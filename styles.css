@@ -1,0 +1,21 @@
+
+body {
+  background-color: rgb(59, 59, 59);
+  text-align: center;
+}
+h1 {
+  font-family: "adobe-garamond-pro", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: rgb(216, 216, 216);
+}
+i {
+  color: rgb(185, 185, 185);
+}
+p {
+  font-family: "adobe-garamond-pro", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: x-large;
+  color: rgb(216, 216, 216);
+}

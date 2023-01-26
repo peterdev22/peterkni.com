@@ -1,21 +1,47 @@
 
+/* whole thing */
 body {
   background-color: rgb(59, 59, 59);
+  background-image: url("bg.png");
   text-align: center;
 }
+
+/* headers & text  */
 h1 {
   font-family: "adobe-garamond-pro", serif;
   font-weight: 700;
   font-style: normal;
   color: rgb(216, 216, 216);
+  font-size: 140px;
 }
+h2 {
+  font-family: "adobe-garamond-pro", serif;
+  font-weight: 600;
+  font-style: italic;
+  color: rgb(146, 146, 146);
+}
+
+/* style */
 i {
+  font-family: "adobe-garamond-pro", serif;
+  font-weight: 600;
+  font-style: italic;
   color: rgb(185, 185, 185);
 }
-p {
+
+/* other */
+a {
   font-family: "adobe-garamond-pro", serif;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
   font-size: x-large;
-  color: rgb(216, 216, 216);
+  color: rgb(184, 167, 149);
+}
+
+/* classes */
+.centered {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

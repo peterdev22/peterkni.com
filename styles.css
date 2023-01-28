@@ -1,8 +1,15 @@
 
 /* whole thing */
-body {
-  background-color: rgb(59, 59, 59);
+html {
+  background-color: rgb(59, 52, 52);
   background-image: url("bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+body {
   text-align: center;
 }
 
@@ -23,16 +30,11 @@ h2 {
 
 /* style */
 i {
-  font-family: "adobe-garamond-pro", serif;
-  font-weight: 600;
-  font-style: italic;
   color: rgb(185, 185, 185);
 }
 
 /* other */
 a {
-  font-family: "adobe-garamond-pro", serif;
-  font-weight: 600;
   font-style: normal;
   font-size: x-large;
   color: rgb(184, 167, 149);

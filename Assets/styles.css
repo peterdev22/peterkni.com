@@ -33,6 +33,12 @@ h3 {
   font-style: normal;
   color: rgb(146, 146, 146);
 }
+h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: rgb(104, 104, 104);
+}
 p {
   font-family: 'Inter', sans-serif;
   font-weight: 500;

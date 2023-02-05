@@ -45,6 +45,7 @@ p {
 /* style */
 i {
   color: rgb(185, 185, 185);
+  font-weight: 400;
 }
 
 /* classes */
@@ -57,7 +58,6 @@ i {
 .row {
   display: flex;
 }
-
 .column {
   flex: 50%;
 }

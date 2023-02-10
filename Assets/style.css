@@ -1,5 +1,4 @@
-
-/* whole thing */
+/* major elements */
 html {
   background-color: rgb(59, 52, 52);
   background-image: url("bg.png");
@@ -15,7 +14,7 @@ body {
 
 /* headers & text  */
 h1 {
-  font-family: "adobe-garamond-pro", serif;
+  font-family: 'adobe-garamond-pro', serif;
   font-weight: 700;
   font-style: normal;
   color: rgb(216, 216, 216);
@@ -46,7 +45,6 @@ p {
   font-size: large;
   color: rgb(179, 179, 179);
 }
-
 
 /* style */
 i {

@@ -90,6 +90,15 @@ p {
   animation: float-alt 5s ease-in-out infinite;
 }
 
+@media(prefers-reduced-motion) {
+  .floating-animation {
+    animation: none;
+  }
+  .floating-animation-alt {
+    animation: none;
+  }
+}
+
 @keyframes float {
   0% {
     transform: translatey(0px);

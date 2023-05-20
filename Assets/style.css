@@ -9,7 +9,7 @@ html {
 
 /* headers & text  */
 h1 {
-  font-family: 'JetBrains Mono', Arial, sans-serif;
+  font-family: 'JetBrainsMono', monospace;
   font-size: 6vmin;
   font-weight: 700;
 
@@ -18,14 +18,14 @@ h1 {
   margin-top: 20vmin;
 }
 h2 {
-  font-family: 'JetBrains Mono', Arial, sans-serif;
+  font-family: 'JetBrainsMono', monospace;
   font-size: x-large;
   font-weight: 700;
 
   color: #BAC2DE;
 }
 p {
-  font-family: 'JetBrains Mono', Arial, sans-serif;
+  font-family: 'JetBrainsMono', monospace;
   font-size: large;
   font-weight: 400;
 

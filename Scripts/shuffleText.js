@@ -1,5 +1,6 @@
-const letters = "abcdefghijklmnopqrstuvwxyz~/404";
+// shuffles the text in the h1 element on page load.
 
+const letters = "abcdefghijklmnopqrstuvwxyz~/404";
 let interval = null;
 
 window.addEventListener("load", () => {

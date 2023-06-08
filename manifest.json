@@ -1,0 +1,11 @@
+{
+  "name" : "Peter // Home",
+  "display" : "browser",
+  "start_url" : "https://peterknight.org/",
+  "scope" : "/",
+  "icons": [
+    { "src": "/Assets/Favicon/ios-180x180.png", "type": "image/png", "sizes": "180x180" },
+    { "src": "/Assets/Favicon/android-192x192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/Assets/Favicon/android-512x512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}

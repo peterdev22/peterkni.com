@@ -1,27 +1,28 @@
-// shuffles the text in the h1 element on page load.
+import { onMount } from "svelte";
 
+/* shuffleText of title on page load */
 const letters = "abcdefghijklmnopqrstuvwxyz~/404";
-let interval = null;
+let interval: any;
+let title: any;
 
-window.addEventListener("load", () => {
-  const h1Element = document.querySelector("h1");
+onMount(() => {
   let iteration = 0;
 
   clearInterval(interval);
 
   interval = setInterval(() => {
-    h1Element.innerText = h1Element.innerText
+    title.innerText = title.innerText
       .split("")
-      .map((letter, index) => {
+      .map((letter: any, index: any) => {
         if (index < iteration) {
-          return h1Element.dataset.value[index];
+          return title.dataset.value[index];
         }
 
         return letters[Math.floor(Math.random() * 31)];
       })
       .join("");
 
-    if (iteration >= h1Element.dataset.value.length) {
+    if (iteration >= title.dataset.value.length) {
       clearInterval(interval);
     }
 

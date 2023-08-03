@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- main meta -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- favicon -->
+		<link rel="icon" href="%sveltekit.assets%/favicon.ico" sizes="any"/> <!-- legacy .ico (in root dir for compatability) -->
+		<link rel="icon" href="%sveltekit.assets%/Assets/favicon.svg" type="image/svg+xml"/>	
+
+		<!-- fonts -->
+		<link rel="preload" href="/%sveltekit.assets%/Fonts/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  	<link rel="preload" href="/%sveltekit.assets%/Fonts/JetBrainsMono-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  	<link rel="preload" href="/%sveltekit.assets%/Fonts/JetBrainsMono-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  	<link rel="stylesheet" href="/%sveltekit.assets%/Fonts/jetbrainsmono.css">
+
+		<!-- page-specific meta -->
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>

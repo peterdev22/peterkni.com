@@ -48,26 +48,20 @@
     translateY.set(image.finalY);
     rotation.set(image.finalRotation);
     scale.set(image.finalScale);
-
-    urlHovered = true;
   }
   function handleMouseLeave() {
     translateX.set(image.initialX);
     translateY.set(image.initialY);
     rotation.set(image.initialRotation);
     scale.set(image.initialScale);
-
-    urlHovered = false;
   }
 
-  let urlHovered = false;
 </script>
 
 <div class="card">
   <div
     class="card-content"
-    role="button"
-    tabindex={id}
+    role="main"
     on:mouseover={handleMouseOver}
     on:mouseleave={handleMouseLeave}
     on:focus={handleMouseOver}

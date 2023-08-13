@@ -110,7 +110,7 @@
   <div class="col-2" />
 
   <div class="col-8">
-    <p style="color: #2c2d44; text-align: center; font-size: small;">~/peters-website · Thanks for visiting!</p>
+    <p style="color: #787E91; text-align: center; font-size: small;">~/peters-website · Thanks for visiting!</p>
   </div>
   
   <div class="col-2" />
@@ -138,7 +138,7 @@
     font-size: x-large;
     font-weight: 700;
 
-    color: #6c7284;
+    color: #787E91;
   }
   p {
     font-family: "JetBrainsMono", monospace;
@@ -150,7 +150,7 @@
 
   .github-link {
     font-weight: 500;
-    color: #6c7284;
+    color: #787E91;
     text-decoration: none;
     transition: color 0.3s, margin-left 0.4s;
   }
@@ -268,24 +268,24 @@
 
   }
 
-  /* animations */
+  /* page load animation */
   .zoom-fade-in {
-    opacity: 0; /* Start with the text hidden */
-    animation: zoomFadeIn 1s forwards; /* Apply the animation with a duration of 1 second */
+    opacity: 0; 
+    animation: zoomFadeIn 1s forwards; 
   }
   .zoom-fade-in-delay {
-    opacity: 0; /* Start with the text hidden */
-    animation: zoomFadeIn 1s forwards; /* Apply the animation with a duration of 1 second */
+    opacity: 0; 
+    animation: zoomFadeIn 1s forwards; 
     animation-delay: 0.1s;
   }
   @keyframes zoomFadeIn {
     0% {
-      transform: scale(0.95); /* Start with a smaller size */
-      opacity: 0; /* Start with the text hidden */
+      transform: scale(0.95); 
+      opacity: 0; 
     }
     100% {
-      transform: scale(1); /* End with the original size */
-      opacity: 1; /* Fully visible */
+      transform: scale(1);
+      opacity: 1; 
     }
   }
 </style>

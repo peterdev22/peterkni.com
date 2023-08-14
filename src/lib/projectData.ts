@@ -83,12 +83,12 @@ export const schoolProjects = [
       {
         source: "Assets/slatedock.jpeg",
         alt: "3D rendering of a Slatedock mini, an organisation hub that can assist with tasks.",
-        initialX: 0,
-        initialY: -32.5,
+        initialX: 10,
+        initialY: -25,
         initialRotation: -3,
         initialScale: 0.2,
-        finalX: 33,
-        finalY: -28,
+        finalX: 36,
+        finalY: -25,
         finalRotation: 0,
         finalScale: 0.7
       }
@@ -106,11 +106,11 @@ export const schoolProjects = [
       {
         source: "Assets/cadarticle.png",
         alt: "Descriptions of what parallel, perpendicular and tangent mean.",
-        initialX: 0,
-        initialY: -23,
+        initialX: 5,
+        initialY: -18,
         initialRotation: -1,
         initialScale: 0.25,
-        finalX: 36,
+        finalX: 40,
         finalY: -20,
         finalRotation: 0,
         finalScale: 0.9
@@ -130,7 +130,7 @@ export const schoolProjects = [
         source: "Assets/makeawebsite.png",
         alt: "A tutorial website displaying one of the steps to create a website.",
         initialX: 16,
-        initialY: -28,
+        initialY: -25,
         initialRotation: 8,
         initialScale: 0.15,
         finalX: 41,

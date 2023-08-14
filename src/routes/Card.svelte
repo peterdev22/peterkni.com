@@ -58,7 +58,7 @@
 
 </script>
 
-<div class="flex flex-col justify-between p-4 my-7 h-28 md:h-60 bg-gradient-to-tr from-crust from-50% to-core to-100% rounded-xl border-4 border-mantle"
+<div class="transition-all duration-500 hover:shadow-blue-dark hover:-translate-y-1 shadow-2xl shadow-core flex flex-col justify-between p-4 mb-7 mt-5 h-28 md:h-40 bg-gradient-to-tr from-crust from-50% to-blue-dark to-100% rounded-xl border-4 border-mantle"
   role="main"
   on:mouseover={handleMouseOver}
   on:mouseleave={handleMouseLeave}
@@ -66,34 +66,26 @@
   on:blur={handleMouseLeave}
   >
   <div>
-    <div class="flex flew-row gap-3 font-body">
-    <p class="text-lg text-subtext-1 font-semibold">
-      {title}
+    <p class="font-body text-lg text-subtext-1 font-semibold mb-1">
+      {title} <span class="text-[0.65rem] font-bold bg-peach text-crust px-1 py-[0.05rem] border-2 border-peach-dark rounded-[5px] align-middle">{date}</span>
     </p>
-    <!--
-    <p class="text-xs text-core font-semibold bg-peach rounded-md p-1 pt-0 border-yellow border-2">
-      {date}
-    </p>
-    -->
-    </div>
-    <p class="hidden md:block text-base pt-2 font-body text-overlay-0 ">
+    <p class="hidden md:block text-base font-body text-overlay-0 ">
       {description}
     </p>
   </div>
   <div>
-    <a href={url} class="text-overlay-1 font-body text-sm border-2 px-2 py-1 rounded-lg border-mantle hover:text-yellow hover:font-bold">
+    <a href={url} class="transition-all text-overlay-1 font-body text-sm border-2 px-2 py-1 rounded-lg border-mantle hover:text-yellow hover:font-bold">
       Visit <span>{domain}</span> ->
     </a>
   </div>
+</div>
+<div>
   {#each images as image, i (id)}
-    <img
-      style="transform: translate({$translateX}rem, {$translateY}rem) rotate({$rotation}deg) scale({$scale});"
-      src={image.source}
-      alt={image.alt}
-    />
+  <img
+    class="invisible absolute rounded-xl xl:visible"
+    style="transform: translate({$translateX}rem, {$translateY}rem) rotate({$rotation}deg) scale({$scale});"
+    src={image.source}
+    alt={image.alt}
+  />
   {/each}
 </div>
-
-<style lang="postcss">
-
-</style>

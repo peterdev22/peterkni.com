@@ -33,7 +33,7 @@ export default {
       'crust': '#11111b',
     },
     fontFamily: {
-      'body': ['"JetBrains Mono"', 'sans-serif']
+      'body': ['JetBrainsMono', 'Courier', 'mono']
     },
     extend: {
       keyframes: {

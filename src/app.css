@@ -10,7 +10,7 @@
 
   /* ------------------- regular fonts ------------------- */
   @font-face {
-    font-family: JetBrainsMono;
+    font-family: 'JetBrainsMono';
     font-style: normal;
     font-weight: 400;
     src:
@@ -20,7 +20,7 @@
     font-display: swap;
   }
   @font-face {
-    font-family: JetBrainsMono;
+    font-family: 'JetBrainsMono';
     font-style: normal;
     font-weight: 500;
     src:
@@ -30,7 +30,7 @@
     font-display: swap;
   }
   @font-face {
-    font-family: JetBrainsMono;
+    font-family: 'JetBrainsMono';
     font-style: normal;
     font-weight: 700;
     src:
@@ -40,7 +40,7 @@
     font-display: swap;
   }
   @font-face {
-    font-family: JetBrainsMono;
+    font-family: 'JetBrainsMono';
     font-style: normal;
     font-weight: 800;
     src:
@@ -52,7 +52,7 @@
 
   /* ------------------- italic fonts ------------------- */
   @font-face {
-    font-family: JetBrainsMono;
+    font-family: 'JetBrainsMono';
     font-style: italic;
     font-weight: 400;
     src:
@@ -62,7 +62,7 @@
     font-display: swap;
   }
   @font-face {
-    font-family: JetBrainsMono;
+    font-family: 'JetBrainsMono';
     font-style: italic;
     font-weight: 500;
     src:
@@ -72,7 +72,7 @@
     font-display: swap;
   }
   @font-face {
-    font-family: JetBrainsMono;
+    font-family: 'JetBrainsMono';
     font-style: italic;
     font-weight: 700;
     src:
@@ -82,7 +82,7 @@
     font-display: swap;
   }
   @font-face {
-    font-family: JetBrainsMono;
+    font-family: 'JetBrainsMono';
     font-style: italic;
     font-weight: 800;
     src:

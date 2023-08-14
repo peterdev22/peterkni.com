@@ -44,7 +44,7 @@
   <title>Peter // Home</title>
 </svelte:head>
 
-<div class="flex flex-col md:flex-row bg-crust">
+<div class="flex flex-col md:flex-row">
   <div class="basis-2/12 xl:basis-2/12" />
   <div class="basis-8/12 mx-7 xl:basis-4/12">
     <h1

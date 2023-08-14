@@ -39,27 +39,29 @@
   <title>Peter // {$page.status}</title>
 </svelte:head>
 
-<div class="row zoom-fade-in">
-  <div class="col-3" />
-  <div class="col-6">
+<div class="flex flex-col md:flex-row animate-zoomFadeIn">
+  <div class="basis-3/12" />
+
+  <div class="basis-6/12 mx-7 xl:basis-4/12">
     <h1
-      style="color: rgb(255, 126, 126); font-size: 50px; margin-bottom: 0px;"
+      class="text-maroon text-5xl font-body font-bold mt-10 md:mt-60"
       data-value="{$page.status} error"
       bind:this={title}
     >
       {$page.status} error
     </h1>
-    <h2>{$page.error?.message}</h2>
+    <h2 class="text-subtext-1 text-xl font-body font-bold my-6"
+    >{$page.error?.message}</h2>
     <br />
 
-    <p>
-      <a href="/" class="home-link">
+    <li class="py-2">
+      <a href="/" class="transition-all duration-500 ease-in-out text-overlay-1 font-body text-lg font-bold animate-zoomFadeIn hover:text-yellow hover:ml-1.5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="512"
-          height="512"
+          width="2rem"
+          height="2rem"
           viewBox="0 0 512 512"
-          class="icon"
+          class="inline-block align-text-bottom translate-y-1"
         >
           <path
             fill="currentColor"
@@ -72,16 +74,15 @@
         </svg>
         Home
       </a>
-    </p>
-
-    <p>
-      <a href="https://youtu.be/dQw4w9WgXcQ" class="nothome-link">
+    </li>
+    <li class="py-2">
+      <a href="https://youtu.be/dQw4w9WgXcQ" class="transition-all duration-500 ease-in-out text-overlay-1 font-body text-lg font-bold animate-zoomFadeIn hover:text-yellow hover:ml-1.5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="256"
-          height="256"
+          width="2rem"
+          height="2rem"
           viewBox="0 0 256 256"
-          class="icon"
+          class="inline-block align-text-bottom translate-y-1"
         >
           <path
             fill="currentColor"
@@ -90,8 +91,10 @@
         </svg>
         ???
       </a>
-    </p>
+    </li>
+
   </div>
-  <div class="col-3" />
+
+  <div class="basis-3/12" />
 </div>
 

@@ -58,42 +58,35 @@
 
 </script>
 
-<div class="card">
-  <div
-    class="card-content"
-    role="main"
-    on:mouseover={handleMouseOver}
-    on:mouseleave={handleMouseLeave}
-    on:focus={handleMouseOver}
-    on:blur={handleMouseLeave}
+<div class="flex flex-col justify-between p-4 my-7 h-28 md:h-60 bg-gradient-to-tr from-crust from-50% to-core to-100% rounded-xl border-4 border-mantle"
+  role="main"
+  on:mouseover={handleMouseOver}
+  on:mouseleave={handleMouseLeave}
+  on:focus={handleMouseOver}
+  on:blur={handleMouseLeave}
   >
-    <p class="card-title">
-      {title} <span class="date">{date}</span>{#if title == 'Airohh'}<span
-          style="
-      color: #14131F;
-      text-align: center;
-      vertical-align: 25%;
-      font-weight: 600;
-      margin-left: 10px;
-      font-size: x-small;
-      border: #2ecde9;
-      border-style: solid;
-      border-width: 2px;
-      background-color: #37defc;
-      border-radius: 5px;
-      padding: 2px 5px 2px 5px;">Unindexed</span
-        >{/if}
+  <div>
+    <div class="flex flew-row gap-3 font-body">
+    <p class="text-lg text-subtext-1 font-semibold">
+      {title}
     </p>
-    <p class="card-description">
+    <!--
+    <p class="text-xs text-core font-semibold bg-peach rounded-md p-1 pt-0 border-yellow border-2">
+      {date}
+    </p>
+    -->
+    </div>
+    <p class="hidden md:block text-base pt-2 font-body text-overlay-0 ">
       {description}
     </p>
-    <a class="card-button" href={url}>
-      Visit <span class="domain">{domain}</span> ->
+  </div>
+  <div>
+    <a href={url} class="text-overlay-1 font-body text-sm border-2 px-2 py-1 rounded-lg border-mantle hover:text-yellow hover:font-bold">
+      Visit <span>{domain}</span> ->
     </a>
   </div>
   {#each images as image, i (id)}
     <img
-      class="card-image"
       style="transform: translate({$translateX}rem, {$translateY}rem) rotate({$rotation}deg) scale({$scale});"
       src={image.source}
       alt={image.alt}
@@ -101,102 +94,6 @@
   {/each}
 </div>
 
-<style>
-  /* ----- Text ----- */
-  p {
-    font-family: "JetBrainsMono", monospace;
-    font-size: large;
-    font-weight: 400;
-    color: #bac2de;
-  }
+<style lang="postcss">
 
-  /* ----- Full Card ----- */
-  .card {
-    transition: 0.5s;
-  }
-  .card:hover {
-    box-shadow: 0px 15px 40px #25263981;
-    transform: translate(0, -4px);
-  }
-
-  /* ----- Major Contents----- */
-  .card > .card-content {
-    background: linear-gradient(30deg, #1e1e2e00 50%, #27273b);
-    border: #1e1e2e;
-    border-width: 3px;
-    border-radius: 12px;
-    border-style: solid;
-
-    padding-left: 20px;
-    padding-bottom: 20px;
-    padding-right: 20px;
-    margin-bottom: 30px;
-    box-sizing: border-box;
-  }
-  .card > .card-image {
-    box-shadow: 0px 30px 50px #1e1e2ebe;
-    border-radius: 12px;
-    position: absolute;
-    display: none;
-  }
-
-  /* ----- Minor Contents ----- */
-  .card-content > .card-title {
-    font-weight: 500;
-  }
-  .card-content > .card-title > .date {
-    color: #14131f;
-    text-align: center;
-    vertical-align: 25%;
-    font-weight: 600;
-    margin-left: 5px;
-    border: #d4946c;
-    border-style: solid;
-    border-width: 2px;
-    font-size: x-small;
-    background-color: #fab387;
-    border-radius: 5px;
-    padding: 2px 5px 2px 5px;
-  }
-  .card-content > .card-description {
-    font-size: medium;
-    margin-top: -10px;
-    color: #6c7284;
-    display: none;
-  }
-  .card-content > .card-button {
-    font-family: "JetBrainsMono", monospace;
-    font-size: small;
-    font-weight: 500;
-    color: #bac2debe;
-    background: #1e1e2e00;
-    border: #222235bb;
-    border-width: 2px;
-    border-radius: 8px;
-    border-style: solid;
-    word-wrap: break-word;
-
-    padding: 5px 10px 5px 10px;
-
-    transition: 0.3s;
-    text-decoration: none;
-  }
-  .card-content > .card-button:hover {
-    color: #f9e2af;
-    font-weight: 800;
-  }
-
-  @media only screen and (min-width: 1000px) {
-    .card > .card-image {
-      display: block;
-    }
-
-    .card {
-      margin-right: 0px;
-    }
-
-    .card-content > .card-description {
-      display: block;
-    }
-  }
 </style>

@@ -9,12 +9,15 @@ export default {
       'mauve': '#cba6f7',
       'red': '#f38ba8',
       'maroon': '#eba0ac',
+      'maroon-dark': '#cc8792',
       'peach': '#fab387',
       'peach-dark': '#D2926D',
       'yellow': '#f9e2af',
+      'yellow-dark': '#d9c393',
       'green': '#a6e3a1',
       'teal': '#94e2d5',
       'sky': '#89dceb',
+      'sky-dark': '#75c3d1',
       'sapphire': '#74c7ec',
       'blue': '#89b4fa',
       'blue-dark': '#25263B',
@@ -46,11 +49,20 @@ export default {
             transform: 'scale(1)',
             opacity: '1'
           }
+        },
+        fadeIn: {
+          '0%': {
+            opacity: '0' 
+          },
+          '100%': {
+            opacity: '1'
+          }
         }
       },
       animation: {
         zoomFadeIn: 'zoomFadeIn 1s forwards',
         zoomFadeInDelay: 'zoomFadeIn 1s forwards 0.2s',
+        fadeIn: 'fadeIn 1s forwards 1s',
       }
     },
   },

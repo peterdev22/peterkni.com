@@ -1,47 +1,47 @@
 export const personalProjects = [
   {
     id: 1,
-    title: "peterknight.org",
+    title: "My Dotfiles",
     description:
-      "This website... created using Svelte as a place for all things I do.",
-    date: "Feb 2023",
-    url: "https://github.com/peterdev22/peterknight.org",
-    domain: "@ github.com",
+      "A backup of my (most important) configuration files just in case my computer dies. Uses the catppuccin theme.",
+    date: "Jun 2023",
+    url: "https://github.com/peterdev22/dotfiles",
+    domain: "github.com",
     images: [
       {
-        source: "Assets/website.png",
-        alt: "Code from this website's source displayed in a code editor.",
-        initialX: 9,
-        initialY: -29,
-        initialRotation: 1,
+        source: "Assets/dotfiles.png",
+        alt: "A Mac desktop with a custom menu bar theme and design.",
+        initialX: 16,
+        initialY: -24,
+        initialRotation: 3,
         initialScale: 0.3,
-        finalX: 41,
+        finalX: 42,
         finalY: -20,
         finalRotation: 0,
-        finalScale: 1,
+        finalScale: 1
       }
     ]
   },
   {
     id: 2,
-    title: "My Dotfiles",
+    title: "peterknight.org",
     description:
-      "A backup of my (most important) configuration files just in case my computer dies. Uses the catppuccin theme.",
-    date: "Jun 2023",
-    url: "https://github.com/peterdev22/dotfiles",
-    domain: "@ github.com",
+      "This website... created using Svelte as a place for all things I do.",
+    date: "Feb 2023",
+    url: "https://github.com/peterdev22/peterknight.org",
+    domain: "github.com",
     images: [
       {
-        source: "Assets/dotfiles.png",
-        alt: "A Mac desktop with a custom menu bar theme and design.",
-        initialX: 13,
-        initialY: -23,
-        initialRotation: 3,
-        initialScale: 0.3,
+        source: "Assets/favicon.png",
+        alt: "Code from this website's source displayed in a code editor.",
+        initialX: 14,
+        initialY: -28,
+        initialRotation: 1,
+        initialScale: 0.2,
         finalX: 41,
-        finalY: -25,
-        finalRotation: 0,
-        finalScale: 1
+        finalY: -23,
+        finalRotation: 360,
+        finalScale: 0.7,
       }
     ]
   }
@@ -53,15 +53,15 @@ export const schoolProjects = [
     title: "Airohh",
     description:
       "A website created to assist the Airohh Drone's product display board.",
-    date: "Jul 2023",
+    date: "Jul 2023",
     url: "https://airohh.peterknight.org",
-    domain: "@ peterknight.org",
+    domain: "peterknight.org",
     images: [
       {
         source: "Assets/drone.png",
         alt: "3D rendering of a drone that has detachable propellers via magnets.",
         initialX: 13,
-        initialY: -24,
+        initialY: -22,
         initialRotation: 3,
         initialScale: 0.3,
         finalX: 41,
@@ -76,9 +76,9 @@ export const schoolProjects = [
     title: "Slatedock",
     description:
       "Slatedock is an organisation hub that can assist you with tasks at your desk or anywhere else.",
-    date: "Jun 2023",
+    date: "Jun 2023",
     url: "https://slatedock.peterknight.org",
-    domain: "@ peterknight.org",
+    domain: "peterknight.org",
     images: [
       {
         source: "Assets/slatedock.jpeg",
@@ -99,9 +99,9 @@ export const schoolProjects = [
     title: "CAD Article",
     description:
       "An article about some great tips you should know when doing CAD.",
-    date: "Mar 2023",
+    date: "Mar 2023",
     url: "https://cadarticle.peterknight.org",
-    domain: "@ peterknight.org",
+    domain: "peterknight.org",
     images: [
       {
         source: "Assets/cadarticle.png",
@@ -122,9 +122,9 @@ export const schoolProjects = [
     title: "Website Creation Tutorial",
     description:
       "My first ever website created in html - where it all started.",
-    date: "Jun 2022",
+    date: "Jun 2022",
     url: "https://makeawebsite.peterknight.org",
-    domain: "@ peterknight.org",
+    domain: "peterknight.org",
     images: [
       {
         source: "Assets/makeawebsite.png",

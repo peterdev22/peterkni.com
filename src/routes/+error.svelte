@@ -55,7 +55,7 @@
     <br />
 
     <li class="py-2">
-      <a href="/" class="transition-all duration-500 ease-in-out text-overlay-1 font-body text-lg font-bold animate-zoomFadeIn hover:text-yellow hover:ml-1.5">
+      <a href="/" class="transition-all duration-500 ease-in-out text-overlay-1 font-body text-lg font-medium animate-zoomFadeIn hover:text-mauve hover:ml-1.5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="2rem"
@@ -76,7 +76,7 @@
       </a>
     </li>
     <li class="py-2">
-      <a href="https://youtu.be/dQw4w9WgXcQ" class="transition-all duration-500 ease-in-out text-overlay-1 font-body text-lg font-bold animate-zoomFadeIn hover:text-yellow hover:ml-1.5">
+      <a href="https://youtu.be/dQw4w9WgXcQ" class="transition-all duration-500 ease-in-out text-overlay-1 font-body text-lg font-medium animate-zoomFadeIn hover:text-mauve hover:ml-1.5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="2rem"

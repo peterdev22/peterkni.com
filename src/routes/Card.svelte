@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { tweened } from "svelte/motion";
-  import { cubicOut } from "svelte/easing";
+  import { tweened } from 'svelte/motion';
+  import { cubicOut } from 'svelte/easing';
 
   export let id: number;
   export let title: string;
@@ -20,6 +20,11 @@
     finalRotation: number;
     finalScale: number;
   }>;
+
+  $: outerWidth = 0
+	$: innerWidth = 0
+	$: outerHeight = 0
+	$: innerHeight = 0
 
   const image = images[0];
   const translateX = tweened(image.initialX, {
@@ -55,37 +60,50 @@
     rotation.set(image.initialRotation);
     scale.set(image.initialScale);
   }
-
 </script>
 
-<div class="transition-all duration-500 hover:shadow-blue-dark hover:-translate-y-1 shadow-2xl shadow-core flex flex-col justify-between p-4 mb-7 mt-5 h-28 md:h-40 bg-gradient-to-tr from-crust from-50% to-blue-dark to-100% rounded-xl border-4 border-mantle"
+<svelte:window bind:innerWidth bind:outerWidth bind:innerHeight bind:outerHeight />
+
+
+<div
+  class="transition-all duration-500 hover:shadow-blue-dark hover:-translate-y-1 shadow-2xl shadow-core flex flex-col justify-between p-4 sm:mb-7 mt-5 h-auto bg-gradient-to-tr from-crust from-50% to-blue-dark to-100% rounded-xl border-4 border-mantle"
   role="main"
   on:mouseover={handleMouseOver}
   on:mouseleave={handleMouseLeave}
   on:focus={handleMouseOver}
   on:blur={handleMouseLeave}
-  >
+>
   <div>
-    <p class="font-body text-lg text-subtext-1 font-semibold mb-1">
-      {title} <span class="text-[0.65rem] font-bold bg-peach text-crust px-1 py-[0.05rem] border-2 border-peach-dark rounded-[5px] align-middle">{date}</span>
+    <p class="font-body text-lg text-subtext-1 font-semibold mb-3 sm:mb-1">
+      {title}
+      <span
+        class="text-[0.65rem] font-bold bg-peach text-crust px-1 py-[0.05rem] border-2 border-peach-dark rounded-[5px] align-middle"
+        >{date}</span
+      >
     </p>
-    <p class="hidden md:block text-base font-body text-overlay-0 ">
+    <p class="hidden sm:block text-base font-body text-overlay-0 mb-3">
       {description}
     </p>
   </div>
   <div>
-    <a href={url} class="transition-all text-overlay-1 font-body text-sm border-2 px-2 py-1 rounded-lg border-mantle hover:text-yellow hover:font-bold">
-      Visit <span>{domain}</span> ->
+    <a
+      href={url}
+      class="transition-all text-overlay-1 font-body text-sm border-2 px-2 py-1 rounded-lg border-mantle hover:text-mauve hover:font-bold"
+    >
+      Visit @ <span>{domain}</span> ->
     </a>
   </div>
 </div>
+
+{#if innerWidth > 640}
 <div>
   {#each images as image, i (id)}
-  <img
-    class="invisible absolute rounded-xl xl:visible"
-    style="transform: translate({$translateX}rem, {$translateY}rem) rotate({$rotation}deg) scale({$scale});"
-    src={image.source}
-    alt={image.alt}
-  />
+    <img
+      class="invisible absolute rounded-xl xl:visible"
+      style="transform: translate({$translateX}rem, {$translateY}rem) rotate({$rotation}deg) scale({$scale});"
+      src={image.source}
+      alt={image.alt}
+    />
   {/each}
 </div>
+{/if}

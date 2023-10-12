@@ -1,11 +1,11 @@
 <!-- ---------------- SCRIPT -------------------- -->
 <script lang="ts">
-  import { personalProjects, schoolProjects } from "$lib/projectData";
-  import Card from "./Card.svelte";
-  import { onMount } from "svelte";
+  import { personalProjects, schoolProjects } from '$lib/projectData';
+  import Card from './Card.svelte';
+  import { onMount } from 'svelte';
 
   /* shuffleText of title on page load */
-  const letters = "abcdefghijklmnopqrstuvwxyz~/";
+  const letters = 'abcdefghijklmnopqrstuvwxyz~/';
   let interval: any;
   let title: any;
 
@@ -16,7 +16,7 @@
 
     interval = setInterval(() => {
       title.innerText = title.innerText
-        .split("")
+        .split('')
         .map((letter: any, index: number) => {
           if (index < iteration) {
             return title.dataset.value[index];
@@ -24,7 +24,7 @@
 
           return letters[Math.floor(Math.random() * 21)];
         })
-        .join("");
+        .join('');
 
       if (iteration >= title.dataset.value.length) {
         clearInterval(interval);
@@ -44,6 +44,7 @@
   <title>Peter // Home</title>
 </svelte:head>
 
+<!-- ---------------- BODY -------------------- -->
 <div class="flex flex-col md:flex-row">
   <div class="basis-2/12 xl:basis-2/12" />
   <div class="basis-8/12 mx-7 xl:basis-4/12">

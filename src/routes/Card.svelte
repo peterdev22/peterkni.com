@@ -66,13 +66,23 @@
 
 
 <div
-  class="transition-all duration-500 hover:shadow-blue-dark hover:-translate-y-1 shadow-2xl shadow-core flex flex-col justify-between p-4 sm:mb-7 mt-5 h-auto bg-gradient-to-tr from-crust from-50% to-blue-dark to-100% rounded-xl border-4 border-mantle"
+  class="transition-all duration-500 w-96 hover:shadow-blue-dark hover:-translate-y-1 shadow-2xl shadow-core flex flex-col justify-between p-4 pt-0 sm:mb-7 mt-5 h-auto bg-gradient-to-tr from-crust from-50% to-blue-dark to-100% rounded-xl border-4 border-mantle"
   role="main"
   on:mouseover={handleMouseOver}
   on:mouseleave={handleMouseLeave}
   on:focus={handleMouseOver}
   on:blur={handleMouseLeave}
 >
+<div>
+  {#each images as image, i (id)}
+    <img
+      class="invisible rounded-xl xl:visible"
+      style="transform: translate({$translateX}rem, {$translateY}rem) rotate({$rotation}deg) scale({$scale});"
+      src={image.source}
+      alt={image.alt}
+    />
+  {/each}
+</div>
   <div>
     <p class="font-body text-lg text-subtext-1 font-semibold mb-3 sm:mb-1">
       {title}
@@ -95,7 +105,7 @@
   </div>
 </div>
 
-{#if innerWidth > 640}
+<!-- {#if innerWidth > 640}
 <div>
   {#each images as image, i (id)}
     <img
@@ -106,4 +116,4 @@
     />
   {/each}
 </div>
-{/if}
+{/if} -->

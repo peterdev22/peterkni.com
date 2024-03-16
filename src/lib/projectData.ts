@@ -1,4 +1,4 @@
-export const personalProjects = [
+export const programmingProjects = [
   {
     id: 1,
     title: "My Dotfiles",
@@ -11,12 +11,12 @@ export const personalProjects = [
       {
         source: "Assets/dotfiles.png",
         alt: "A Mac desktop with a custom menu bar theme and design.",
-        initialX: 16,
-        initialY: -24,
-        initialRotation: 3,
-        initialScale: 0.3,
-        finalX: 42,
-        finalY: -20,
+        initialX: 0,
+        initialY: -1,
+        initialRotation: 2,
+        initialScale: 1,
+        finalX: 0,
+        finalY: -2,
         finalRotation: 0,
         finalScale: 1
       }
@@ -32,22 +32,22 @@ export const personalProjects = [
     domain: "github.com",
     images: [
       {
-        source: "Assets/favicon.png",
+        source: "Assets/",
         alt: "Code from this website's source displayed in a code editor.",
-        initialX: 14,
-        initialY: -28,
-        initialRotation: 1,
-        initialScale: 0.2,
-        finalX: 41,
-        finalY: -23,
-        finalRotation: 360,
-        finalScale: 0.7,
+        initialX: 3,
+        initialY: -1,
+        initialRotation: 0,
+        initialScale: 1,
+        finalX: 3,
+        finalY: -1.5,
+        finalRotation: 0,
+        finalScale: 1,
       }
     ]
   }
 ];
 
-export const schoolProjects = [
+export const cadProjects = [
   {
     id: 1,
     title: "Airohh",
@@ -60,13 +60,13 @@ export const schoolProjects = [
       {
         source: "Assets/drone.png",
         alt: "3D rendering of a drone that has detachable propellers via magnets.",
-        initialX: 13,
-        initialY: -22,
+        initialX: 0,
+        initialY: 0,
         initialRotation: 3,
-        initialScale: 0.3,
-        finalX: 41,
-        finalY: -25,
-        finalRotation: 0,
+        initialScale: 1,
+        finalX: 0,
+        finalY: -1,
+        finalRotation: 5,
         finalScale: 1
       }
     ]
@@ -83,42 +83,26 @@ export const schoolProjects = [
       {
         source: "Assets/slatedock.jpeg",
         alt: "3D rendering of a Slatedock mini, an organisation hub that can assist with tasks.",
-        initialX: 10,
-        initialY: -25,
+        initialX: 0,
+        initialY: -1,
         initialRotation: -3,
-        initialScale: 0.2,
-        finalX: 36,
-        finalY: -25,
+        initialScale: 1,
+        finalX: 0,
+        finalY: -2,
         finalRotation: 0,
-        finalScale: 0.7
+        finalScale: 1
       }
     ]
-  },
+  }
+];
+
+export const roboticsProjects = [
+
+];
+
+export const miscProjects = [
   {
-    id: 3,
-    title: "CAD Article",
-    description:
-      "An article about some great tips you should know when doing CAD.",
-    date: "Mar 2023",
-    url: "https://cadarticle.peterknight.org",
-    domain: "peterknight.org",
-    images: [
-      {
-        source: "Assets/cadarticle.png",
-        alt: "Descriptions of what parallel, perpendicular and tangent mean.",
-        initialX: 5,
-        initialY: -18,
-        initialRotation: -1,
-        initialScale: 0.25,
-        finalX: 40,
-        finalY: -20,
-        finalRotation: 0,
-        finalScale: 0.9
-      }
-    ]
-  },
-  {
-    id: 4,
+    id: 1,
     title: "Website Creation Tutorial",
     description:
       "My first ever website created in html - where it all started.",
@@ -129,14 +113,37 @@ export const schoolProjects = [
       {
         source: "Assets/makeawebsite.png",
         alt: "A tutorial website displaying one of the steps to create a website.",
-        initialX: 16,
-        initialY: -25,
-        initialRotation: 8,
-        initialScale: 0.15,
-        finalX: 41,
-        finalY: -30,
-        finalRotation: 0,
+        initialX: 0,
+        initialY: -1,
+        initialRotation: 1,
+        initialScale: 1,
+        finalX: 0,
+        finalY: -2,
+        finalRotation: 2,
         finalScale: 1
+      }
+    ]
+  },
+  {
+    id: 2,
+    title: "CAD Article",
+    description:
+      "An article about some great tips you should know when doing CAD.",
+    date: "Mar 2023",
+    url: "https://cadarticle.peterknight.org",
+    domain: "peterknight.org",
+    images: [
+      {
+        source: "Assets/cadarticle.png",
+        alt: "Descriptions of what parallel, perpendicular and tangent mean.",
+        initialX: 0,
+        initialY: 2,
+        initialRotation: 0,
+        initialScale: 1.2,
+        finalX: 0,
+        finalY: 1,
+        finalRotation: 0,
+        finalScale: 1.25
       }
     ]
   }

@@ -32,7 +32,7 @@ export const programmingProjects = [
     domain: "github.com",
     images: [
       {
-        source: "Assets/",
+        source: "Assets/favicon.png",
         alt: "Code from this website's source displayed in a code editor.",
         initialX: 3,
         initialY: -1,
@@ -61,13 +61,13 @@ export const cadProjects = [
         source: "Assets/drone.png",
         alt: "3D rendering of a drone that has detachable propellers via magnets.",
         initialX: 0,
-        initialY: 0,
+        initialY: 1,
         initialRotation: 3,
-        initialScale: 1,
+        initialScale: 1.1,
         finalX: 0,
-        finalY: -1,
+        finalY: 0,
         finalRotation: 5,
-        finalScale: 1
+        finalScale: 1.1
       }
     ]
   },

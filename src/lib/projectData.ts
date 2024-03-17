@@ -39,7 +39,7 @@ export const programmingProjects = [
         initialRotation: 0,
         initialScale: 1,
         finalX: 3,
-        finalY: -1.5,
+        finalY: -2,
         finalRotation: 0,
         finalScale: 1,
       }
@@ -61,13 +61,13 @@ export const cadProjects = [
         source: "Assets/drone.png",
         alt: "3D rendering of a drone that has detachable propellers via magnets.",
         initialX: 0,
-        initialY: 1,
+        initialY: 0,
         initialRotation: 3,
-        initialScale: 1.1,
+        initialScale: 1,
         finalX: 0,
         finalY: 0,
         finalRotation: 5,
-        finalScale: 1.1
+        finalScale: 1
       }
     ]
   },
@@ -137,13 +137,13 @@ export const miscProjects = [
         source: "Assets/cadarticle.png",
         alt: "Descriptions of what parallel, perpendicular and tangent mean.",
         initialX: 0,
-        initialY: 2,
-        initialRotation: 0,
-        initialScale: 1.2,
+        initialY: 0,
+        initialRotation: 1,
+        initialScale: 1,
         finalX: 0,
-        finalY: 1,
+        finalY: -1,
         finalRotation: 0,
-        finalScale: 1.25
+        finalScale: 1
       }
     ]
   }

@@ -65,7 +65,12 @@
   }
 
   function smoothScroll() {
-    // calculate the distance to the target and the next step
+  if (window.innerWidth <= 1024) {
+    // Disable smooth scroll when window width is small enough
+    scrollLeft = targetScroll;
+    scrolling = false;
+  } else {
+    // Enable smooth scroll when window width is large enough
     let distance = targetScroll - scrollLeft;
     let step = distance * 0.1; // adjust this factor to change the speed of the scroll
 
@@ -78,6 +83,7 @@
       requestAnimationFrame(smoothScroll);
     }
   }
+}
 
   /* scrolling when dragging the div */
   let isDown = false;
@@ -125,6 +131,8 @@
   }
 
   function handleWheel(event) {
+  if (window.innerWidth > 1024) {
+    // Only prevent default scrolling and implement custom scrolling when window width is large enough
     event.preventDefault(); // prevent default scrolling
 
     let newScrollAmount = scrollLeft - event.deltaY * 3;
@@ -139,10 +147,18 @@
       requestAnimationFrame(smoothScroll);
     }
   }
+}
 
+window.addEventListener('resize', function() {
+  if (window.innerWidth < 1024) {
+    scrollLeft = 0;
+    targetScroll = 0;
+    if (scrolling) {
+      scrolling = false;
+    }
+  }
+});
 </script>
-
-
 
 <!-- ---------------- HEAD -------------------- -->
 <svelte:head>
@@ -166,7 +182,9 @@
   aria-valuenow={scrollLeft}
   tabindex="0"
 >
-<div class="absolute top-0 right-0 w-56 h-full bg-gradient-to-l from-[#12111B] to-transparent z-10"></div>
+  <div
+    class="absolute top-0 right-0 w-56 h-full bg-gradient-to-l from-[#12111B] to-transparent z-10 invisible lg:visible"
+  ></div>
 
   <div class="flex flex-col sm:flex-row">
     <div class="basis-1/12 md:basis-2/12 lg:basis-3/12 xl:basis-2/12" />
@@ -196,12 +214,12 @@
       </div>
 
       <div
-        class="text-overlay-0 font-body font-bold text-md animate-zoomFadeInDelay mt-12"
+        class="text-overlay-0 font-body font-bold text-md animate-zoomFadeInDelay mt-12 hidden lg:block"
       >
         TOPIC SELECTED
       </div>
 
-      <div class="flex gap-10 mt-2 mb-14 lg:mb-8 animate-zoomFadeInDelay">
+      <div class="lg:flex gap-10 mt-2 mb-14 lg:mb-8 animate-zoomFadeInDelay hidden">
         <button
           class="{scrollLeft <= 0 && scrollLeft > -500
             ? 'text-blue'
@@ -261,7 +279,7 @@
         style="transform: translateX({scrollLeft}px); transition: transform 0.1s;"
       >
         {#if selectedView == 0}
-          <div class="lg:rotate-90 origin-top">
+          <div class="lg:rotate-90 origin-top mt-20 lg:mt-0">
             <h3
               class="font-body text-surface-0 text-3xl font-bold absolute translate-x-5 -translate-y-12"
             >
@@ -276,7 +294,7 @@
         {/if}
 
         {#if selectedView == 0}
-          <div class="lg:rotate-90 origin-top">
+          <div class="lg:rotate-90 origin-top mt-20 lg:mt-0">
             <h3
               class="font-body text-surface-0 text-3xl font-bold absolute translate-x-5 -translate-y-12"
             >
@@ -304,7 +322,7 @@
     {/if} -->
 
         {#if selectedView == 0}
-          <div class="lg:rotate-90 origin-top">
+          <div class="lg:rotate-90 origin-top mt-20 lg:mt-0">
             <h3
               class="font-body text-surface-0 text-3xl font-bold absolute translate-x-5 -translate-y-12"
             >

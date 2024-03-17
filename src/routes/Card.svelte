@@ -66,7 +66,7 @@
 
 
 <div
-  class="transition-all duration-500 cursor-default w-96 hover:shadow-blue-dark hover:-translate-y-1 shadow-2xl shadow-core flex flex-col justify-between p-4 pt-0 sm:mb-7 mt-5 h-auto bg-gradient-to-tr from-crust from-50% to-blue-dark to-100% rounded-xl border-4 border-mantle"
+  class="transition-all duration-500 cursor-default lg:w-96 hover:shadow-blue-dark hover:-translate-y-1 shadow-2xl shadow-core flex flex-col justify-between p-4 pt-0 sm:mb-7 mt-5 h-auto bg-gradient-to-tr from-crust from-50% to-blue-dark to-100% rounded-xl border-4 border-mantle"
   role="main"
   on:mouseover={handleMouseOver}
   on:mouseleave={handleMouseLeave}

@@ -149,15 +149,17 @@
   }
 }
 
-window.addEventListener('resize', function() {
-  if (window.innerWidth < 1024) {
-    scrollLeft = 0;
-    targetScroll = 0;
-    if (scrolling) {
-      scrolling = false;
+if (typeof window !== 'undefined') {
+  window.addEventListener('resize', function() {
+    if (window.innerWidth < 1024) {
+      scrollLeft = 0;
+      targetScroll = 0;
+      if (scrolling) {
+        scrolling = false;
+      }
     }
-  }
-});
+  });
+}
 </script>
 
 <!-- ---------------- HEAD -------------------- -->

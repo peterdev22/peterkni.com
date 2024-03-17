@@ -63,7 +63,7 @@ export default {
       animation: {
         zoomFadeIn: 'zoomFadeIn 1s forwards',
         zoomFadeInDelay: 'zoomFadeIn 1s forwards 0.2s',
-        fadeIn: 'fadeIn 1s forwards 1s',
+        fadeIn: 'fadeIn 1s forwards 1s'
       }
     },
   },

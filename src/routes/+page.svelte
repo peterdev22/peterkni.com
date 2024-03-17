@@ -7,46 +7,13 @@
     miscProjects,
   } from '$lib/projectData';
   import Card from './Card.svelte';
-  import { onMount, onDestroy } from 'svelte';
 
-  /* shuffleText of title on page load */
-  const letters = 'abcdefghijklmnopqrstuvwxyz~/';
-  let interval: any;
-  let title: any;
+  // relating to changing view via smooth scroll
+  let targetScroll: number;
+  let scrolling: boolean = false;
+  let selectedView: number = 0;
 
-  let selectedView = 0;
-
-  onMount(() => {
-    let iteration = 0;
-
-    clearInterval(interval);
-
-    interval = setInterval(() => {
-      title.innerText = title.innerText
-        .split('')
-        .map((letter: any, index: number) => {
-          if (index < iteration) {
-            return title.dataset.value[index];
-          }
-
-          return letters[Math.floor(Math.random() * 21)];
-        })
-        .join('');
-
-      if (iteration >= title.dataset.value.length) {
-        clearInterval(interval);
-      }
-
-      iteration += 1 / 2;
-    }, 35);
-  });
-
-  /* scrolling when pressing view buttons */
-  let targetScroll;
-  let scrolling = false;
-
-  function changeSelectedView(view: number) {
-    // calculate target scroll position based on view number
+  function changeSelectedView(view: number): void {
     switch (view) {
       case 0:
         targetScroll = 0; // CAD
@@ -64,60 +31,62 @@
     requestAnimationFrame(smoothScroll);
   }
 
-  function smoothScroll() {
-  if (window.innerWidth <= 1024) {
-    // Disable smooth scroll when window width is small enough
-    scrollLeft = targetScroll;
-    scrolling = false;
-  } else {
-    // Enable smooth scroll when window width is large enough
-    let distance = targetScroll - scrollLeft;
-    let step = distance * 0.1; // adjust this factor to change the speed of the scroll
-
-    // update scroll position
-    scrollLeft += step;
-
-    if (Math.abs(distance) < 0.01) {
+  // smooth scrolling
+  function smoothScroll(): void {
+    if (window.innerWidth <= 1024) {
+      scrollLeft = targetScroll;
       scrolling = false;
     } else {
-      requestAnimationFrame(smoothScroll);
+      let distance: number = targetScroll - scrollLeft;
+      let step: number = distance * 0.1; // change speed of scroll
+
+      scrollLeft += step;
+
+      if (Math.abs(distance) < 0.01) {
+        scrolling = false;
+      } else {
+        requestAnimationFrame(smoothScroll);
+      }
     }
   }
-}
 
-  /* scrolling when dragging the div */
-  let isDown = false;
-  let startX;
-  let scrollLeft = 0;
-  let velocity = 0;
-  let lastX;
-  let minScroll = -1800; // minimum scroll position (negative value since its moving the initial pos to the left)
-  let maxScroll = 0; // maximum scroll position
+  // scrolling sideways variables
+  let isDown: boolean = false;
+  let startX: number;
+  let scrollLeft: number = 0;
+  let velocity: number = 0;
+  let lastX: number;
+  let minScroll: number = -1800; // minimum scroll position
+  let maxScroll: number = 0; // maximum scroll position
 
-  function handleMousedown(event) {
+  // drag scrolling
+  function handleMousedown(event: MouseEvent): void {
     isDown = true;
     startX = event.clientX;
     lastX = startX;
   }
-
-  function handleMouseleave() {
+  function handleMouseleave(): void {
     isDown = false;
   }
-
-  function handleMousemove(event) {
+  function handleMousemove(event: MouseEvent): void {
     if (!isDown) return;
     event.preventDefault();
-    const x = event.clientX;
+    const x: number = event.clientX;
     velocity = x - lastX;
-    let newScrollLeft = scrollLeft + velocity;
+    let newScrollLeft: number = scrollLeft + velocity;
     if (newScrollLeft < minScroll || newScrollLeft > maxScroll) return;
     scrollLeft = newScrollLeft;
     lastX = x;
   }
+  function handleMouseup(): void {
+    isDown = false;
+    requestAnimationFrame(animate);
+  }
 
-  function animate() {
+  // smoother scrolling
+  function animate(): void {
     if (!isDown && Math.abs(velocity) > 0.01) {
-      let newScrollLeft = scrollLeft + velocity;
+      let newScrollLeft: number = scrollLeft + velocity;
       if (newScrollLeft < minScroll || newScrollLeft > maxScroll) return;
       scrollLeft = newScrollLeft;
       velocity *= 0.95; // damping factor
@@ -125,50 +94,47 @@
     }
   }
 
-  function handleMouseup() {
-    isDown = false;
-    requestAnimationFrame(animate);
-  }
+  // scroll sideways with mouse wheel
+  function handleWheel(event: WheelEvent): void {
+    if (window.innerWidth > 1024) {
+      event.preventDefault();
 
-  function handleWheel(event) {
-  if (window.innerWidth > 1024) {
-    // Only prevent default scrolling and implement custom scrolling when window width is large enough
-    event.preventDefault(); // prevent default scrolling
+      let newScrollAmount: number = scrollLeft - event.deltaY * 3;
 
-    let newScrollAmount = scrollLeft - event.deltaY * 3;
+      if (newScrollAmount < minScroll) newScrollAmount = minScroll;
+      if (newScrollAmount > maxScroll) newScrollAmount = maxScroll;
 
-    if (newScrollAmount < minScroll) newScrollAmount = minScroll;
-    if (newScrollAmount > maxScroll) newScrollAmount = maxScroll;
+      targetScroll = newScrollAmount;
 
-    targetScroll = newScrollAmount;
-
-    if (!scrolling) {
-      scrolling = true;
-      requestAnimationFrame(smoothScroll);
-    }
-  }
-}
-
-if (typeof window !== 'undefined') {
-  window.addEventListener('resize', function() {
-    if (window.innerWidth < 1024) {
-      scrollLeft = 0;
-      targetScroll = 0;
-      if (scrolling) {
-        scrolling = false;
+      if (!scrolling) {
+        scrolling = true;
+        requestAnimationFrame(smoothScroll);
       }
     }
-  });
-}
+  }
+
+  // reset scroll pos to default when resizing to smaller window
+  if (typeof window !== 'undefined') {
+    window.addEventListener('resize', function () {
+      if (window.innerWidth < 1024) {
+        scrollLeft = 0;
+        targetScroll = 0;
+        if (scrolling) {
+          scrolling = false;
+        }
+      }
+    });
+  }
 </script>
 
 <!-- ---------------- HEAD -------------------- -->
 <svelte:head>
   <meta
     name="description"
-    content="A portfolio containing all public projects created by Peter."
+    content="A portfolio containing projects created by Peter Knight. Anything I want to put online goes here, 
+    and could be related to anything but is mostly CAD or code."
   />
-  <title>Peter // Home</title>
+  <title>Peter's Projects</title>
 </svelte:head>
 
 <!-- ---------------- BODY -------------------- -->
@@ -180,8 +146,11 @@ if (typeof window !== 'undefined') {
   on:mousemove={handleMousemove}
   on:wheel={handleWheel}
   role="scrollbar"
+  aria-orientation="horizontal"
   aria-controls="scroll-container"
-  aria-valuenow={scrollLeft}
+  aria-valuemin={0}
+  aria-valuemax={1800}
+  aria-valuenow={-scrollLeft}
   tabindex="0"
 >
   <div
@@ -221,7 +190,9 @@ if (typeof window !== 'undefined') {
         TOPIC SELECTED
       </div>
 
-      <div class="lg:flex gap-10 mt-2 mb-14 lg:mb-8 animate-zoomFadeInDelay hidden">
+      <div
+        class="lg:flex gap-10 mt-2 mb-14 lg:mb-8 animate-zoomFadeInDelay hidden"
+      >
         <button
           class="{scrollLeft <= 0 && scrollLeft > -500
             ? 'text-blue'

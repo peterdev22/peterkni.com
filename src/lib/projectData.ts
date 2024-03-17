@@ -24,7 +24,7 @@ export const programmingProjects = [
   },
   {
     id: 2,
-    title: "peterknight.org",
+    title: "peterkni.com",
     description:
       "This website... created using Svelte as a place for all things I do.",
     date: "Feb 2023",
@@ -54,8 +54,8 @@ export const cadProjects = [
     description:
       "A website created to assist the Airohh Drone's product display board.",
     date: "Jul 2023",
-    url: "https://airohh.peterknight.org",
-    domain: "peterknight.org",
+    url: "https://airohh.peterkni.com",
+    domain: "peterkni.com",
     images: [
       {
         source: "Assets/drone.png",
@@ -77,8 +77,8 @@ export const cadProjects = [
     description:
       "Slatedock is an organisation hub that can assist you with tasks at your desk or anywhere else.",
     date: "Jun 2023",
-    url: "https://slatedock.peterknight.org",
-    domain: "peterknight.org",
+    url: "https://slatedock.peterkni.com",
+    domain: "peterkni.com",
     images: [
       {
         source: "Assets/slatedock.jpeg",
@@ -107,8 +107,8 @@ export const miscProjects = [
     description:
       "My first ever website created in html - where it all started.",
     date: "Jun 2022",
-    url: "https://makeawebsite.peterknight.org",
-    domain: "peterknight.org",
+    url: "https://makeawebsite.peterkni.com",
+    domain: "peterkni.com",
     images: [
       {
         source: "Assets/makeawebsite.png",
@@ -130,8 +130,8 @@ export const miscProjects = [
     description:
       "An article about some great tips you should know when doing CAD.",
     date: "Mar 2023",
-    url: "https://cadarticle.peterknight.org",
-    domain: "peterknight.org",
+    url: "https://cadarticle.peterkni.com",
+    domain: "peterkni.com",
     images: [
       {
         source: "Assets/cadarticle.png",

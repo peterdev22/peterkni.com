@@ -7,7 +7,7 @@
     miscProjects,
   } from '$lib/projectData';
   import Card from './Card.svelte';
-  import { onMount } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
 
   /* shuffleText of title on page load */
   const letters = 'abcdefghijklmnopqrstuvwxyz~/';
@@ -124,11 +124,25 @@
     requestAnimationFrame(animate);
   }
 
-  /* prevent default scrolling on trackpads */
   function handleWheel(event) {
     event.preventDefault(); // prevent default scrolling
+
+    let newScrollAmount = scrollLeft - event.deltaY * 3;
+
+    if (newScrollAmount < minScroll) newScrollAmount = minScroll;
+    if (newScrollAmount > maxScroll) newScrollAmount = maxScroll;
+
+    targetScroll = newScrollAmount;
+
+    if (!scrolling) {
+      scrolling = true;
+      requestAnimationFrame(smoothScroll);
+    }
   }
+
 </script>
+
+
 
 <!-- ---------------- HEAD -------------------- -->
 <svelte:head>
@@ -152,6 +166,8 @@
   aria-valuenow={scrollLeft}
   tabindex="0"
 >
+<div class="absolute top-0 right-0 w-56 h-full bg-gradient-to-l from-[#12111B] to-transparent z-10"></div>
+
   <div class="flex flex-col sm:flex-row">
     <div class="basis-1/12 md:basis-2/12 lg:basis-3/12 xl:basis-2/12" />
     <div class="mx-7 basis-10/12 md:basis-8/12 lg:basis-6/12 xl:basis-8/12">
@@ -185,7 +201,7 @@
         TOPIC SELECTED
       </div>
 
-      <div class="flex gap-10 mt-2 mb-8 animate-zoomFadeInDelay">
+      <div class="flex gap-10 mt-2 mb-14 lg:mb-8 animate-zoomFadeInDelay">
         <button
           class="{scrollLeft <= 0 && scrollLeft > -500
             ? 'text-blue'
@@ -245,7 +261,7 @@
         style="transform: translateX({scrollLeft}px); transition: transform 0.1s;"
       >
         {#if selectedView == 0}
-          <div class="rotate-90 origin-top">
+          <div class="lg:rotate-90 origin-top">
             <h3
               class="font-body text-surface-0 text-3xl font-bold absolute translate-x-5 -translate-y-12"
             >
@@ -260,7 +276,7 @@
         {/if}
 
         {#if selectedView == 0}
-          <div class="rotate-90 origin-top">
+          <div class="lg:rotate-90 origin-top">
             <h3
               class="font-body text-surface-0 text-3xl font-bold absolute translate-x-5 -translate-y-12"
             >
@@ -288,7 +304,7 @@
     {/if} -->
 
         {#if selectedView == 0}
-          <div class="rotate-90 origin-top">
+          <div class="lg:rotate-90 origin-top">
             <h3
               class="font-body text-surface-0 text-3xl font-bold absolute translate-x-5 -translate-y-12"
             >

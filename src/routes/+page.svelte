@@ -207,7 +207,7 @@
             : 'text-overlay-1'} font-body font-bold text-xl hover:text-text transition-all duration-300 ease-in-out"
           on:click={() => changeSelectedView(0)}
         >
-          CAD & Rendering
+          CAD
         </button>
         <button
           class="{scrollLeft < -500 && scrollLeft > -1200
@@ -294,14 +294,14 @@
         {/if}
 
         {#if selectedView == 0}
-          <div class="rotate-90 origin-top">
+          <div class="lg:rotate-90 origin-top mt-20 lg:mt-0">
             <h3
               class="font-jetbrains text-surface-0 text-3xl font-bold absolute translate-x-5 -translate-y-12"
             >
               ROBOTICS
             </h3>
           </div>
-          <div class="flex gap-10">
+          <div class="lg:flex gap-10">
             {#each roboticsProjects as project, i (project.id)}
               <Card {...project} />
             {/each}

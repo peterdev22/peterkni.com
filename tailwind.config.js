@@ -38,7 +38,7 @@ export default {
     fontFamily: {
       'body': ['DM Sans', 'Courier', 'mono'],
       'title': ['Aleo', 'Courier', 'mono'],
-      'jetbrains': ['JetBrains Mono', 'Courier', 'mono']
+      'jetbrains': ['JetBrainsMono', 'Courier', 'mono']
     },
     extend: {
       keyframes: {

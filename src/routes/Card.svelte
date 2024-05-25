@@ -78,7 +78,7 @@
   on:focus={handleMouseOver}
   on:blur={handleMouseLeave}
 >
-  <div>
+  <div class="mt-10 md:mt-3 lg:my-0 h-60">
     {#each images as image, i (id)}
       <img
         class="rounded-xl max-h-60"
@@ -89,7 +89,7 @@
     {/each}
   </div>
   <div>
-    <p class="font-title text-xl text-subtext-1 font-semibold mb-3 sm:mb-1">
+    <p class="font-title sm:text-xl text-2xl text-subtext-1 font-semibold mb-3">
       {title}
       <!-- <span
         class="text-[0.65rem] font-bold font-jetbrains bg-peach text-crust px-1 py-[0.05rem] border-2 border-peach-dark rounded-[5px] align-middle"
@@ -97,7 +97,7 @@
       > -->
     </p>
     <p
-      class="hidden sm:block text-base font-body leading-5 text-overlay-0 mb-3"
+      class="block font-body text-lg sm:text-md leading-5 text-overlay-0 mb-3"
     >
       {description}
     </p>
@@ -107,7 +107,7 @@
     <a
       href={url}
       class="
-      transition-all font-jetbrains text-overlay-1 text-sm tracking-tighter border-2 px-2 py-1 rounded-lg border-mantle hover:text-mauve font-bold hover:border-core"
+      transition-all font-jetbrains text-overlay-1  text-lg sm:text-sm tracking-tighter border-2 px-2 py-1 rounded-lg border-mantle hover:text-mauve font-bold hover:border-core"
     >
       Visit <span>{domain} </span><span class="tracking-normal">-></span>
     </a>

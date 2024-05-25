@@ -159,18 +159,27 @@
   <div
     class="absolute top-0 right-0 w-56 h-full bg-gradient-to-l from-[#12111B] to-transparent z-10 invisible lg:visible"
   ></div>
+  <div
+    class="absolute w-full h-full -z-10 bg-bottom bg-grid bg-cover hidden lg:block"
+  ></div>
 
   <div class="flex flex-col sm:flex-row">
     <div class="basis-1/12 md:basis-2/12 lg:basis-3/12 xl:basis-2/12" />
     <div class="mx-7 basis-10/12 md:basis-8/12 lg:basis-6/12 xl:basis-8/12">
       <div class="animate-zoomFadeIn">
-        <h1 class="text-subtext-1 font-title text-3xl font-bold my-4 sm:mt-40">
+        <img
+          src="Assets/logo_noblur.png"
+          alt="Fancy text reading, 'Peter Knight'"
+          class="w-[16rem] sm:mt-32 mt-10 mb-1"
+        />
+        <!-- <img src="Assets/logo.svg" alt="Fancy text reading, 'Peter Knight'" class="w-[30rem] mt-10 -mx-20 -mb-20 pl-10 md:pl-0 pb-10 md:pb-0"> -->
+        <!-- <h1 class="text-subtext-1 font-title text-3xl font-bold my-4 sm:mt-40">
           Peter's Projects
-        </h1>
+        </h1> --> 
         <div class="flex">
           <a
             href="https://github.com/peterdev22"
-            class=" text-overlay-1 font-body text-lg font-semibold duration-500 ease-in-out transition-all flex hover:text-mauve hover:ml-1.5"
+            class=" text-overlay-1 font-body text-lg font-semibold z-10 duration-500 ease-in-out transition-all flex hover:text-mauve hover:ml-1.5"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -193,9 +202,9 @@
       </div>
 
       <div
-        class="text-overlay-0 font-body font-bold text-md animate-zoomFadeInDelay mt-12 hidden lg:block"
+        class="text-overlay-0 font-body font-bold italic text-md animate-zoomFadeInDelay mt-12 hidden lg:block"
       >
-        View Topic
+        Jump to
       </div>
 
       <div
@@ -266,7 +275,10 @@
         {#if selectedView == 0}
           <div class="lg:rotate-90 origin-top mt-20 lg:mt-0">
             <h3
-              class="font-jetbrains text-surface-0 text-3xl font-bold absolute translate-x-5 -translate-y-12"
+              class="font-jetbrains transition-all duration-500 text-3xl font-bold absolute translate-x-5 -translate-y-12 {scrollLeft <
+                0 && scrollLeft > -500
+                ? 'text-blue'
+                : 'text-surface-0'}"
             >
               CAD
             </h3>
@@ -281,7 +293,10 @@
         {#if selectedView == 0}
           <div class="lg:rotate-90 origin-top mt-20 lg:mt-0">
             <h3
-              class="font-jetbrains text-surface-0 text-3xl font-bold absolute translate-x-5 -translate-y-12"
+              class="font-jetbrains transition-all duration-500 text-3xl font-bold absolute translate-x-5 -translate-y-12 {scrollLeft <
+                -500 && scrollLeft > -1200
+                ? 'text-maroon'
+                : 'text-surface-0'}"
             >
               PROGRAMMING
             </h3>
@@ -296,7 +311,10 @@
         {#if selectedView == 0}
           <div class="lg:rotate-90 origin-top mt-20 lg:mt-0">
             <h3
-              class="font-jetbrains text-surface-0 text-3xl font-bold absolute translate-x-5 -translate-y-12"
+              class="font-jetbrains transition-all duration-500 text-3xl font-bold absolute translate-x-5 -translate-y-12 {scrollLeft <
+                -1200 && scrollLeft > -1800
+                ? 'text-peach'
+                : 'text-surface-0'}"
             >
               ROBOTICS
             </h3>
@@ -311,7 +329,10 @@
         {#if selectedView == 0}
           <div class="lg:rotate-90 origin-top mt-20 lg:mt-0">
             <h3
-              class="font-jetbrains text-surface-0 text-3xl font-bold absolute translate-x-5 -translate-y-12"
+              class="font-jetbrains transition-all duration-500 text-3xl font-bold absolute translate-x-5 -translate-y-12 {scrollLeft <
+                -1800 && scrollLeft > -3000
+                ? 'text-green'
+                : 'text-surface-0'}"
             >
               MISC
             </h3>

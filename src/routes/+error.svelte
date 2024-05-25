@@ -44,7 +44,7 @@
 
   <div class="basis-6/12 mx-7 xl:basis-4/12">
     <h1
-      class="text-maroon text-5xl font-body font-bold mt-10 md:mt-60"
+      class="text-maroon text-5xl font-jetbrains font-bold mt-10 md:mt-60"
       data-value="{$page.status} error"
       bind:this={title}
     >
@@ -58,14 +58,14 @@
     <div class="py-2">
       <a
         href="/"
-        class="transition-all duration-500 ease-in-out text-overlay-1 font-body text-lg font-medium animate-zoomFadeIn hover:text-mauve hover:ml-1.5"
+        class="transition-all duration-500 ease-in-out text-overlay-1 font-body text-lg font-semibold animate-zoomFadeIn hover:text-mauve hover:ml-1.5"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="2rem"
           height="2rem"
           viewBox="0 0 16 16"
-          class="inline-block align-text-bottom translate-y-1"
+          class="inline-block align-text-bottom translate-y-1 mr-1.5"
           ><path
             fill="currentColor"
             fill-rule="evenodd"

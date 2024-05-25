@@ -36,8 +36,9 @@ export default {
       'crust': '#11111b',
     },
     fontFamily: {
-      'body': ['JetBrainsMono', 'Courier', 'mono'],
-      'major': ['Arial', 'Courier', 'mono']
+      'body': ['DM Sans', 'Courier', 'mono'],
+      'title': ['Aleo', 'Courier', 'mono'],
+      'jetbrains': ['JetBrains Mono', 'Courier', 'mono']
     },
     extend: {
       keyframes: {

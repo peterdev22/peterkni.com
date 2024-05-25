@@ -6,7 +6,7 @@ export const programmingProjects = [
       "A backup of my (most important) configuration files just in case my computer dies. Uses the catppuccin theme.",
     date: "Jun 2023",
     url: "https://github.com/peterdev22/dotfiles",
-    domain: "github.com",
+    domain: "GitHub Repo",
     images: [
       {
         source: "Assets/dotfiles.png",
@@ -29,7 +29,7 @@ export const programmingProjects = [
       "This website... created using Svelte as a place for all things I do.",
     date: "Feb 2023",
     url: "https://github.com/peterdev22/peterknight.org",
-    domain: "github.com",
+    domain: "GitHub Repo",
     images: [
       {
         source: "Assets/favicon.png",
@@ -55,7 +55,7 @@ export const cadProjects = [
       "A website created to assist the Airohh Drone's product display board.",
     date: "Jul 2023",
     url: "https://airohh.peterkni.com",
-    domain: "peterkni.com",
+    domain: "CAD/Drawing Files",
     images: [
       {
         source: "Assets/drone.png",
@@ -78,7 +78,7 @@ export const cadProjects = [
       "Slatedock is an organisation hub that can assist you with tasks at your desk or anywhere else.",
     date: "Jun 2023",
     url: "https://slatedock.peterkni.com",
-    domain: "peterkni.com",
+    domain: "Product Page",
     images: [
       {
         source: "Assets/slatedock.jpeg",
@@ -97,7 +97,29 @@ export const cadProjects = [
 ];
 
 export const roboticsProjects = [
-
+  {
+    id: 1,
+    title: "75477M Robotics",
+    description:
+      "Our team's robot code for the VRC Over Under 2023-2024 competition.",
+    date: "Dec 2023",
+    url: "https://github.com/peterdev22/vrc-over-under",
+    domain: "GitHub Repo",
+    images: [
+      {
+        source: "Assets/robot.JPG",
+        alt: "A black painted aluminium robot with a front bumper made from polycarbonate with a 'Frij' sticker.",
+        initialX: 0,
+        initialY: -1,
+        initialRotation: 2,
+        initialScale: 1,
+        finalX: 0,
+        finalY: -2,
+        finalRotation: 1,
+        finalScale: 1
+      }
+    ]
+  }
 ];
 
 export const miscProjects = [
@@ -108,7 +130,7 @@ export const miscProjects = [
       "My first ever website created in html - where it all started.",
     date: "Jun 2022",
     url: "https://makeawebsite.peterkni.com",
-    domain: "peterkni.com",
+    domain: "Tutorial",
     images: [
       {
         source: "Assets/makeawebsite.png",
@@ -131,7 +153,7 @@ export const miscProjects = [
       "An article about some great tips you should know when doing CAD.",
     date: "Mar 2023",
     url: "https://cadarticle.peterkni.com",
-    domain: "peterkni.com",
+    domain: "Article",
     images: [
       {
         source: "Assets/cadarticle.png",

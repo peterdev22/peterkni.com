@@ -1,5 +1,6 @@
 <!-- ---------------- SCRIPT -------------------- -->
 <script lang="ts">
+  import { onMount } from 'svelte';
   import {
     programmingProjects,
     cadProjects,
@@ -7,6 +8,47 @@
     miscProjects,
   } from '$lib/projectData';
   import Card from './Card.svelte';
+
+  let responsiveTopMargin = 'sm:mt-32';
+
+  onMount(() => {
+    function handleKeydown(event: KeyboardEvent): void {
+      let scrollAmount = 100; // arrow key scroll speed
+      if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+        event.preventDefault(); // prevent default scrolling via arrow keys
+      }
+      // accessibility scrolling
+      if (event.key === 'ArrowLeft') {
+        scrollLeft += scrollAmount;
+        if (scrollLeft > maxScroll) scrollLeft = maxScroll;
+      } else if (event.key === 'ArrowRight') {
+        scrollLeft -= scrollAmount;
+        if (scrollLeft < minScroll) scrollLeft = minScroll;
+      }
+    }
+
+    function handleResize(): void {
+      if (window.innerWidth > 1024) {
+        window.scrollTo(0, 0); // resets scroll on window resize to desktop mode
+      }
+    }
+
+    function checkViewportHeight() {
+      responsiveTopMargin = window.innerHeight < 940 ? 'sm:mt-10' : 'sm:mt-32';
+    }
+
+    checkViewportHeight();
+    window.addEventListener('resize', checkViewportHeight);
+
+    window.addEventListener('keydown', handleKeydown);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeydown);
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', checkViewportHeight);
+    };
+  });
 
   // relating to changing view via smooth scroll
   let targetScroll: number;
@@ -45,7 +87,7 @@
 
       scrollLeft += step;
 
-      if (Math.abs(distance) < 0.01) {
+      if (Math.abs(distance) < 0.1) {
         scrolling = false;
       } else {
         requestAnimationFrame(smoothScroll);
@@ -88,7 +130,7 @@
 
   // smoother scrolling
   function animate(): void {
-    if (!isDown && Math.abs(velocity) > 0.01) {
+    if (!isDown && Math.abs(velocity) > 0.1) {
       let newScrollLeft: number = scrollLeft + velocity;
       if (newScrollLeft < minScroll || newScrollLeft > maxScroll) return;
       scrollLeft = newScrollLeft;
@@ -170,16 +212,16 @@
         <img
           src="Assets/logo_noblur.png"
           alt="Fancy text reading, 'Peter Knight'"
-          class="w-[16rem] sm:mt-32 mt-10 mb-1"
+          class="w-[16rem] {responsiveTopMargin} mt-10 mb-1"
         />
         <!-- <img src="Assets/logo.svg" alt="Fancy text reading, 'Peter Knight'" class="w-[30rem] mt-10 -mx-20 -mb-20 pl-10 md:pl-0 pb-10 md:pb-0"> -->
         <!-- <h1 class="text-subtext-1 font-title text-3xl font-bold my-4 sm:mt-40">
           Peter's Projects
-        </h1> --> 
+        </h1> -->
         <div class="flex">
           <a
             href="https://github.com/peterdev22"
-            class=" text-overlay-1 font-body  text-lg font-semibold z-10 duration-500 ease-in-out transition-all flex hover:text-mauve hover:ml-1.5"
+            class=" text-overlay-1 font-body text-lg font-semibold z-10 duration-500 ease-in-out transition-all flex hover:text-mauve hover:ml-1.5"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

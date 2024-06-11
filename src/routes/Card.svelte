@@ -1,7 +1,6 @@
 <script lang="ts">
   import { tweened } from 'svelte/motion';
   import { cubicOut } from 'svelte/easing';
-  import { cadProjects } from '$lib/projectData';
 
   export let id: number;
   export let title: string;
@@ -89,7 +88,7 @@
     {/each}
   </div>
   <div>
-    <p class="font-title sm:text-xl text-2xl text-subtext-1 font-semibold mb-3">
+    <p class="font-title sm:text-xl mt-6 lg:mt-0 text-2xl text-subtext-1 font-semibold mb-3">
       {title}
       <!-- <span
         class="text-[0.65rem] font-bold font-jetbrains bg-peach text-crust px-1 py-[0.05rem] border-2 border-peach-dark rounded-[5px] align-middle"

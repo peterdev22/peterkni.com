@@ -1,9 +1,9 @@
 export const programmingProjects = [
   {
     id: 1,
-    title: "My Dotfiles",
+    title: "My Dotfiles (2023)",
     description:
-      "A backup of my (most important) configuration files just in case my computer dies. Uses the catppuccin theme.",
+      "A backup of my (most important) configuration files just in case my computer dies.",
     date: "Jun 2023",
     url: "https://github.com/peterdev22/dotfiles",
     domain: "GitHub Repo",
@@ -24,7 +24,7 @@ export const programmingProjects = [
   },
   {
     id: 2,
-    title: "peterkni.com",
+    title: "peterkni.com (2024)",
     description:
       "This website... created using Svelte as a place for all things I do.",
     date: "Feb 2023",
@@ -50,7 +50,30 @@ export const programmingProjects = [
 export const cadProjects = [
   {
     id: 1,
-    title: "Airohh",
+    title: "Toothbrush (2024)",
+    description:
+      "Improving my motion/joint skills in Fusion and rendering skills in Blender.",
+    date: "Mar 2024",
+    url: "/videos/skilltask1",
+    domain: "Evaluation Videos",
+    images: [
+      {
+        source: "Assets/toothbrush.jpg",
+        alt: "3D rendering of a drone that has detachable propellers via magnets.",
+        initialX: 0,
+        initialY: 0,
+        initialRotation: -1,
+        initialScale: 1,
+        finalX: 0,
+        finalY: -1,
+        finalRotation: -3,
+        finalScale: 1
+      }
+    ]
+  },
+  {
+    id: 2,
+    title: "Airohh (2023)",
     description:
       "A website created to assist the Airohh Drone's product display board.",
     date: "Jul 2023",
@@ -65,15 +88,15 @@ export const cadProjects = [
         initialRotation: 3,
         initialScale: 1,
         finalX: 0,
-        finalY: 0,
+        finalY: -1,
         finalRotation: 5,
         finalScale: 1
       }
     ]
   },
   {
-    id: 2,
-    title: "Slatedock",
+    id: 3,
+    title: "Slatedock (2023)",
     description:
       "Slatedock is an organisation hub that can assist you with tasks at your desk or anywhere else.",
     date: "Jun 2023",
@@ -99,7 +122,7 @@ export const cadProjects = [
 export const roboticsProjects = [
   {
     id: 1,
-    title: "75477M Robotics",
+    title: "75477M Robotics (2023)",
     description:
       "Our team's robot code for the VRC Over Under 2023-2024 competition.",
     date: "Dec 2023",
@@ -125,7 +148,7 @@ export const roboticsProjects = [
 export const miscProjects = [
   {
     id: 1,
-    title: "Website Creation Tutorial",
+    title: "Website Creation Tutorial (2021)",
     description:
       "My first ever website created in html - where it all started.",
     date: "Jun 2022",
@@ -148,7 +171,7 @@ export const miscProjects = [
   },
   {
     id: 2,
-    title: "CAD Article",
+    title: "CAD Article (2023)",
     description:
       "An article about some great tips you should know when doing CAD.",
     date: "Mar 2023",

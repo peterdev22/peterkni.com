@@ -59,12 +59,51 @@ export default {
           '100%': {
             opacity: '1'
           }
-        }
+        },
+        elastic: {
+          '0%': {
+            transform: 'translateY(-50%) scale(0.5)',
+            opacity: '0',
+          },
+          '40%': {
+            opacity: '1',
+          },
+          '60%': {
+            transform: 'translateY(5%)',
+            opacity: '1',
+          },
+          '100%': {
+            transform: 'translateY(0%)',
+            opacity: '1',
+          },
+        },
+        slide: {
+          '0%': {
+            transform: 'translateX(-2%) scale(1)',
+            opacity: '0',
+          },
+          '100%': {
+            transform: 'translateX(0%) scale(1)',
+            opacity: '1',
+          },
+        },
       },
       animation: {
         zoomFadeIn: 'zoomFadeIn 1s forwards',
         zoomFadeInDelay: 'zoomFadeIn 1s forwards 0.2s',
-        fadeIn: 'fadeIn 1s forwards 1s'
+        fadeIn: 'fadeIn 1s forwards 1s',
+        elastic00: 'elastic 1s forwards 0.4s',
+        elastic02: 'elastic 1s forwards 0.6s',
+        elastic04: 'elastic 1s forwards 0.8s',
+        elastic06: 'elastic 1s forwards 1.0s',
+        elastic08: 'elastic 1s forwards 1.2s',
+        slide00: 'slide 1s forwards',
+        card1: 'slide 1s forwards 0.2s',
+        card2: 'slide 1s forwards 0.2s',
+        card3: 'slide 1s forwards 0.2s',
+        card4: 'slide 1s forwards 0.2s',
+        card5: 'slide 1s forwards 0.2s',
+        card6: 'slide 1s forwards 0.2s',
       },
       backgroundImage: {
         'grid': "url('/Assets/bg.svg')"

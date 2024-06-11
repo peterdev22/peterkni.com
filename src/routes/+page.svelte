@@ -19,13 +19,13 @@
         targetScroll = 0; // CAD
         break;
       case 1:
-        targetScroll = -800; // Programming
+        targetScroll = -1000; // Programming
         break;
       case 2:
-        targetScroll = -1500; // Robotics.
+        targetScroll = -1700; // Robotics.
         break;
       case 3:
-        targetScroll = -2200; // Misc.
+        targetScroll = -2400; // Misc.
         break;
       default:
         targetScroll = 0;
@@ -59,7 +59,7 @@
   let scrollLeft: number = 0;
   let velocity: number = 0;
   let lastX: number;
-  let minScroll: number = -2200; // minimum scroll position
+  let minScroll: number = -2400; // minimum scroll position
   let maxScroll: number = 0; // maximum scroll position
 
   // drag scrolling
@@ -166,7 +166,7 @@
   <div class="flex flex-col sm:flex-row">
     <div class="basis-1/12 md:basis-2/12 lg:basis-3/12 xl:basis-2/12" />
     <div class="mx-7 basis-10/12 md:basis-8/12 lg:basis-6/12 xl:basis-8/12">
-      <div class="animate-zoomFadeIn">
+      <div class="animate-zoomFadeIn opacity-0">
         <img
           src="Assets/logo_noblur.png"
           alt="Fancy text reading, 'Peter Knight'"
@@ -179,7 +179,7 @@
         <div class="flex">
           <a
             href="https://github.com/peterdev22"
-            class=" text-overlay-1 font-body text-lg font-semibold z-10 duration-500 ease-in-out transition-all flex hover:text-mauve hover:ml-1.5"
+            class=" text-overlay-1 font-body  text-lg font-semibold z-10 duration-500 ease-in-out transition-all flex hover:text-mauve hover:ml-1.5"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -202,16 +202,16 @@
       </div>
 
       <div
-        class="text-overlay-0 font-body font-bold italic text-md animate-zoomFadeInDelay mt-12 hidden lg:block"
+        class="text-overlay-0 font-body font-bold italic text-md animate-zoomFadeInDelay mt-12 hidden lg:block opacity-0"
       >
         Jump to
       </div>
 
       <div
-        class="lg:flex gap-10 mt-2 mb-14 lg:mb-8 animate-zoomFadeInDelay hidden"
+        class="lg:flex gap-10 mt-2 mb-14 lg:mb-8 animate-zoomFadeInDelay hidden opacity-0"
       >
         <button
-          class="{scrollLeft <= 0 && scrollLeft > -500
+          class="{scrollLeft <= 0 && scrollLeft > -700
             ? 'text-blue'
             : 'text-overlay-1'} font-body font-bold text-xl hover:text-text transition-all duration-300 ease-in-out"
           on:click={() => changeSelectedView(0)}
@@ -219,7 +219,7 @@
           CAD
         </button>
         <button
-          class="{scrollLeft < -500 && scrollLeft > -1200
+          class="{scrollLeft < -700 && scrollLeft > -1400
             ? 'text-red'
             : 'text-overlay-1'} font-body font-bold text-xl hover:text-text transition-all duration-300 ease-in-out"
           on:click={() => changeSelectedView(1)}
@@ -227,7 +227,7 @@
           Programming
         </button>
         <button
-          class="{scrollLeft < -1200 && scrollLeft > -1800
+          class="{scrollLeft < -1400 && scrollLeft > -2000
             ? 'text-peach'
             : 'text-overlay-1'} font-body font-bold text-xl hover:text-text transition-all duration-300 ease-in-out"
           on:click={() => changeSelectedView(2)}
@@ -235,7 +235,7 @@
           Robotics
         </button>
         <button
-          class="{scrollLeft < -1800 && scrollLeft > -3000
+          class="{scrollLeft < -2000 && scrollLeft > -3200
             ? 'text-green'
             : 'text-overlay-1'} font-body font-bold text-xl hover:text-text transition-all duration-300 ease-in-out"
           on:click={() => changeSelectedView(3)}
@@ -266,7 +266,7 @@
   <div class="flex flex-col sm:flex-row">
     <div class="basis-1/12 md:basis-2/12 lg:basis-3/12 xl:basis-2/12" />
     <div
-      class="mx-7 basis-10/12 md:basis-8/12 lg:basis-9/12 xl:basis-10/12 animate-zoomFadeInDelay"
+      class="mx-7 basis-10/12 md:basis-8/12 lg:basis-9/12 xl:basis-10/12 animate-zoomFadeInDelay opacity-0"
     >
       <div
         class="lg:flex gap-16"

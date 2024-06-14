@@ -18,7 +18,7 @@
   <div class="basis-1/12 md:basis-2/12 lg:basis-3/12 xl:basis-2/12" />
   <div class="mx-7 basis-10/12 md:basis-8/12 lg:basis-6/12 xl:basis-8/12">
     <div class="animate-zoomFadeIn opacity-0">
-      <div class="text-overlay-0 font-body font-bold italic text-lg mt-32">
+      <div class="text-overlay-0 font-body font-bold italic text-lg mt-24">
         CAD 2024
       </div>
       <div class="text-subtext-1 font-title font-bold text-2xl">
@@ -53,23 +53,20 @@
           </div>
         </div>
         <div>
+          <br>
           <div class="text-overlay-0 font-bold font-body text-md text-right">
             By Peter
           </div>
-          <a
-            class="text-overlay-0 font-bold font-body text-md text-right hover:text-mauve transition-all underline"
-            href="/videos/skilltask1">&lt; Back to Skill Task 1</a
-          >
         </div>
       </div>
     </div>
 
-    <div class="p-4">
+    <div class="p-4 flex justify-between">
       <a
-        href="/"
-        class="transition-all duration-500 opacity-0 ease-in-out text-overlay-1 font-body text-lg font-semibold animate-zoomFadeIn hover:text-mauve hover:ml-1.5"
+        href="/videos/skilltask1"
+        class="transition-all duration-500 opacity-0 ease-in-out text-overlay-1 font-body text-lg font-semibold animate-zoomFadeIn hover:text-mauve hover:font-bold"
       >
-        <svg
+      <svg
           xmlns="http://www.w3.org/2000/svg"
           width="2rem"
           height="2rem"
@@ -82,7 +79,7 @@
             clip-rule="evenodd"
           /></svg
         >
-        Go Home
+        Skills Task 1
       </a>
     </div>
 

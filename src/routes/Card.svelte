@@ -2,6 +2,7 @@
   import { tweened } from 'svelte/motion';
   import { cubicOut } from 'svelte/easing';
 
+  // data used from projectData.ts
   export let id: number;
   export let title: string;
   export let description: string;
@@ -88,16 +89,16 @@
     {/each}
   </div>
   <div>
-    <p class="font-title sm:text-xl mt-6 lg:mt-0 text-2xl text-subtext-1 font-semibold mb-3">
+    <p
+      class="font-title sm:text-xl mt-6 lg:mt-0 text-2xl text-subtext-1 font-semibold mb-3"
+    >
       {title}
       <!-- <span
         class="text-[0.65rem] font-bold font-jetbrains bg-peach text-crust px-1 py-[0.05rem] border-2 border-peach-dark rounded-[5px] align-middle"
         >{date}</span
       > -->
     </p>
-    <p
-      class="block font-body text-lg sm:text-md leading-5 text-overlay-0 mb-3"
-    >
+    <p class="block font-body text-lg sm:text-md leading-5 text-overlay-0 mb-3">
       {description}
     </p>
     <br />
@@ -106,7 +107,7 @@
     <a
       href={url}
       class="
-      transition-all font-jetbrains text-overlay-1  text-lg sm:text-sm tracking-tighter border-2 px-2 py-1 rounded-lg border-mantle hover:text-mauve font-bold hover:border-core"
+      transition-all font-jetbrains text-overlay-1 text-lg sm:text-sm tracking-tighter border-2 px-2 py-1 rounded-lg border-mantle hover:text-mauve font-bold hover:border-core"
     >
       Visit <span>{domain} </span><span class="tracking-normal">-></span>
     </a>

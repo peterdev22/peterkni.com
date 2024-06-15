@@ -1,9 +1,8 @@
 <script lang="ts">
-  /* modules & data */
   import { page } from '$app/stores';
   import { onMount } from 'svelte';
 
-  /* shuffleText of title on page load */
+  // shuffle text animation
   const letters = 'abcdefghijklmnopqrstuvwxyz~/1234567890';
   let interval: any;
   let title: any;

@@ -59,7 +59,7 @@ export const cadProjects = [
     images: [
       {
         source: "Assets/toothbrush.jpg",
-        alt: "3D rendering of a drone that has detachable propellers via magnets.",
+        alt: "3D rendering of an electric toothbrush lying on it's side with the head detached.",
         initialX: 0,
         initialY: 0,
         initialRotation: -1,

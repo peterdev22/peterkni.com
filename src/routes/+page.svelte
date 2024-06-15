@@ -12,12 +12,12 @@
   let responsiveTopMargin = 'sm:mt-32';
 
   onMount(() => {
+    // accessibility scrolling
     function handleKeydown(event: KeyboardEvent): void {
       let scrollAmount = 100; // arrow key scroll speed
       if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
         event.preventDefault(); // prevent default scrolling via arrow keys
       }
-      // accessibility scrolling
       if (event.key === 'ArrowLeft') {
         scrollLeft += scrollAmount;
         if (scrollLeft > maxScroll) scrollLeft = maxScroll;
@@ -27,22 +27,25 @@
       }
     }
 
+    // resets scroll on window resize to desktop mode
     function handleResize(): void {
       if (window.innerWidth > 1024) {
-        window.scrollTo(0, 0); // resets scroll on window resize to desktop mode
+        window.scrollTo(0, 0);
       }
     }
 
+    // check viewport height for responsive top margin
     function checkViewportHeight() {
       responsiveTopMargin = window.innerHeight < 940 ? 'sm:mt-10' : 'sm:mt-32';
     }
-
     checkViewportHeight();
-    window.addEventListener('resize', checkViewportHeight);
 
+    // add event listeners
     window.addEventListener('keydown', handleKeydown);
     window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', checkViewportHeight);
 
+    // remove event listeners
     return () => {
       window.removeEventListener('keydown', handleKeydown);
       window.removeEventListener('resize', handleResize);
@@ -193,9 +196,13 @@
   role="scrollbar"
   aria-orientation="horizontal"
   aria-controls="scroll-container"
-  aria-valuemin={0}
-  aria-valuemax={1800}
-  aria-valuenow={-scrollLeft}
+  aria-valuemin={Math.abs(maxScroll)}
+  aria-valuemax={Math.abs(minScroll)}
+  aria-valuenow={Math.abs(scrollLeft) >= Math.abs(minScroll) - 1
+    ? Math.abs(minScroll)
+    : Math.abs(scrollLeft) <= Math.abs(maxScroll) + 1
+      ? Math.abs(maxScroll)
+      : Math.abs(scrollLeft)}
   tabindex="0"
 >
   <div

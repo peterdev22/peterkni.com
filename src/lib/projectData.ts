@@ -32,7 +32,7 @@ export const programmingProjects = [
     domain: "GitHub Repo",
     images: [
       {
-        source: "Assets/favicon.png",
+        source: "favicon.png",
         alt: "Code from this website's source displayed in a code editor.",
         initialX: 3,
         initialY: -1,
@@ -50,6 +50,29 @@ export const programmingProjects = [
 export const cadProjects = [
   {
     id: 1,
+    title: "3D Printer (2024)",
+    description:
+      "Creating a new 3D printer design in CAD designed for home users.",
+    date: "Nov 2024",
+    url: "https://collaborate.shapr3d.com/v/lo4VRJcwMHnFwjyv5TsYy",
+    domain: "3D Model Web Viewer",
+    images: [
+      {
+        source: "Assets/3dprinter.png",
+        alt: "3D rendering of an cylindrical 3D printer on a wooden floor with a dark metallic background.",
+        initialX: 0,
+        initialY: 0,
+        initialRotation: 1,
+        initialScale: 1,
+        finalX: 0,
+        finalY: -1,
+        finalRotation: -2,
+        finalScale: 1
+      }
+    ]
+  },
+  {
+    id: 2,
     title: "Toothbrush (2024)",
     description:
       "Improving my motion/joint skills in Fusion and rendering skills in Blender.",
@@ -72,7 +95,7 @@ export const cadProjects = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     title: "Airohh (2023)",
     description:
       "A website created to assist the Airohh Drone's product display board.",
@@ -95,7 +118,7 @@ export const cadProjects = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     title: "Slatedock (2023)",
     description:
       "Slatedock is an organisation hub that can assist you with tasks at your desk or anywhere else.",
@@ -122,7 +145,30 @@ export const cadProjects = [
 export const roboticsProjects = [
   {
     id: 1,
-    title: "75477M Robotics (2023)",
+    title: "75477M 'Frij' Robotics (2024)",
+    description:
+      "Our team's robot code for the V5RC High Stakes 2024-2025 competition.",
+    date: "Nov 2024",
+    url: "https://github.com/moooeg/vrc-High-Stakes",
+    domain: "GitHub Repo",
+    images: [
+      {
+        source: "Assets/robot2.jpeg",
+        alt: "A black painted aluminium robot with a front bumper made from polycarbonate with a 'Frij' sticker.",
+        initialX: 0,
+        initialY: -1,
+        initialRotation: -1,
+        initialScale: 1,
+        finalX: 0,
+        finalY: -2,
+        finalRotation: 1,
+        finalScale: 1
+      }
+    ]
+  },
+  {
+    id: 2,
+    title: "75477M 'Frij' Robotics (2023)",
     description:
       "Our team's robot code for the VRC Over Under 2023-2024 competition.",
     date: "Dec 2023",

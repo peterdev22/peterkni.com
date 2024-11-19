@@ -35,7 +35,7 @@
 
 <svelte:head>
   <meta name="description" content={$page.error?.message} />
-  <title>Peter's Projects // {$page.status}</title>
+  <title>Peter Knight - {$page.status}</title>
 </svelte:head>
 
 <div class="flex flex-col md:flex-row animate-zoomFadeIn">

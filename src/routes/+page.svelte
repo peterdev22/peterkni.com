@@ -64,13 +64,13 @@
         targetScroll = 0; // CAD
         break;
       case 1:
-        targetScroll = -1000; // Programming
+        targetScroll = -1400; // Programming
         break;
       case 2:
-        targetScroll = -1700; // Robotics.
+        targetScroll = -2100; // Robotics.
         break;
       case 3:
-        targetScroll = -2400; // Misc.
+        targetScroll = -3000; // Misc.
         break;
       default:
         targetScroll = 0;
@@ -104,7 +104,7 @@
   let scrollLeft: number = 0;
   let velocity: number = 0;
   let lastX: number;
-  let minScroll: number = -2400; // minimum scroll position
+  let minScroll: number = -3200; // minimum scroll position
   let maxScroll: number = 0; // maximum scroll position
 
   // drag scrolling
@@ -182,7 +182,7 @@
     content="A portfolio containing projects created by Peter Knight. Anything I want to put online goes here, 
     and could be related to anything but is mostly CAD or code."
   />
-  <title>Peter's Projects</title>
+  <title>Peter Knight - Portfolio</title>
 </svelte:head>
 
 <!-- ---------------- BODY -------------------- -->
@@ -260,7 +260,7 @@
         class="lg:flex gap-10 mt-2 mb-14 lg:mb-8 animate-zoomFadeInDelay hidden opacity-0"
       >
         <button
-          class="{scrollLeft <= 0 && scrollLeft > -700
+          class="{scrollLeft <= 0 && scrollLeft > -1100
             ? 'text-blue'
             : 'text-overlay-1'} font-body font-bold text-xl hover:text-text transition-all duration-300 ease-in-out"
           on:click={() => changeSelectedView(0)}
@@ -268,7 +268,7 @@
           CAD
         </button>
         <button
-          class="{scrollLeft < -700 && scrollLeft > -1400
+          class="{scrollLeft < -1100 && scrollLeft > -1800
             ? 'text-red'
             : 'text-overlay-1'} font-body font-bold text-xl hover:text-text transition-all duration-300 ease-in-out"
           on:click={() => changeSelectedView(1)}
@@ -276,7 +276,7 @@
           Programming
         </button>
         <button
-          class="{scrollLeft < -1400 && scrollLeft > -2000
+          class="{scrollLeft < -1800 && scrollLeft > -2400
             ? 'text-peach'
             : 'text-overlay-1'} font-body font-bold text-xl hover:text-text transition-all duration-300 ease-in-out"
           on:click={() => changeSelectedView(2)}
@@ -284,7 +284,7 @@
           Robotics
         </button>
         <button
-          class="{scrollLeft < -2000 && scrollLeft > -3200
+          class="{scrollLeft < -2400 && scrollLeft > -3600
             ? 'text-green'
             : 'text-overlay-1'} font-body font-bold text-xl hover:text-text transition-all duration-300 ease-in-out"
           on:click={() => changeSelectedView(3)}
@@ -325,7 +325,7 @@
           <div class="lg:rotate-90 origin-top mt-20 lg:mt-0">
             <h3
               class="font-jetbrains transition-all duration-500 text-3xl font-bold absolute translate-x-5 -translate-y-12 {scrollLeft <
-                0 && scrollLeft > -500
+                0 && scrollLeft > -1100
                 ? 'text-blue'
                 : 'text-surface-0'}"
             >
@@ -343,7 +343,7 @@
           <div class="lg:rotate-90 origin-top mt-20 lg:mt-0">
             <h3
               class="font-jetbrains transition-all duration-500 text-3xl font-bold absolute translate-x-5 -translate-y-12 {scrollLeft <
-                -500 && scrollLeft > -1200
+                -1100 && scrollLeft > -1800
                 ? 'text-maroon'
                 : 'text-surface-0'}"
             >
@@ -361,7 +361,7 @@
           <div class="lg:rotate-90 origin-top mt-20 lg:mt-0">
             <h3
               class="font-jetbrains transition-all duration-500 text-3xl font-bold absolute translate-x-5 -translate-y-12 {scrollLeft <
-                -1200 && scrollLeft > -1800
+                -1800 && scrollLeft > -2400
                 ? 'text-peach'
                 : 'text-surface-0'}"
             >
@@ -379,7 +379,7 @@
           <div class="lg:rotate-90 origin-top mt-20 lg:mt-0">
             <h3
               class="font-jetbrains transition-all duration-500 text-3xl font-bold absolute translate-x-5 -translate-y-12 {scrollLeft <
-                -1800 && scrollLeft > -3000
+                -2400 && scrollLeft > -3600
                 ? 'text-green'
                 : 'text-surface-0'}"
             >

@@ -180,7 +180,7 @@
   <meta
     name="description"
     content="A portfolio containing projects created by Peter Knight. Anything I want to put online goes here, 
-    and could be related to anything but is mostly CAD or code."
+    and could be related to anything but is mostly CAD or code. Test edit."
   />
   <title>Peter Knight - Portfolio</title>
 </svelte:head>

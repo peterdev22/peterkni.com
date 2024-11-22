@@ -50,95 +50,47 @@ export const programmingProjects = [
 export const cadProjects = [
   {
     id: 1,
-    title: "3D Printer (2024)",
+    title: "Printo",
     description:
       "Creating a new 3D printer design in CAD designed for home users.",
-    date: "Nov 2024",
+    date: "2024",
     url: "https://collaborate.shapr3d.com/v/lo4VRJcwMHnFwjyv5TsYy",
     domain: "3D Model Web Viewer",
-    images: [
-      {
-        source: "Assets/3dprinter.png",
-        alt: "3D rendering of an cylindrical 3D printer on a wooden floor with a dark metallic background.",
-        initialX: 0,
-        initialY: 0,
-        initialRotation: 1,
-        initialScale: 1,
-        finalX: 0,
-        finalY: -1,
-        finalRotation: -2,
-        finalScale: 1
-      }
-    ]
+    source: "3dprinter.png",
+    alt: "3D rendering of an cylindrical 3D printer on a wooden floor with a dark metallic background.",
   },
   {
     id: 2,
-    title: "Toothbrush (2024)",
+    title: "Toothbrush",
     description:
       "Improving my motion/joint skills in Fusion and rendering skills in Blender.",
-    date: "Mar 2024",
+    date: "2024",
     url: "/videos/skilltask1",
     domain: "Evaluation Videos",
-    images: [
-      {
-        source: "Assets/toothbrush.jpg",
-        alt: "3D rendering of an electric toothbrush lying on it's side with the head detached.",
-        initialX: 0,
-        initialY: 0,
-        initialRotation: -1,
-        initialScale: 1,
-        finalX: 0,
-        finalY: -1,
-        finalRotation: -3,
-        finalScale: 1
-      }
-    ]
+    source: "toothbrush.jpg",
+    alt: "3D rendering of an electric toothbrush lying on it's side with the head detached.",
   },
   {
     id: 3,
-    title: "Airohh (2023)",
+    title: "Airohh",
     description:
       "A website created to assist the Airohh Drone's product display board.",
-    date: "Jul 2023",
+    date: "2023",
     url: "https://airohh.peterkni.com",
     domain: "CAD/Drawing Files",
-    images: [
-      {
-        source: "Assets/drone.png",
-        alt: "3D rendering of a drone that has detachable propellers via magnets.",
-        initialX: 0,
-        initialY: 0,
-        initialRotation: 3,
-        initialScale: 1,
-        finalX: 0,
-        finalY: -1,
-        finalRotation: 5,
-        finalScale: 1
-      }
-    ]
+    source: "drone.png",
+    alt: "3D rendering of a drone that has detachable propellers via magnets.",
   },
   {
     id: 4,
-    title: "Slatedock (2023)",
+    title: "Slatedock",
     description:
       "Slatedock is an organisation hub that can assist you with tasks at your desk or anywhere else.",
-    date: "Jun 2023",
+    date: "2023",
     url: "https://slatedock.peterkni.com",
     domain: "Product Page",
-    images: [
-      {
-        source: "Assets/slatedock.jpeg",
-        alt: "3D rendering of a Slatedock mini, an organisation hub that can assist with tasks.",
-        initialX: 0,
-        initialY: -1,
-        initialRotation: -3,
-        initialScale: 1,
-        finalX: 0,
-        finalY: -2,
-        finalRotation: 0,
-        finalScale: 1
-      }
-    ]
+    source: "slatedock.jpeg",
+    alt: "3D rendering of a Slatedock mini, an organisation hub that can assist with tasks.",
   }
 ];
 

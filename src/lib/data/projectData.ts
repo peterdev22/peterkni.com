@@ -11,11 +11,11 @@ export const cadProjects = [
       "3D rendering of an cylindrical 3D printer on a wooden floor with a dark metallic background.",
     buttons: [
       {
-        name: "Image Gallery",
-        url: "/printo",
+        name: "Printo Website",
+        url: "https://printo.peterkni.com",
       },
       {
-        name: "3D Model Viewer",
+        name: "3D Model Webviewer",
         url: "https://collaborate.shapr3d.com/v/lo4VRJcwMHnFwjyv5TsYy",
       },
     ],
@@ -37,11 +37,11 @@ export const cadProjects = [
     buttons: [
       {
         name: "Evalulation Video 1",
-        url: "/skillstask1",
+        url: "/assets/projects/cad/st1.mp4",
       },
       {
         name: "Evalulation Video 2",
-        url: "/skillstask2",
+        url: "/assets/projects/cad/st2.mp4",
       },
     ],
     tags: [
@@ -53,7 +53,7 @@ export const cadProjects = [
     id: 3,
     name: "Airohh",
     description:
-      "A website created to assist the Airohh Drone's product display board.",
+      "Airohh is a drone that contains moldular features to make sure you are always up to date with the latest drone technologies.",
     date: "2023",
     section: "cad",
     filename: "drone.png",
@@ -62,6 +62,10 @@ export const cadProjects = [
       {
         name: "Drawings & CAD Model",
         url: "https://airohh.peterkni.com",
+      },
+      {
+        name: "3D Model Webviewer",
+        url: "https://collaborate.shapr3d.com/v/uu8gjKiymWejbBenDEDN6",
       },
     ],
     tags: [
@@ -81,8 +85,12 @@ export const cadProjects = [
       "3D rendering of a Slatedock mini, an organisation hub that can assist with tasks.",
     buttons: [
       {
-        name: "Slatedock Website",
-        url: "https://slatedock.peterkni.com",
+        name: "Slatedock Branding",
+        url: "https://slatedock.peterkni.com/branding",
+      },
+      {
+        name: "Slatedock Prototypes",
+        url: "https://slatedock.peterkni.com/prototypes",
       },
     ],
     tags: [
@@ -90,4 +98,149 @@ export const cadProjects = [
       "School Project",
     ],
   },
+  {
+    id: 5,
+    name: "4 Top CAD Tips to Save Tons of Time",
+    description:
+      "4 Top CAD Tips to Save Tons of Time is an article that was wrote for fun but may help a beginner save some time creating models in CAD.",
+    date: "2023",
+    section: "cad",
+    filename: "cadarticle.png",
+    alt:
+      "Text snippet of the article '4 Top CAD Tips to Save Tons of Time'.",
+    buttons: [
+      {
+        name: "4 Top CAD Tips to Save Tons of Time",
+        url: "https://cadarticle.peterkni.com",
+      },
+    ],
+    tags: [
+      "Article",
+      "CAD",
+      "Tips & Tricks"
+    ],
+  }
+];
+
+export const roboticsProjects = [
+  {
+    id: 1,
+    name: "Frij 2024",
+    description:
+      "Our team's robot code for the 2024-2025 High Stakes season of VEX V5RC.",
+    date: "2024 - Present",
+    section: "robotics",
+    filename: "robot2.jpeg",
+    alt:
+      "A robot that is holding two blue rings.",
+    buttons: [
+      {
+        name: "75477M RobotEvents Page",
+        url: "https://www.robotevents.com/teams/V5RC/75477M",
+      },
+      {
+        name: "GitHub Repo",
+        url: "https://github.com/moooeg/vrc-High-Stakes",
+      }
+    ],
+    tags: [
+      "VEX Robotics",
+      "Team Project",
+      "Competition"
+    ],
+  },
+  {
+    id: 2,
+    name: "Frij 2023",
+    description:
+      "Our team's robot code for the VEX Robotics Competition Over Under season.",
+    date: "2023",
+    section: "robotics",
+    filename: "robot.JPG",
+    alt:
+      "A black robot with a front sticker that says 'Frij'.",
+    buttons: [
+      {
+        name: "GitHub Repo",
+        url: "https://github.com/peterdev22/vrc-over-under",
+      }
+    ],
+    tags: [
+      "VEX Robotics",
+      "Team Project",
+      "Competition"
+    ],
+  }
+];
+
+
+export const programmingProjects = [
+  {
+    id: 1,
+    name: "My Dotfiles",
+    description:
+      "A backup of my (most important) configuration files just in case my computer dies.",
+    date: "2023",
+    section: "programming",
+    filename: "dotfiles.png",
+    alt:
+      "A Mac desktop with a custom menu bar theme and design.",
+    buttons: [
+      {
+        name: "GitHub Repo",
+        url: "https://github.com/peterdev22/dotfiles",
+      }
+    ],
+    tags: [
+      "Programming",
+    ],
+  },
+  {
+    id: 2,
+    name: "peterkni.com",
+    description:
+      "This website... created using Svelte as a place for all things I do.",
+    date: "2024 - Present",
+    section: "programming",
+    filename: "peterkni.png",
+    alt:
+      "Code from this website's source displayed in a code editor.",
+    buttons: [
+      {
+        name: "GitHub Repo",
+        url: "https://github.com/peterdev22/peterkni.com",
+      },
+      {
+        name: "peterkni.com (You're already here!)",
+        url: "/",
+      },
+    ],
+    tags: [
+      "VEX Robotics",
+      "Team Project",
+      "Competition"
+    ],
+  },
+  {
+    id: 3,
+    name: "How to Create a Website",
+    description:
+      "My first time creating a website from simple HTML and CSS. A tutorial for beginners... written by a beginner.",
+    date: "2022",
+    section: "programming",
+    filename: "makeawebsite.png",
+    alt:
+      "A snippet of text from the tutorial 'How to Create a Website'.",
+    buttons: [
+      {
+        name: "How to Create a Website",
+        url: "https://makeawebsite.peterkni.com/",
+      }
+    ],
+    tags: [
+      "VEX Robotics",
+      "Team Project",
+      "Competition"
+    ],
+  }
 ];

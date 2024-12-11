@@ -36,11 +36,11 @@ export const cadProjects = [
       "3D rendering of an electric toothbrush lying on it's side with the head detached.",
     buttons: [
       {
-        name: "Evalulation Video 1",
+        name: "Eval 1: Simulating Motion",
         url: "/assets/projects/cad/st1.mp4",
       },
       {
-        name: "Evalulation Video 2",
+        name: "Eval 2: Rendering in Blender",
         url: "/assets/projects/cad/st2.mp4",
       },
     ],
@@ -127,7 +127,7 @@ export const roboticsProjects = [
     id: 1,
     name: "Frij 2024-2025",
     description:
-      "Our team's robot code for the 2024-2025 High Stakes season of VEX V5RC.",
+      "Our team's robot code for the 2024-2025 'High Stakes' season of VEX V5RC. This season we won the excellence award at the Australian Nationals and will be representing Australia at the VEX Robotics World Championship in May 2025.",
     date: "May 2024 - Present",
     section: "robotics",
     filename: "robot2.jpeg",
@@ -153,7 +153,7 @@ export const roboticsProjects = [
     id: 2,
     name: "Frij 2023",
     description:
-      "Our team's robot code for the VEX Robotics Competition Over Under season.",
+      "Our team's robot code for the VEX Robotics Competition 'Over Under' season. In 2023, we won the Judges award at the Australian National Championship.",
     date: "May 2023 - Dec 2023",
     section: "robotics",
     filename: "robot.JPG",
@@ -179,7 +179,7 @@ export const programmingProjects = [
     id: 1,
     name: "peterkni.com",
     description:
-      "This website... created using Svelte as a place for all things I do.",
+      "This website... created using Svelte as a place for all things I do. View the source code of what you're looking at right now on GitHub.",
     date: "Jan 2023 - Present",
     section: "programming",
     filename: "peterkni.png",
@@ -226,7 +226,7 @@ export const programmingProjects = [
     id: 3,
     name: "How to Create a Website",
     description:
-      "My first time creating a website from simple HTML and CSS. A tutorial for beginners... written by a beginner.",
+      "My first time 'programming' my own website; made with HTML & CSS. A tutorial for beginners... written by a beginner.",
     date: "Jun 2022",
     section: "programming",
     filename: "makeawebsite.png",

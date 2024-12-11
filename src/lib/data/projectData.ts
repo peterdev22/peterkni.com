@@ -3,8 +3,8 @@ export const cadProjects = [
     id: 1,
     name: "Printo",
     description:
-      "Creating a new 3D printer design in CAD designed for home users.",
-    date: "2024",
+      "Creating a new 3D printer design in CAD designed for home users. Designed to be easy to use and maintain, CAD modelled in Fusion and rendered in Blender.",
+    date: "Mar 2024 - Present",
     section: "cad",
     filename: "3dprinter.png",
     alt:
@@ -29,7 +29,7 @@ export const cadProjects = [
     name: "Toothbrush",
     description:
       "Improving my motion/joint skills in Fusion and rendering skills in Blender.",
-    date: "2024",
+    date: "Feb 2024",
     section: "cad",
     filename: "toothbrush.jpg",
     alt:
@@ -54,7 +54,7 @@ export const cadProjects = [
     name: "Airohh",
     description:
       "Airohh is a drone that contains moldular features to make sure you are always up to date with the latest drone technologies.",
-    date: "2023",
+    date: "Feb 2023 - Jun 2023",
     section: "cad",
     filename: "drone.png",
     alt: "3D rendering of a drone that has detachable propellers via magnets.",
@@ -78,7 +78,7 @@ export const cadProjects = [
     name: "Slatedock",
     description:
       "Slatedock is an organisation hub that can assist you with tasks at your desk or anywhere else.",
-    date: "2023",
+    date: "Jan 2023 - Jun 2023",
     section: "cad",
     filename: "slatedock.jpeg",
     alt:
@@ -100,10 +100,10 @@ export const cadProjects = [
   },
   {
     id: 5,
-    name: "4 Top CAD Tips to Save Tons of Time",
+    name: "4 Top CAD Tips",
     description:
       "4 Top CAD Tips to Save Tons of Time is an article that was wrote for fun but may help a beginner save some time creating models in CAD.",
-    date: "2023",
+    date: "Mar 2023",
     section: "cad",
     filename: "cadarticle.png",
     alt:
@@ -128,7 +128,7 @@ export const roboticsProjects = [
     name: "Frij 2024",
     description:
       "Our team's robot code for the 2024-2025 High Stakes season of VEX V5RC.",
-    date: "2024 - Present",
+    date: "May 2024 - Present",
     section: "robotics",
     filename: "robot2.jpeg",
     alt:
@@ -154,7 +154,7 @@ export const roboticsProjects = [
     name: "Frij 2023",
     description:
       "Our team's robot code for the VEX Robotics Competition Over Under season.",
-    date: "2023",
+    date: "May 2023 - Dec 2023",
     section: "robotics",
     filename: "robot.JPG",
     alt:
@@ -177,30 +177,10 @@ export const roboticsProjects = [
 export const programmingProjects = [
   {
     id: 1,
-    name: "My Dotfiles",
-    description:
-      "A backup of my (most important) configuration files just in case my computer dies.",
-    date: "2023",
-    section: "programming",
-    filename: "dotfiles.png",
-    alt:
-      "A Mac desktop with a custom menu bar theme and design.",
-    buttons: [
-      {
-        name: "GitHub Repo",
-        url: "https://github.com/peterdev22/dotfiles",
-      }
-    ],
-    tags: [
-      "Programming",
-    ],
-  },
-  {
-    id: 2,
     name: "peterkni.com",
     description:
       "This website... created using Svelte as a place for all things I do.",
-    date: "2024 - Present",
+    date: "Jan 2023 - Present",
     section: "programming",
     filename: "peterkni.png",
     alt:
@@ -216,9 +196,30 @@ export const programmingProjects = [
       },
     ],
     tags: [
-      "VEX Robotics",
-      "Team Project",
-      "Competition"
+      "SvelteKit",
+      "Web Development",
+      "Portfolio"
+    ],
+  },
+  {
+    id: 2,
+    name: "My Dotfiles",
+    description:
+      "A backup of my (most important) configuration files just in case my computer dies.",
+    date: "Jun 2023",
+    section: "programming",
+    filename: "dotfiles.png",
+    alt:
+      "A Mac desktop with a custom menu bar theme and design.",
+    buttons: [
+      {
+        name: "GitHub Repo",
+        url: "https://github.com/peterdev22/dotfiles",
+      }
+    ],
+    tags: [
+      "Configuration",
+      "Theme"
     ],
   },
   {
@@ -226,7 +227,7 @@ export const programmingProjects = [
     name: "How to Create a Website",
     description:
       "My first time creating a website from simple HTML and CSS. A tutorial for beginners... written by a beginner.",
-    date: "2022",
+    date: "Jun 2022",
     section: "programming",
     filename: "makeawebsite.png",
     alt:
@@ -238,9 +239,9 @@ export const programmingProjects = [
       }
     ],
     tags: [
-      "VEX Robotics",
-      "Team Project",
-      "Competition"
+      "Article",
+      "Web Development",
+      "HTML & CSS"
     ],
   }
 ];

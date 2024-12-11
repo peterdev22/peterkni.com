@@ -35,26 +35,33 @@
     </a>
 
     <nav
-      class="gap-8 text-xl mr-56 text-white underline-offset-8 decoration-zinc-600 hidden lg:flex items-center"
-    >
+      class="gap-8 text-xl mr-56 text-white underline-offset-8 decoration-zinc-600 hidden lg:flex items-center font-semibold"
+    > 
+    <a
+        href="/"
+        class="{currentPath == '/'
+          ? 'bg-white text-black px-2'
+          : 'hover:bg-zinc-800 hover:px-2 hover:-mx-2'} transition-all rounded-lg active:scale-95"
+        >Home</a
+      >
       <a
         href="/cad"
         class="{currentPath == '/cad'
-          ? 'bg-blue-300 text-black px-2 font-medium'
+          ? 'bg-blue-300 text-black px-2'
           : 'hover:bg-zinc-800 hover:px-2 hover:-mx-2'} transition-all rounded-lg active:scale-95"
         >CAD</a
       >
       <a
         href="/robotics"
         class="{currentPath == '/robotics'
-          ? 'bg-red-300 text-black px-2 font-medium'
+          ? 'bg-red-400 text-black px-2 '
           : 'hover:bg-zinc-800 hover:px-2 hover:-mx-2'} transition-all rounded-lg active:scale-95"
         >Robotics</a
       >
       <a
         href="/programming"
         class="{currentPath == '/programming'
-          ? 'bg-yellow-300 text-black px-2 font-medium'
+          ? 'bg-yellow-300 text-black px-2 '
           : 'hover:bg-zinc-800 hover:px-2 hover:-mx-2'} transition-all rounded-lg active:scale-95"
         >Programming</a
       >

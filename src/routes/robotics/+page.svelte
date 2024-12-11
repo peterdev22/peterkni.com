@@ -43,7 +43,7 @@
       : theme.colour == 'blue'
         ? 'text-blue-300'
         : theme.colour == 'red'
-          ? 'text-red-300'
+          ? 'text-red-400'
           : theme.colour == 'yellow'
             ? 'text-yellow-300'
             : ''} flex gap-4"

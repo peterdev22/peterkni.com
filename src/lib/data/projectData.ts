@@ -125,7 +125,7 @@ export const cadProjects = [
 export const roboticsProjects = [
   {
     id: 1,
-    name: "Frij 2024",
+    name: "Frij 2024-2025",
     description:
       "Our team's robot code for the 2024-2025 High Stakes season of VEX V5RC.",
     date: "May 2024 - Present",

@@ -49,7 +49,7 @@
             : theme.colour == 'blue'
               ? 'bg-blue-300 hover:bg-blue-400'
               : theme.colour == 'red'
-                ? 'bg-red-300 hover:bg-red-400'
+                ? 'bg-red-400 hover:bg-red-500'
                 : theme.colour == 'yellow'
                   ? 'bg-yellow-300 hover:bg-yellow-400'
                   : ''} rounded-2xl lg:rounded-xl transition-all active:scale-95"

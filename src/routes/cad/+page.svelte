@@ -17,7 +17,7 @@
 
   onMount(() => {
     const checkScreenWidth = () => {
-      sm = window.innerWidth <= 640;
+      sm = window.innerWidth <= 1024;
     };
 
     checkScreenWidth();
@@ -61,6 +61,8 @@
         {theme.title}
       {:else if theme.titleMini !== '' && sm}
         {theme.titleMini}
+      {:else}
+        {theme.title}
       {/if}
     </div>
   </div>
@@ -89,7 +91,7 @@
 </section>
 
 <!-- PROJECT LIST -->
-<section class="py-12 px-4 lg:px-28 xl:px-52 2xl:px-72 flex flex-col gap-12">
+<section class="py-6 sm:py-12 px-4 lg:px-28 xl:px-52 2xl:px-72 flex flex-col gap-12">
   {#each cadProjects as project}
     <ProjectCard {project} {theme} />
   {/each}

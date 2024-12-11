@@ -8,34 +8,34 @@
 <svelte:head>
   <meta
     name="description"
-    content="Peter Knight's portfolio of computer aided design (CAD), VEX robotics, 3D renders and programming projects."
+    content="Peter Knight's portfolio of computer aided design (CAD), VEX robotics, 3D renders and programming projects. View source code, videos, CAD models and renders created by Peter in various different projects."
   />
-  <title>Peter Knight</title>
+  <title>Peter Knight · CAD, Robotics & Programming</title>
 </svelte:head>
 
 <!-- TITLE & INTRO -->
-<section class="mb-12 px-10 lg:px-28 xl:px-52 2xl:px-72 flex justify-between">
+<section class="mb-12 px-10 lg:px-28 xl:px-52 2xl:px-72 flex flex-col lg:flex-row justify-between">
   <div>
     <h1
-      class="text-yellow-300 font-semibold text-8xl -rotate-1 underline underline-offset-[1rem]"
+      class="text-yellow-300 font-semibold text-6xl sm:text-7xl lg:text-8xl -rotate-1 underline underline-offset-[1rem]"
     >
       Welcome !
     </h1>
-    <p class="text-white font-medium text-2xl mt-10">
+    <p class="text-white font-medium text-xl sm:text-2xl mt-10">
       Hey, I'm Peter. On my wesbite you'll find some of my projects relating to
       CAD, Robotics and Programming.
     </p>
   </div>
-  <div class="w-[65rem]"></div>
+  <div class="w-[55rem]"></div>
 </section>
 
 <!-- BUTTONS -->
 <section class="mt-10 px-10 lg:px-28 xl:px-52 2xl:px-72">
   <h2 class="text-xl text-zinc-600 font-semibold mb-6">Go to projects:</h2>
-  <div class="flex gap-8 text-black font-semibold text-3xl items-center">
+  <div class="flex flex-col md:flex-row gap-8 text-black font-semibold text-3xl items-center">
     <a
       href="/cad"
-      class="bg-blue-300 hover:bg-blue-400 px-3 py-1 transition-all rounded-2xl active:scale-95"
+      class="bg-blue-300 hover:bg-blue-400 px-3 py-1 transition-all rounded-2xl active:scale-95 shrink-0"
       ><svg
         xmlns="http://www.w3.org/2000/svg"
         class="inline-block mr-2 mb-[0.25rem]"
@@ -50,7 +50,7 @@
     >
     <a
       href="/robotics"
-      class="bg-red-400 hover:bg-red-500 px-3 py-1 transition-all rounded-2xl active:scale-95"
+      class="bg-red-400 hover:bg-red-500 px-3 py-1 transition-all rounded-2xl active:scale-95 shrink-0"
       ><svg
         xmlns="http://www.w3.org/2000/svg"
         class="inline-block mr-2 mb-[0.25rem]"
@@ -65,7 +65,7 @@
     >
     <a
       href="/programming"
-      class="bg-yellow-300 hover:bg-yellow-400 px-3 py-1 transition-all rounded-2xl active:scale-95"
+      class="bg-yellow-300 hover:bg-yellow-400 px-3 py-1 transition-all rounded-2xl active:scale-95 shrink-0"
       ><svg
         xmlns="http://www.w3.org/2000/svg"
         class="inline-block mr-2 mb-[0.25rem]"
@@ -78,7 +78,7 @@
         /></svg
       >Programming</a
     >
-    <h2 class="text-lg text-zinc-600 font-medium italic">
+    <h2 class="text-lg text-zinc-600 font-medium italic hidden xl:block">
       Or keep scrolling to view some of my favourites.
     </h2>
   </div>
@@ -91,39 +91,39 @@
 
 <!-- FEATURED PROJECTS HEADING -->
 <h2
-  class="mx-10 lg:mx-28 xl:mx-52 2xl:mx-64 mt-10 text-zinc-600 flex gap-2 items-center py-4 border-b-4 border-dashed border-zinc-900"
+  class="mx-5 lg:mx-28 xl:mx-52 2xl:mx-64 mt-10 text-zinc-600 flex gap-2 items-center py-4 border-b-4 border-dashed border-zinc-900"
 >
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="3.8rem"
-    height="auto"
+    class="w-[2rem] sm:w-[3.8rem] "
     viewBox="0 0 24 24"
     ><path
       fill="currentColor"
       d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z"
     /></svg
   >
-  <div class=" font-semibold text-6xl">Featured Projects</div>
+  <div class=" font-semibold text-3xl sm:text-5xl lg:text-6xl">Featured Projects</div>
 </h2>
 
 <!-- FEATURED: PRINTO -->
 <section
   class="bg-gradient-to-tr border border-1 border-zinc-900 bg-zinc-950 py-6 my-16"
 >
-  <div class="mb-6 px-10 lg:px-28 xl:px-52 2xl:px-80 flex gap-12 items-center">
+  <div class="mb-6 px-10 lg:px-28 xl:px-52 2xl:px-80 flex flex-col sm:flex-row gap-6 sm:gap-12 items-center">
     <h3 class="font-semibold text-5xl text-white">Printo</h3>
-    <p class="font-medium text-xl text-white">
+    <p class="font-medium text-xl text-white mb-4 sm:mb-0">
       The 3D printer designed for home users.
     </p>
   </div>
   <div class="overflow-x-clip">
     <Slideshow images={featuredImages} />
   </div>
-  <div class="flex justify-center mt-6 gap-6">
+  <div class="flex flex-col sm:flex-row mx-auto w-fit text-center items-center justify-center mt-6 gap-4 sm:gap-6">
     {#each cadProjects[0].buttons as button}
       <a
         href={button.url}
-        class="bg-blue-300 hover:bg-blue-400 text-xl font-semibold px-3 py-1 transition-all rounded-xl active:scale-95"
+        target="_blank"
+        class="bg-blue-300 hover:bg-blue-400 text-xl font-semibold px-3 py-1 mt-2 sm:mt-0 transition-all rounded-xl active:scale-95"
         >{button.name}<svg
           xmlns="http://www.w3.org/2000/svg"
           width="1.2rem"
@@ -144,16 +144,16 @@
 <section
   class="bg-gradient-to-tr border border-1 border-zinc-900 bg-zinc-950 py-6 my-16"
 >
-  <div class="mb-6 px-10 lg:px-28 xl:px-52 2xl:px-80 flex gap-12 items-center">
+  <div class="mb-6 px-10 lg:px-28 xl:px-52 2xl:px-80 flex flex-col sm:flex-row gap-6 sm:gap-12 items-center">
     <h3 class="font-semibold text-5xl text-white">Toothbrush Evaluation</h3>
-    <p class="font-medium text-xl text-white">
+    <p class="font-medium text-xl text-white mb-4 sm:mb-0">
       Practicing my CAD and rendering skills in preparation for the final
       project.
     </p>
   </div>
-  <div class="flex gap-10 justify-center h-96 overflow-x-clip">
+  <div class="flex gap-10 justify-center h-96 overflow-x-clip p-6 sm:p-0 -my-6 sm:my-0">
     <img
-      class="rounded-3xl"
+      class="rounded-3xl object-cover h-full"
       src="assets/projects/cad/toothbrush.jpg"
       alt="Toothbrush CAD model">
     <!-- svelte-ignore a11y-media-has-caption -->
@@ -179,12 +179,12 @@
       src="assets/featured/explode_8bit.png"
       alt="Toothbrush CAD model"> -->
   </div>
-  <div class="flex justify-center mt-6 gap-6">
+  <div class="flex flex-col sm:flex-row mx-auto w-fit text-center items-center justify-center mt-6 gap-4 sm:gap-6">
     {#each cadProjects[1].buttons as button}
       <a
         href={button.url}
         target="_blank"
-        class="bg-blue-300 hover:bg-blue-400 text-xl font-semibold px-3 py-1 transition-all rounded-xl active:scale-95"
+        class="bg-blue-300 hover:bg-blue-400 text-xl font-semibold px-3 py-1 mt-2 sm:mt-0 transition-all rounded-xl active:scale-95"
         >{button.name}<svg
           xmlns="http://www.w3.org/2000/svg"
           width="1.2rem"

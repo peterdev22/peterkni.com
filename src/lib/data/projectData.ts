@@ -36,11 +36,11 @@ export const cadProjects = [
       "3D rendering of an electric toothbrush lying on it's side with the head detached.",
     buttons: [
       {
-        name: "Eval 1: Simulating Motion",
+        name: "Eval 1: Motion",
         url: "/assets/projects/cad/st1.mp4",
       },
       {
-        name: "Eval 2: Rendering in Blender",
+        name: "Eval 2: Rendering",
         url: "/assets/projects/cad/st2.mp4",
       },
     ],

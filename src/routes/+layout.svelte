@@ -14,13 +14,11 @@
 <!-- GLOBAL NAVIGATION BAR -->
 <header class="p-5 sm:p-10 px-10 xl:px-20 2xl:px-48 py-4 flex justify-center">
   <div
-    class="flex gap-16 items-center justify-center w-[50rem] bg-black py-5 rounded-[2rem] outline outline-1 outline-zinc-950 bg-opacity-80 bg-gradient-to-tr from-black to-zinc-950"
+    class="flex gap-16 items-center justify-between w-[90rem] px-10 bg-black py-5 rounded-[2rem] outline outline-1 outline-zinc-950 bg-opacity-80 bg-gradient-to-tr from-black to-zinc-950"
   >
     <a
       href="/"
-      class="font-bold  flex group gap-3 py-1 {currentPath == '/'
-        ? 'bg-blue-300 text-black px-4'
-        : 'hover:bg-zinc-800 text-white hover:px-4 hover:-mx-4'} transition-all rounded-2xl"
+      class="font-bold flex group gap-3 py-1 active:scale-95  px-4 -mx-4 hover:bg-zinc-800 text-white hover:px-4 hover:-mx-4 transition-all rounded-2xl"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -37,31 +35,48 @@
     </a>
 
     <nav
-      class="gap-8 text-xl text-white underline-offset-8 decoration-zinc-600 hidden lg:flex items-center"
+      class="gap-8 text-xl mr-56 text-white underline-offset-8 decoration-zinc-600 hidden lg:flex items-center"
     >
-      
       <a
         href="/cad"
         class="{currentPath == '/cad'
           ? 'bg-blue-300 text-black px-2 font-medium'
-          : 'hover:bg-zinc-800 hover:px-2 hover:-mx-2'} transition-all rounded-lg"
+          : 'hover:bg-zinc-800 hover:px-2 hover:-mx-2'} transition-all rounded-lg active:scale-95"
         >CAD</a
       >
       <a
         href="/robotics"
         class="{currentPath == '/robotics'
-          ? 'bg-blue-300 text-black px-2 font-medium'
-          : 'hover:bg-zinc-800 hover:px-2 hover:-mx-2'} transition-all rounded-lg"
+          ? 'bg-red-300 text-black px-2 font-medium'
+          : 'hover:bg-zinc-800 hover:px-2 hover:-mx-2'} transition-all rounded-lg active:scale-95"
         >Robotics</a
       >
       <a
         href="/programming"
         class="{currentPath == '/programming'
-          ? 'bg-blue-300 text-black px-2 font-medium'
-          : 'hover:bg-zinc-800 hover:px-2 hover:-mx-2'} transition-all rounded-lg"
+          ? 'bg-yellow-300 text-black px-2 font-medium'
+          : 'hover:bg-zinc-800 hover:px-2 hover:-mx-2'} transition-all rounded-lg active:scale-95"
         >Programming</a
       >
     </nav>
+
+    <a
+      href="https://github.com/peterdev22"
+      target="_blank"
+      aria-label="GitHub"
+      class="font-bold flex group gap-3 py-2 active:bg-white active:text-black hover:bg-zinc-800 text-white hover:px-2 hover:-mx-2 transition-all rounded-full"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="2rem"
+        height="auto"
+        viewBox="0 0 24 24"
+        ><path
+          fill="currentColor"
+          d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"
+        /></svg
+      >
+    </a>
   </div>
 </header>
 

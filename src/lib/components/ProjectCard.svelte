@@ -3,20 +3,20 @@
 
   import { onMount } from 'svelte';
 
-let tagMaxWidth = $state(false);
+  let tagMaxWidth = $state(false);
 
-onMount(() => {
-  const checkScreenWidth = () => {
-    tagMaxWidth = window.innerWidth <= 1800;
-  };
+  onMount(() => {
+    const checkScreenWidth = () => {
+      tagMaxWidth = window.innerWidth <= 1800;
+    };
 
-  checkScreenWidth();
-  window.addEventListener('resize', checkScreenWidth);
+    checkScreenWidth();
+    window.addEventListener('resize', checkScreenWidth);
 
-  return () => {
-    window.removeEventListener('resize', checkScreenWidth);
-  };
-});
+    return () => {
+      window.removeEventListener('resize', checkScreenWidth);
+    };
+  });
 </script>
 
 <div
@@ -44,7 +44,7 @@ onMount(() => {
         <a
           href={button.url}
           target="_blank"
-          class="py-2 lg:py-1 px-8 {theme.colour == 'green'
+          class="py-2 lg:py-1 px-4 {theme.colour == 'green'
             ? 'bg-green-300 hover:bg-green-400'
             : theme.colour == 'blue'
               ? 'bg-blue-300 hover:bg-blue-400'
@@ -54,7 +54,20 @@ onMount(() => {
                   ? 'bg-yellow-300 hover:bg-yellow-400'
                   : ''} rounded-2xl lg:rounded-xl transition-all active:scale-95"
         >
-          <div>{button.name} →</div>
+          <div>
+            {button.name}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1.2rem"
+              height="auto"
+              class="inline-block mb-[0.2rem] ml-1"
+              viewBox="0 0 16 16"
+              ><path
+                fill="currentColor"
+                d="M4.75 3.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h6.5c.69 0 1.25-.56 1.25-1.25v-1.5a.75.75 0 0 1 1.5 0v1.5A2.75 2.75 0 0 1 11.25 14h-6.5A2.75 2.75 0 0 1 2 11.25v-6.5A2.75 2.75 0 0 1 4.75 2h1.5a.75.75 0 0 1 0 1.5zM8 2.75A.75.75 0 0 1 8.75 2h4.5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0V4.561l-3.22 3.22A.75.75 0 1 1 8.22 6.72l3.22-3.22H8.75A.75.75 0 0 1 8 2.75"
+              /></svg
+            >
+          </div>
         </a>
       {/each}
     </div>

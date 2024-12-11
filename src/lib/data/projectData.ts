@@ -187,7 +187,7 @@ export const programmingProjects = [
       "Code from this website's source displayed in a code editor.",
     buttons: [
       {
-        name: "GitHub Repo",
+        name: "Source Code",
         url: "https://github.com/peterdev22/peterkni.com",
       },
       {

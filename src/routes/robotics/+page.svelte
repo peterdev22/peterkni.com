@@ -65,7 +65,7 @@
     </div>
   </div>
   <div
-    class="items-center text-zinc-700 flex gap-2 bg-zinc-950 px-4 py-1 rounded-xl outline-1 outline-zinc-900 outline"
+    class="items-center text-zinc-700 flex gap-2 bg-zinc-950 px-4 py-1 rounded-xl outline-1 outline-zinc-900 outline flex-shrink-0"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"

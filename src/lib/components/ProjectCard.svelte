@@ -54,13 +54,15 @@
                   ? 'bg-yellow-300 hover:bg-yellow-400'
                   : ''} rounded-2xl lg:rounded-xl transition-all active:scale-95"
         >
-          <div>
-            {button.name}
+          <div class="flex items-center justify-center gap-2 ">
+            <p class="line-clamp-1">
+              {button.name}
+            </p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1.2rem"
               height="auto"
-              class="inline-block mb-[0.2rem] ml-1"
+              class=""
               viewBox="0 0 16 16"
               ><path
                 fill="currentColor"

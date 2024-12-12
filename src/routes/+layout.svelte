@@ -42,7 +42,7 @@
 
 <!-- HEADER & NAV BAR -->
 <header
-  class="p-5 sm:p-10 px-10 xl:px-20 2xl:px-48 sm:py-4 flex justify-cente bg-gradient-to-tr from-black to-zinc-950 border-b-1 border-zinc-950 border sm:border-none sm:bg-black py-0 mb-8"
+  class="p-5 sm:p-10 px-10 xl:px-20 2xl:px-48 sm:py-4 flex justify-cente bg-gradient-to-tr sm:bg-none from-black to-zinc-950 border-b-1 border-zinc-950 border sm:border-none sm:bg-black py-0 mb-8"
 >
   <div
     class="flex sm:gap-16 items-center justify-between scrol w-[90rem] sm:px-10 py-5 rounded-[2rem] sm:outline outline-1 outline-zinc-950 bg-opacity-80 sm:bg-gradient-to-tr from-black to-zinc-950"

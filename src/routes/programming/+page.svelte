@@ -1,7 +1,7 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import { programmingProjects } from '$lib/data/projectData';
   import ProjectCard from '$lib/components/ProjectCard.svelte';
-  import { onMount } from 'svelte';
 
   // page theme data
   let theme = {

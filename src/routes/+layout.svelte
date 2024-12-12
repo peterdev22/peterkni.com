@@ -2,16 +2,15 @@
   import '../app.css';
   import { page } from '$app/stores';
 
-  import { onMount, onDestroy } from 'svelte';
+  import { onMount } from 'svelte';
   import { scale } from 'svelte/transition';
   import MobileNav from '$lib/components/MobileNav.svelte';
 
   let { children } = $props();
-
   let navMenuEnabled: boolean = $state(false);
   let currentPath: string = $state('');
 
-  // current path for highlighted navlinks
+  // highlight current page in nav bar
   $effect(() => {
     currentPath = $page.url.pathname;
   });
@@ -34,9 +33,10 @@
 
   onMount(() => {
     window.addEventListener('resize', handleResize);
-  });
-  onDestroy(() => {
-    window.removeEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('keydown', handleResize);
+    };
   });
 </script>
 
@@ -188,7 +188,7 @@
   </div>
 </footer>
 
-<!-- STYLES -->
+<!-- GLOBAL STYLES -->
 <style lang="postcss">
   :global(body) {
     @apply bg-black;

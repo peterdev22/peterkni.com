@@ -1,7 +1,11 @@
 <script lang="ts">
-  import Slideshow from '$lib/components/Slideshow.svelte';
-  import { featuredImages } from '$lib/data/slideshowData';
+  // data used in the featured projects section
+  import { printoFeature } from '$lib/data/slideshowData';
   import { cadProjects } from '$lib/data/projectData';
+
+  // slideshow component
+  import Slideshow from '$lib/components/Slideshow.svelte';
+
 </script>
 
 <!-- PAGE METADATA -->
@@ -116,7 +120,7 @@
     </p>
   </div>
   <div class="overflow-x-clip">
-    <Slideshow images={featuredImages} />
+    <Slideshow images={printoFeature} />
   </div>
   <div class="flex flex-col sm:flex-row mx-auto w-fit text-center items-center justify-center mt-6 gap-4 sm:gap-6">
     {#each cadProjects[0].buttons as button}
@@ -200,3 +204,6 @@
     {/each}
   </div>
 </section>
+
+<!-- ADD MORE SOON -->
+ 

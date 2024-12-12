@@ -1,4 +1,4 @@
-export const featuredImages = [
+export const printoFeature = [
   {
     id: 0,
     filename: 'toolheadexploded_whitebg_8bit.jpeg',

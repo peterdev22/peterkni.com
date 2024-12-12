@@ -1,10 +1,10 @@
 <script>
-  let { project, theme } = $props();
-
   import { onMount } from 'svelte';
 
+  let { project, theme } = $props();
   let tagMaxWidth = $state(false);
 
+  // check screen width for tag display
   onMount(() => {
     const checkScreenWidth = () => {
       tagMaxWidth = window.innerWidth <= 1800;

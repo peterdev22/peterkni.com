@@ -92,7 +92,7 @@
   <!-- IMAGE SECTION -->
   <div class="rounded-2xl m-5 lg:w-1/2 overflow-hidden flex-shrink-0">
     <img
-      src="/cdn-cgi/image/format=auto,width=1920,quality=100/assets/projects/{project.section}/{project.filename}"
+      src="/cdn-cgi/image/format=auto,width=1920,quality=80/assets/projects/{project.section}/{project.filename}"
       alt={project.alt}
       class="h-full w-full object-cover"
     />

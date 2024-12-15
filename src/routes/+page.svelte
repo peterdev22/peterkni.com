@@ -158,14 +158,14 @@
   <div class="flex gap-10 justify-center h-96 overflow-x-clip p-6 sm:p-0 -my-6 sm:my-0">
     <img
       class="rounded-3xl object-cover h-full"
-      src="/cdn-cgi/image/format=auto,width=1080,quality=100/assets/projects/cad/toothbrush.jpg" 
+      src="/cdn-cgi/image/format=auto,width=1920,quality=80/assets/projects/cad/toothbrush.jpg" 
       alt="Toothbrush CAD model">
     <!-- svelte-ignore a11y-media-has-caption -->
     <video
       class="rounded-3xl hidden md:block"
       controls
       controlsList="nodownload"
-      poster="/cdn-cgi/image/format=auto,width=1080,quality=100/assets/projects/cad/st1_cover.jpeg"
+      poster="/cdn-cgi/image/format=auto,width=1920,quality=80/assets/projects/cad/st1_cover.jpeg"
       src="/assets/projects/cad/st1.mp4"
     >
     </video>
@@ -192,7 +192,7 @@
         >{button.name}<svg
           xmlns="http://www.w3.org/2000/svg"
           width="1.2rem"
-          height="100%"
+          height="auto"
           class="inline-block mb-[0.2rem] ml-1"
           viewBox="0 0 16 16"
           ><path

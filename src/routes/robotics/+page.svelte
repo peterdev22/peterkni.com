@@ -51,7 +51,7 @@
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="4rem"
-      height="auto"
+      height="100%"
       viewBox="0 0 24 24"><path fill="currentColor" d={theme.icon} /></svg
     >
     <div class="font-semibold text-5xl sm:text-7xl">
@@ -70,7 +70,7 @@
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="2rem"
-      height="auto"
+      height="100%"
       viewBox="0 0 24 24"
       ><path
         fill="currentColor"

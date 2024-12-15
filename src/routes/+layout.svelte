@@ -112,7 +112,7 @@
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="2rem"
-        height="auto"
+        height="100%"
         viewBox="0 0 24 24"
         ><path
           fill="currentColor"
@@ -177,7 +177,7 @@
         xmlns="http://www.w3.org/2000/svg"
         class="inline-block mr-2 mb-[0.25rem]"
         width="1rem"
-        height="auto"
+        height="100%"
         viewBox="0 0 448 512"
         ><path
           fill="currentColor"

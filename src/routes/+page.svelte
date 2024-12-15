@@ -44,7 +44,7 @@
         xmlns="http://www.w3.org/2000/svg"
         class="inline-block mr-2 mb-[0.25rem]"
         width="2rem"
-        height="auto"
+        height="100%"
         viewBox="0 0 24 24"
         ><path
           fill="currentColor"
@@ -59,7 +59,7 @@
         xmlns="http://www.w3.org/2000/svg"
         class="inline-block mr-2 mb-[0.25rem]"
         width="2rem"
-        height="auto"
+        height="100%"
         viewBox="0 0 24 24"
         ><path
           fill="currentColor"
@@ -74,7 +74,7 @@
         xmlns="http://www.w3.org/2000/svg"
         class="inline-block mr-2 mb-[0.25rem]"
         width="2rem"
-        height="auto"
+        height="100%"
         viewBox="0 0 24 24"
         ><path
           fill="currentColor"
@@ -131,7 +131,7 @@
         >{button.name}<svg
           xmlns="http://www.w3.org/2000/svg"
           width="1.2rem"
-          height="auto"
+          height="100%"
           class="inline-block mb-[0.2rem] ml-1"
           viewBox="0 0 16 16"
           ><path
@@ -192,7 +192,7 @@
         >{button.name}<svg
           xmlns="http://www.w3.org/2000/svg"
           width="1.2rem"
-          height="auto"
+          height="100%"
           class="inline-block mb-[0.2rem] ml-1"
           viewBox="0 0 16 16"
           ><path

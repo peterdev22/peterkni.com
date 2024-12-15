@@ -32,7 +32,7 @@
 <!-- PAGE METADATA -->
 <svelte:head>
   <meta name="description" content="{theme.description}" />
-  <title>{theme.titleMini !== '' ? theme.titleMini : theme.title} · Peter Knight</title>
+  <title>{theme.title} · Peter Knight</title>
 </svelte:head>
 
 <!-- TITLE SNIPPET -->

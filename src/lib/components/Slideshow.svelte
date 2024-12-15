@@ -36,7 +36,7 @@
       
       animate:flip={{ duration: 600 }}
     >
-      <img src="/cdn-cgi/image/width=700,quality=90/assets/featured/{image.filename}" alt={image.alt} class="rounded-[1.5rem]"/>
+      <img src="/cdn-cgi/image/format=auto,width=1080,quality=100/assets/featured/{image.filename}" alt={image.alt} class="rounded-[1.5rem]"/>
     </div>
   {/each}
 </div>

@@ -158,14 +158,14 @@
   <div class="flex gap-10 justify-center h-96 overflow-x-clip p-6 sm:p-0 -my-6 sm:my-0">
     <img
       class="rounded-3xl object-cover h-full"
-      src="assets/projects/cad/toothbrush.jpg"
+      src="/cdn-cgi/image/format=auto,width=1080,quality=100/assets/projects/cad/toothbrush.jpg" 
       alt="Toothbrush CAD model">
     <!-- svelte-ignore a11y-media-has-caption -->
     <video
       class="rounded-3xl hidden md:block"
       controls
       controlsList="nodownload"
-      poster="/assets/projects/cad/st1_cover.jpeg"
+      poster="/cdn-cgi/image/format=auto,width=1080,quality=100/assets/projects/cad/st1_cover.jpeg"
       src="/assets/projects/cad/st1.mp4"
     >
     </video>

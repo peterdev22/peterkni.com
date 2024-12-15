@@ -7,7 +7,5 @@ The framework used is [SvelteKit](https://kit.svelte.dev/) and it's been very fu
 All of the code is found on Github in this repository, with the website being hosted on [Cloudflare Pages](https://pages.cloudflare.com/).
 
 ### Fonts
-The fonts contained on my website are avalible to download from Google Fonts or open source. All fonts are locally imported. 
-- [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
-- [Aleo](https://fonts.google.com/specimen/Aleo)
+The fonts contained on my website are avalible to download from Google Fonts or open source. All fonts are locally imported.
 - [DM Sans](https://fonts.google.com/specimen/DM+Sans)

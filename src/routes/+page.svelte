@@ -1,10 +1,21 @@
 <script lang="ts">
-  // data used in the featured projects section
+  import { PUBLIC_CF_IMAGES } from '$env/static/public';
   import { printoFeature } from '$lib/data/slideshowData';
   import { cadProjects } from '$lib/data/projectData';
 
   // slideshow component
   import Slideshow from '$lib/components/Slideshow.svelte';
+
+  // handle local vs cloudflare pages image paths
+  function getImagePath(section: string, filename: string, width: string, quality: string) {
+    const productionBuild = PUBLIC_CF_IMAGES;
+
+    if (productionBuild == 'true') {
+      return `/cdn-cgi/image/format=auto,width=${width},quality=${quality}/assets/projects/${section}/${filename}`;
+    } else {
+      return `/assets/projects/${section}/${filename}`;
+    }
+  }
 
 </script>
 
@@ -158,14 +169,14 @@
   <div class="flex gap-10 justify-center h-96 overflow-x-clip p-6 sm:p-0 -my-6 sm:my-0">
     <img
       class="rounded-3xl object-cover h-full"
-      src="/cdn-cgi/image/format=auto,width=1920,quality=80/assets/projects/cad/toothbrush.jpg" 
+      src={getImagePath('cad', 'toothbrush.jpg', '1920', '80')}
       alt="Toothbrush CAD model">
     <!-- svelte-ignore a11y-media-has-caption -->
     <video
       class="rounded-3xl hidden md:block"
       controls
       controlsList="nodownload"
-      poster="/cdn-cgi/image/format=auto,width=1920,quality=80/assets/projects/cad/st1_cover.jpeg"
+      poster={getImagePath('cad', 'st2_cover.jpeg', '1920', '80')}
       src="/assets/projects/cad/st1.mp4"
     >
     </video>

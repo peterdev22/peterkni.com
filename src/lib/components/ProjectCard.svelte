@@ -1,4 +1,5 @@
-<script>
+<script lang="ts">
+  import { PUBLIC_CF_IMAGES } from '$env/static/public';
   import { onMount } from 'svelte';
 
   let { project, theme } = $props();
@@ -17,6 +18,17 @@
       window.removeEventListener('resize', checkScreenWidth);
     };
   });
+
+  // handle local vs cloudflare pages image paths
+  function getImagePath(section: string, filename: string, width: string, quality: string) {
+    const productionBuild = PUBLIC_CF_IMAGES;
+
+    if (productionBuild == 'true') {
+      return `/cdn-cgi/image/format=auto,width=${width},quality=${quality}/assets/projects/${section}/${filename}`;
+    } else {
+      return `/assets/projects/${section}/${filename}`;
+    }
+  }
 </script>
 
 <div
@@ -92,7 +104,7 @@
   <!-- IMAGE SECTION -->
   <div class="rounded-2xl m-5 lg:w-1/2 overflow-hidden flex-shrink-0">
     <img
-      src="/cdn-cgi/image/format=auto,width=1920,quality=80/assets/projects/{project.section}/{project.filename}"
+      src={getImagePath(project.section, project.filename, '1920', '90')}
       alt={project.alt}
       class="h-full w-full object-cover"
     />

@@ -24,6 +24,17 @@
     clearInterval(autoRotate);
   });
 
+  // handle local vs cloudflare pages image paths
+  function getImagePath(filename: string, width: string, quality: string) {
+    const productionBuild = import.meta.env.VITE_CF_IMAGES;
+
+    if (productionBuild == true) {
+      return `/cdn-cgi/image/format=auto,width=${width},quality=${quality}/assets/featured/${filename}`;
+    } else {
+      return `/assets/featured/${filename}`;
+    }
+  }
+
 </script>
 
 <div class="flex justify-center gap-5 md:gap-8 -mx-[40rem]">
@@ -36,7 +47,7 @@
       
       animate:flip={{ duration: 600 }}
     >
-      <img src="/cdn-cgi/image/format=auto,width=1080,quality=80/assets/featured/{image.filename}" alt={image.alt} class="rounded-[1.5rem]"/>
+      <img src={getImagePath(image.filename, "1080", "90")} alt={image.alt} class="rounded-[1.5rem]"/>
     </div>
   {/each}
 </div>

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { PUBLIC_CF_IMAGES } from '$env/static/public';
   import { onMount, onDestroy } from 'svelte';
   import { flip } from 'svelte/animate';
 
@@ -26,9 +27,9 @@
 
   // handle local vs cloudflare pages image paths
   function getImagePath(filename: string, width: string, quality: string) {
-    const productionBuild = import.meta.env.VITE_CF_IMAGES;
+    const productionBuild = PUBLIC_CF_IMAGES;
 
-    if (productionBuild == true) {
+    if (productionBuild == 'true') {
       return `/cdn-cgi/image/format=auto,width=${width},quality=${quality}/assets/featured/${filename}`;
     } else {
       return `/assets/featured/${filename}`;

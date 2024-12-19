@@ -176,7 +176,7 @@
       class="rounded-3xl hidden md:block"
       controls
       controlsList="nodownload"
-      poster={getImagePath('cad', 'st2_cover.jpeg', '1920', '80')}
+      poster={getImagePath('cad', 'st1_cover.jpeg', '1920', '80')}
       src="/assets/projects/cad/st1.mp4"
     >
     </video>

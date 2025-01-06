@@ -12,7 +12,7 @@
 ></div>
 
 <nav
-  class="z-20 rounded-2xl bg-zinc-950 outline outline-1 outline-zinc-900 text-black absolute h-[27rem] flex flex-col gap-5 py-4 px-4 font-bold text-3xl left-10 right-10 transition-all"
+  class="z-20 rounded-2xl bg-gradient-to-tr from-black to-zinc-950 outline outline-1 outline-zinc-900 text-black absolute h-[27rem] flex flex-col gap-5 py-4 px-4 font-bold text-3xl left-10 right-10 transition-all"
   in:blur={{ duration: 500 }}
   out:blur={{ duration: 500 }}
 >

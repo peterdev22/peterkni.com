@@ -32,7 +32,7 @@
 </script>
 
 <div
-  class="w-full bg-zinc-950 text-white outline-1 outline-zinc-900 outline flex justify-between rounded-3xl 2xl:h-[28rem] lg:flex-row flex-col"
+  class="w-full bg-gradient-to-tr from-black to-zinc-950 text-white outline-1 outline-zinc-900 outline flex justify-between rounded-3xl 2xl:h-[28rem] lg:flex-row flex-col"
 >
   <!-- TEXT SECTION -->
   <div class="flex flex-col m-6 text-white">

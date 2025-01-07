@@ -7,6 +7,7 @@ export default {
     extend: {},
     fontFamily: {
       "sans": ["DM Sans", "sans-serif"],
+      "title": ["Outfit", "sans-serif"],
       "serif": ["serif"],
     },
   },

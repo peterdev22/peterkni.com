@@ -11,11 +11,11 @@ export const cadProjects = [
       "3D rendering of an cylindrical 3D printer on a wooden floor with a dark metallic background.",
     buttons: [
       {
-        name: "Printo Website",
+        name: "Homepage",
         url: "https://printo.peterkni.com",
       },
       {
-        name: "3D Model Webviewer",
+        name: "3D Model",
         url: "https://collaborate.shapr3d.com/v/lo4VRJcwMHnFwjyv5TsYy",
       },
     ],
@@ -36,11 +36,11 @@ export const cadProjects = [
       "3D rendering of an electric toothbrush lying on it's side with the head detached.",
     buttons: [
       {
-        name: "Eval 1: Motion",
+        name: "Episode I",
         url: "/assets/projects/cad/st1.mp4",
       },
       {
-        name: "Eval 2: Rendering",
+        name: "Episode II",
         url: "/assets/projects/cad/st2.mp4",
       },
     ],
@@ -60,11 +60,11 @@ export const cadProjects = [
     alt: "3D rendering of a drone that has detachable propellers via magnets.",
     buttons: [
       {
-        name: "Drawings & CAD Model",
+        name: "Homepage",
         url: "https://airohh.peterkni.com",
       },
       {
-        name: "3D Model Webviewer",
+        name: "3D Model",
         url: "https://collaborate.shapr3d.com/v/uu8gjKiymWejbBenDEDN6",
       },
     ],
@@ -85,11 +85,11 @@ export const cadProjects = [
       "3D rendering of a Slatedock mini, an organisation hub that can assist with tasks.",
     buttons: [
       {
-        name: "Slatedock Branding",
+        name: "Branding",
         url: "https://slatedock.peterkni.com/branding",
       },
       {
-        name: "Slatedock Prototypes",
+        name: "Prototypes",
         url: "https://slatedock.peterkni.com/prototypes",
       },
     ],
@@ -110,7 +110,7 @@ export const cadProjects = [
       "Text snippet of the article '4 Top CAD Tips to Save Tons of Time'.",
     buttons: [
       {
-        name: "4 Top CAD Tips to Save Tons of Time",
+        name: "Read Article",
         url: "https://cadarticle.peterkni.com",
       },
     ],
@@ -135,11 +135,11 @@ export const roboticsProjects = [
       "A robot that is holding two blue rings.",
     buttons: [
       {
-        name: "75477M RobotEvents Page",
+        name: "Team Info",
         url: "https://www.robotevents.com/teams/V5RC/75477M",
       },
       {
-        name: "GitHub Repo",
+        name: "Repository",
         url: "https://github.com/moooeg/vrc-High-Stakes",
       }
     ],
@@ -161,7 +161,7 @@ export const roboticsProjects = [
       "A black robot with a front sticker that says 'Frij'.",
     buttons: [
       {
-        name: "GitHub Repo",
+        name: "Repository",
         url: "https://github.com/peterdev22/vrc-over-under",
       }
     ],
@@ -187,11 +187,11 @@ export const programmingProjects = [
       "Code from this website's source displayed in a code editor.",
     buttons: [
       {
-        name: "Source Code",
+        name: "Repository",
         url: "https://github.com/peterdev22/peterkni.com",
       },
       {
-        name: "peterkni.com (You're already here!)",
+        name: "Homepage",
         url: "/",
       },
     ],
@@ -213,7 +213,7 @@ export const programmingProjects = [
       "A Mac desktop with a custom menu bar theme and design.",
     buttons: [
       {
-        name: "GitHub Repo",
+        name: "Repository",
         url: "https://github.com/peterdev22/dotfiles",
       }
     ],
@@ -234,7 +234,7 @@ export const programmingProjects = [
       "A snippet of text from the tutorial 'How to Create a Website'.",
     buttons: [
       {
-        name: "How to Create a Website",
+        name: "Read Article",
         url: "https://makeawebsite.peterkni.com/",
       }
     ],

@@ -38,7 +38,7 @@
 
 </script>
 
-<div class="flex justify-center gap-5 md:gap-8 -mx-[50rem]">
+<div class="flex justify-center gap-5 md:gap-16 -mx-[60rem]">
   {#each images as image, i (image.id)}
     <div
       class="transition-all delay-200 flex flex-col {i ===

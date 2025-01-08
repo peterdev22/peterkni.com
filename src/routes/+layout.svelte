@@ -19,8 +19,10 @@
   $effect(() => {
     if (navMenuEnabled) {
       document.body.classList.add('overflow-y-hidden');
+      document.body.classList.add('touch-none');
     } else {
       document.body.classList.remove('overflow-y-hidden');
+      document.body.classList.remove('touch-none');
     }
   });
 
@@ -40,14 +42,12 @@
   });
 </script>
 
-
 <!-- HEADER & NAV BAR -->
 <header
-  class="p-5 sm:p-10 px-10 xl:px-20 2xl:px-48 sm:py-4 flex justify-center "
+  class="p-5 sm:p-10 px-10 xl:px-20 2xl:px-48 sm:py-4 flex justify-center"
 >
-
   <div
-    class="flex sm:gap-16 items-center justify-between w-[90rem] sm:px-10 py-5"
+    class="flex sm:gap-16 items-center justify-between lg:justify-center w-[90rem] sm:px-10 py-5"
   >
     <a
       onclick={() => {
@@ -56,41 +56,65 @@
         }
       }}
       href="/"
-      class="font-bold flex group gap-3 py-1 active:scale-95 px-4 -mx-4 hover:bg-zinc-800 text-white hover:px-4 hover:-mx-4 transition-all rounded-2xl"
+      class="font-bold flex group gap-3 py-1 active:scale-95 px-4 -mx-4 text-white hover:px-4 hover:-mx-4 transition-all rounded-2xl"
     >
-      <img src="assets/branding/pk_white.svg" alt="" class="group-hover:rotate-6 group-hover:-translate-y-1 transition-all w-[3.5rem]">
-      
+      <img
+        src="assets/branding/pk_white.svg"
+        alt=""
+        class="group-hover:rotate-6 group-hover:-translate-y-1 transition-all w-[3.5rem]"
+      />
+    </a>
+
+    <!-- this is shown for half a second on page load, fix later-->
+    <a
+      href="/"
+      class="hidden
+    {currentPath == '/' ? 'hidden' : 'lg:flex'}
+    bg-amber-300 hover:bg-white flex gap-2 font-bold tracking-tighter transition-all active:scale-95 items-center text-3xl px-2 py-0.5"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="100%"
+        height="100%"
+        class="w-8"
+        viewBox="0 0 16 16"
+        ><path
+          fill="currentColor"
+          d="M14 6h-1.7c-.2 0-.4-.1-.6-.2l-1.3-1.3c-.2-.3-.6-.5-1.1-.5H9c1.1 0 2-.9 2-2s-.9-2-2-2s-2 .9-2 2c0 .7.4 1.4 1 1.7l-.2.3h-2c-1.1 0-2.3.5-3 1.5l-.6.8c-.4.4-.2 1 .2 1.3c.4.2.9.1 1.2-.3l.5-.7Q4.55 6 5.3 6h.8l-.7 1.6c-.3.6-.4 1.2-.4 1.9v2c0 .3-.2.5-.5.5H2c-.6 0-1 .4-1 1s.4 1 1 1h3.5c.8 0 1.5-.7 1.5-1.5V10l3.8 4.5c.6.9 1.7 1.5 2.8 1.5h.9L9.1 9.3c-.3-.4-.2-.8 0-1.3l.6-1.5l.7.8c.4.4 1 .7 1.6.7h2c.6 0 1-.4 1-1s-.4-1-1-1"
+        /></svg
+      >
+      <p>Exit</p>
     </a>
 
     <!-- <nav
-      class="gap-8 text-xl xl:mr-56 text-white underline-offset-8 decoration-zinc-600 hidden lg:flex items-center font-semibold"
+      class="gap-8 text-xl text-white underline-offset-8 decoration-zinc-600 hidden lg:flex items-center font-semibold"
     >
       <a
         href="/"
         class="{currentPath == '/'
           ? 'bg-white text-black px-2'
-          : 'hover:bg-zinc-800 hover:px-2 hover:-mx-2'} transition-all rounded-lg active:scale-95"
-        >Home</a
+          : 'hover:bg-zinc-800 hover:px-2 hover:-mx-2'} transition-all active:scale-95"
+        >Dashboard</a
       >
       <a
         href="/cad"
         class="{currentPath == '/cad'
           ? 'bg-blue-300 text-black px-2'
-          : 'hover:bg-zinc-800 hover:px-2 hover:-mx-2'} transition-all rounded-lg active:scale-95"
+          : 'hover:bg-zinc-800 hover:px-2 hover:-mx-2'} transition-all active:scale-95"
         >CAD</a
       >
       <a
         href="/robotics"
         class="{currentPath == '/robotics'
           ? 'bg-red-400 text-black px-2 '
-          : 'hover:bg-zinc-800 hover:px-2 hover:-mx-2'} transition-all rounded-lg active:scale-95"
+          : 'hover:bg-zinc-800 hover:px-2 hover:-mx-2'} transition-all active:scale-95"
         >Robotics</a
       >
       <a
         href="/programming"
         class="{currentPath == '/programming'
           ? 'bg-yellow-300 text-black px-2 '
-          : 'hover:bg-zinc-800 hover:px-2 hover:-mx-2'} transition-all rounded-lg active:scale-95"
+          : 'hover:bg-zinc-800 hover:px-2 hover:-mx-2'} transition-all active:scale-95"
         >Programming</a
       >
     </nav> -->
@@ -117,26 +141,44 @@
       onclick={() => {
         navMenuEnabled = !navMenuEnabled;
       }}
-      class="lg:hidden p-2 h-14 flex justify-center bg-white hover:bg-zinc-300 rounded-2xl transition-all active:scale-95"
+      class="lg:hidden p-2 h-14 flex justify-center text-white transition-all active:scale-95"
     >
       <div class="w-10 h-10 flex justify-center items-center">
         {#if !navMenuEnabled}
-          <img
-            src="assets/icons/menu_icon.svg"
-            aria-label="Open navigation menu."
-            alt="Three horizontal lines, representing a menu."
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="100%"
+            height="100%"
+            class="absolute w-8 -translate-y-1"
+            viewBox="0 0 16 16"
             in:scale
-            class="absolute w-9"
-          />
+            out:scale
+            ><path
+              fill="currentColor"
+              d="M14 6h-1.7c-.2 0-.4-.1-.6-.2l-1.3-1.3c-.2-.3-.6-.5-1.1-.5H9c1.1 0 2-.9 2-2s-.9-2-2-2s-2 .9-2 2c0 .7.4 1.4 1 1.7l-.2.3h-2c-1.1 0-2.3.5-3 1.5l-.6.8c-.4.4-.2 1 .2 1.3c.4.2.9.1 1.2-.3l.5-.7Q4.55 6 5.3 6h.8l-.7 1.6c-.3.6-.4 1.2-.4 1.9v2c0 .3-.2.5-.5.5H2c-.6 0-1 .4-1 1s.4 1 1 1h3.5c.8 0 1.5-.7 1.5-1.5V10l3.8 4.5c.6.9 1.7 1.5 2.8 1.5h.9L9.1 9.3c-.3-.4-.2-.8 0-1.3l.6-1.5l.7.8c.4.4 1 .7 1.6.7h2c.6 0 1-.4 1-1s-.4-1-1-1"
+            /></svg
+          >
+          <p
+            class="font-black tracking-tighter text-xs translate-y-5"
+            in:scale
+            out:scale
+          >
+            Menu
+          </p>
         {/if}
         {#if navMenuEnabled}
-          <img
-            src="assets/icons/close_menu_icon.svg"
-            aria-label="Close navigation menu."
-            alt="An 'X' icon, representing a close button."
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="100%"
+            height="100%"
+            viewBox="0 0 24 24"
             in:scale
-            class="absolute w-9"
-          />
+            class="absolute w-12"
+            ><path
+              fill="currentColor"
+              d="M18.36 19.78L12 13.41l-6.36 6.37l-1.42-1.42L10.59 12L4.22 5.64l1.42-1.42L12 10.59l6.36-6.36l1.41 1.41L13.41 12l6.36 6.36z"
+            /></svg
+          >
         {/if}
       </div>
     </button>
@@ -156,8 +198,16 @@
   class="mt-40 mb-10 px-10 lg:px-28 xl:px-52 2xl:px-72 flex justify-center"
 >
   <div class="flex flex-col items-center">
-    <img src="assets/branding/pk_grey_nodetail.svg" class="w-8 m-2" alt="Peter Knight logo" />
-    <a href="/" class="hover:text-zinc-400 transition-all text-zinc-700 font-bold">Peter Knight</a>
+    <img
+      src="assets/branding/pk_grey_nodetail.svg"
+      class="w-8 m-2"
+      alt="Peter Knight logo"
+    />
+    <a
+      href="/"
+      class="hover:text-zinc-400 transition-all text-zinc-700 font-bold"
+      >Peter Knight</a
+    >
     <p class="text-zinc-700 text-xs font-bold -mt-1">2022-2025</p>
   </div>
 </footer>

@@ -1,7 +1,11 @@
 <script lang="ts">
   import { PUBLIC_CF_IMAGES } from '$env/static/public';
   import { printoFeature } from '$lib/data/slideshowData';
-  import { cadProjects, roboticsProjects, programmingProjects } from '$lib/data/projectData';
+  import {
+    cadProjects,
+    roboticsProjects,
+    programmingProjects,
+  } from '$lib/data/projectData';
 
   // slideshow component
   import Slideshow from '$lib/components/Slideshow.svelte';
@@ -114,7 +118,7 @@
 <section
   class="mb-12 px-4 lg:px-28 xl:px-52 2xl:px-72 flex flex-col lg:flex-row gap-12 justify-center"
 >
-  <div class="flex flex-col gap-12">
+  <div class="flex flex-col gap-12 lg:w-[40rem]">
     <div
       class="w-full relative bg-zinc-950 bg-opacity-50 text-white border-2 border-b-zinc-900 border-l-zinc-900 border-green-300 flex justify-between lg:flex-row flex-col"
     >
@@ -126,11 +130,25 @@
         </h2>
         <div class="flex flex-col">
           <p class="text-white font-medium tracking-tight max-w-[40rem]">
-            Hello, I'm Peter. I enjoy modelling functional objects in CAD and 3D
+            Hello, I'm Peter. I enjoy designing functional objects with CAD and 3D
             printing in my spare time. On this website you will find various
-            personal and school projects I have worked on.
+             projects I have worked on.
           </p>
           <div class="w-12 h-0.5 bg-green-300 my-4"></div>
+          <a href="https://github.com/peterdev22" class="items-center font-bold mt-4  hover:bg-white active:scale-95 px-2 text-black transition-all flex gap-1 w-24 lg:w-fit bg-green-300">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              class="h-5"
+              viewBox="0 0 24 24"
+              ><path
+                fill="currentColor"
+                d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"
+              /></svg
+            >
+            <p>GitHub</p>
+          </a>
         </div>
       </div>
     </div>
@@ -160,7 +178,7 @@
     </div>
   </div>
 
-  <div class="flex flex-col gap-12">
+  <div class="flex flex-col gap-12 lg:w-[40rem]">
     <div
       class="relative bg-zinc-950 bg-opacity-50 text-white border-2 border-b-zinc-900 border-l-zinc-900 border-red-400 flex justify-between lg:flex-row flex-col"
     >
@@ -178,10 +196,8 @@
           class="bg-red-400 px-2 text-black active:scale-95 mt-4 hover:bg-white transition-all font-semibold w-fit"
           >View all robotics projects</a
         >
-
       </div>
     </div>
-
 
     <div
       class="relative bg-zinc-950 bg-opacity-50 text-white border-2 border-b-zinc-900 border-l-zinc-900 border-yellow-300 flex justify-between lg:flex-row flex-col"
@@ -192,11 +208,11 @@
         >
           PROGRAMMING
         </h2>
-        
+
         {@render projectSection(programmingProjects, [1, 2])}
 
         <div class="w-full h-0.5 bg-zinc-600 my-3"></div>
-        
+
         {@render projectSection(programmingProjects, [3])}
 
         <a

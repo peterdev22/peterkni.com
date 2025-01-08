@@ -4,6 +4,7 @@ export const cadProjects = [
     name: "Printo",
     description:
       "Creating a new 3D printer design in CAD designed for home users. Designed to be easy to use and maintain, CAD modelled in Fusion and rendered in Blender.",
+    summary: "The 3D printer designed for home users.",
     date: "Mar 2024 - Present",
     section: "cad",
     filename: "3dprinter.png",
@@ -11,17 +12,17 @@ export const cadProjects = [
       "3D rendering of an cylindrical 3D printer on a wooden floor with a dark metallic background.",
     buttons: [
       {
-        name: "Homepage",
+        name: "Product page",
         url: "https://printo.peterkni.com",
       },
       {
-        name: "3D Model",
+        name: "3D model",
         url: "https://collaborate.shapr3d.com/v/lo4VRJcwMHnFwjyv5TsYy",
       },
     ],
     tags: [
-      "Industrial Design",
-      "School Project",
+      "Concept",
+      "Design Process",
     ],
   },
   {
@@ -29,6 +30,7 @@ export const cadProjects = [
     name: "Toothbrush",
     description:
       "Improving my motion/joint skills in Fusion and rendering skills in Blender.",
+    summary: "Challenges encountered while designing a toothbrush.",
     date: "Feb 2024",
     section: "cad",
     filename: "toothbrush.jpg",
@@ -45,8 +47,7 @@ export const cadProjects = [
       },
     ],
     tags: [
-      "Industrial Design",
-      "School Project",
+      "Video",
     ],
   },
   {
@@ -54,23 +55,24 @@ export const cadProjects = [
     name: "Airohh",
     description:
       "Airohh is a drone that contains moldular features to make sure you are always up to date with the latest drone technologies.",
+    summary: "The drone that puts modularity first.",
     date: "Feb 2023 - Jun 2023",
     section: "cad",
     filename: "drone.png",
     alt: "3D rendering of a drone that has detachable propellers via magnets.",
     buttons: [
       {
-        name: "Homepage",
+        name: "Product page",
         url: "https://airohh.peterkni.com",
       },
       {
-        name: "3D Model",
+        name: "3D model",
         url: "https://collaborate.shapr3d.com/v/uu8gjKiymWejbBenDEDN6",
       },
     ],
     tags: [
-      "Industrial Design",
-      "School Project",
+      "Concept",
+      "Design Process",
     ],
   },
   {
@@ -78,6 +80,7 @@ export const cadProjects = [
     name: "Slatedock",
     description:
       "Slatedock is an organisation hub that can assist you with tasks at your desk or anywhere else.",
+    summary: "Cable management for your desk.",
     date: "Jan 2023 - Jun 2023",
     section: "cad",
     filename: "slatedock.jpeg",
@@ -94,8 +97,8 @@ export const cadProjects = [
       },
     ],
     tags: [
-      "Industrial Design",
-      "School Project",
+      "Concept",
+      "Design Process",
     ],
   },
   {
@@ -103,6 +106,7 @@ export const cadProjects = [
     name: "4 Top CAD Tips",
     description:
       "4 Top CAD Tips to Save Tons of Time is an article that was wrote for fun but may help a beginner save some time creating models in CAD.",
+    summary: "Tips for someone starting out at CAD.",
     date: "Mar 2023",
     section: "cad",
     filename: "cadarticle.png",
@@ -110,14 +114,12 @@ export const cadProjects = [
       "Text snippet of the article '4 Top CAD Tips to Save Tons of Time'.",
     buttons: [
       {
-        name: "Read Article",
+        name: "Read article",
         url: "https://cadarticle.peterkni.com",
       },
     ],
     tags: [
-      "Article",
-      "CAD",
-      "Tips & Tricks"
+      "Article"
     ],
   }
 ];
@@ -128,6 +130,7 @@ export const roboticsProjects = [
     name: "Frij 2024-2025",
     description:
       "Our team's robot code for the 2024-2025 'High Stakes' season of VEX V5RC. This season we won the excellence award at the Australian Nationals and will be representing Australia at the VEX Robotics World Championship in May 2025.",
+    summary: "Our robot for the 'High Stakes' season of the VEX Robotics Competiton.",
     date: "May 2024 - Present",
     section: "robotics",
     filename: "robot2.jpeg",
@@ -135,7 +138,7 @@ export const roboticsProjects = [
       "A robot that is holding two blue rings.",
     buttons: [
       {
-        name: "Team Info",
+        name: "Team info",
         url: "https://www.robotevents.com/teams/V5RC/75477M",
       },
       {
@@ -144,9 +147,7 @@ export const roboticsProjects = [
       }
     ],
     tags: [
-      "VEX Robotics",
-      "Team Project",
-      "Competition"
+      "Competiton"
     ],
   },
   {
@@ -154,6 +155,7 @@ export const roboticsProjects = [
     name: "Frij 2023",
     description:
       "Our team's robot code for the VEX Robotics Competition 'Over Under' season. In 2023, we won the Judges award at the Australian National Championship.",
+    summary: "Our robot for the 'Over Under' season of the VEX Robotics Competiton.",
     date: "May 2023 - Dec 2023",
     section: "robotics",
     filename: "robot.JPG",
@@ -166,9 +168,7 @@ export const roboticsProjects = [
       }
     ],
     tags: [
-      "VEX Robotics",
-      "Team Project",
-      "Competition"
+      "Competiton"
     ],
   }
 ];
@@ -180,6 +180,7 @@ export const programmingProjects = [
     name: "peterkni.com",
     description:
       "This website... created using Svelte as a place for all things I do. View the source code of what you're looking at right now on GitHub.",
+    summary: "The website you are currently on.",
     date: "Jan 2023 - Present",
     section: "programming",
     filename: "peterkni.png",
@@ -196,9 +197,7 @@ export const programmingProjects = [
       },
     ],
     tags: [
-      "SvelteKit",
-      "Web Development",
-      "Portfolio"
+      "Svelte",
     ],
   },
   {
@@ -206,6 +205,7 @@ export const programmingProjects = [
     name: "My Dotfiles",
     description:
       "A backup of my (most important) configuration files just in case my computer dies.",
+    summary: "Firefox userChrome.css, yabai and skhd configurations.",
     date: "Jun 2023",
     section: "programming",
     filename: "dotfiles.png",
@@ -218,8 +218,8 @@ export const programmingProjects = [
       }
     ],
     tags: [
-      "Configuration",
-      "Theme"
+      "Shell",
+      "CSS"
     ],
   },
   {
@@ -227,6 +227,7 @@ export const programmingProjects = [
     name: "How to Create a Website",
     description:
       "My first time 'programming' my own website; made with HTML & CSS. A tutorial for beginners... written by a beginner.",
+    summary: "A guide on how to create a basic website from scratch.",
     date: "Jun 2022",
     section: "programming",
     filename: "makeawebsite.png",
@@ -234,14 +235,13 @@ export const programmingProjects = [
       "A snippet of text from the tutorial 'How to Create a Website'.",
     buttons: [
       {
-        name: "Read Article",
+        name: "Read article",
         url: "https://makeawebsite.peterkni.com/",
       }
     ],
     tags: [
       "Article",
-      "Web Development",
-      "HTML & CSS"
+      "HTML/CSS"
     ],
   }
 ];

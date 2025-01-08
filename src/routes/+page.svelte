@@ -1,7 +1,7 @@
 <script lang="ts">
   import { PUBLIC_CF_IMAGES } from '$env/static/public';
   import { printoFeature } from '$lib/data/slideshowData';
-  import { cadProjects } from '$lib/data/projectData';
+  import { cadProjects, roboticsProjects, programmingProjects } from '$lib/data/projectData';
 
   // slideshow component
   import Slideshow from '$lib/components/Slideshow.svelte';
@@ -32,122 +32,193 @@
   <title>Peter Knight · CAD, Robotics & Programming</title>
 </svelte:head>
 
-<!-- TITLE & INTRO -->
-<section
-  class="mb-12 px-10 lg:px-28 xl:px-52 2xl:px-72 flex flex-col lg:flex-row justify-between"
->
-  <div>
-    <h1
-      class="text-yellow-300 font-semibold text-6xl sm:text-7xl lg:text-8xl -rotate-1 underline underline-offset-[1rem]"
-    >
-      Welcome !
-    </h1>
-    <p class="text-white font-medium text-xl sm:text-2xl mt-10">
-      Hey, I'm Peter. On my wesbite you'll find some of my projects relating to
-      CAD, Robotics and Programming.
-    </p>
-  </div>
-  <div class="w-[55rem]"></div>
-</section>
-
-<!-- BUTTONS -->
-<section class="mt-10 px-10 lg:px-28 xl:px-52 2xl:px-72">
-  <h2 class="text-xl text-zinc-600 font-semibold mb-6">Go to projects:</h2>
-  <div
-    class="flex flex-col md:flex-row gap-8 text-black font-bold text-3xl md:items-center"
-  >
-    <a
-      href="/cad"
-      class="bg-gradient-to-tr from-white to-blue-500 text-blue-950 hover:from-blue-300 hover:to-blue-700 hover:text-blue-100 px-3 py-1 transition-all rounded-2xl active:scale-95 shrink-0"
-      ><div class="flex gap-2 items-center">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class=""
-          width="2rem"
-          height="100%"
-          viewBox="0 0 24 24"
-          ><path
-            fill="currentColor"
-            d="M21.22 6.894a3.7 3.7 0 0 0-1.4-1.37l-6-3.31a3.83 3.83 0 0 0-3.63 0l-6 3.31a3.7 3.7 0 0 0-1.4 1.37a3.74 3.74 0 0 0-.52 1.9v6.41a3.79 3.79 0 0 0 1.92 3.27l6 3.3a3.74 3.74 0 0 0 3.63 0l6-3.31a3.72 3.72 0 0 0 1.91-3.26v-6.36a3.64 3.64 0 0 0-.51-1.95m-1 8.31a2.2 2.2 0 0 1-1.14 1.95l-6 3.31q-.158.089-.33.14v-8.18l7.3-4.39c.092.242.136.5.13.76z"
-          /></svg
+{#snippet projectSection(type: any, filterIn: Array<number>)}
+  {#each type.filter( (project: any) => filterIn.includes(project.id), ) as project}
+    <div class="flex flex-col">
+      <h3 class="text-2xl text-white font-black tracking-tight">
+        {project.name}
+      </h3>
+      <p class="text-white font-medium tracking-tight">
+        {project.summary}
+      </p>
+      <div
+        class="flex justify-between sm:items-center sm:flex-row flex-col sm:gap-0 gap-2 sm:mb-0 mb-4"
+      >
+        <div
+          class="flex gap-4 {project.section == 'misc'
+            ? 'text-green-300'
+            : project.section == 'cad'
+              ? 'text-blue-300'
+              : project.section == 'robotics'
+                ? 'text-red-400'
+                : project.section == 'programming'
+                  ? 'text-yellow-300'
+                  : ''} font-semibold my-2"
         >
-        <div>CAD</div>
-      </div></a
-    >
-    <a
-      href="/robotics"
-      class="bg-gradient-to-tr from-pink-400 to-red-400 text-red-950 hover:from-red-400 hover:to-red-800 hover:text-red-100 px-3 py-1 transition-all rounded-2xl active:scale-95 shrink-0"
-      ><div class="flex gap-2 items-center">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class=""
-          width="2rem"
-          height="100%"
-          viewBox="0 0 24 24"
-          ><path
-            fill="currentColor"
-            d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2M7.5 13A2.5 2.5 0 0 0 5 15.5A2.5 2.5 0 0 0 7.5 18a2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 7.5 13m9 0a2.5 2.5 0 0 0-2.5 2.5a2.5 2.5 0 0 0 2.5 2.5a2.5 2.5 0 0 0 2.5-2.5a2.5 2.5 0 0 0-2.5-2.5"
-          /></svg
-        >
-        <div>Robotics</div>
+          {#each project.tags as tag}
+            <div
+              class="border {project.section == 'misc'
+                ? 'border-green-300'
+                : project.section == 'cad'
+                  ? 'border-blue-300'
+                  : project.section == 'robotics'
+                    ? 'border-red-400'
+                    : project.section == 'programming'
+                      ? 'border-yellow-300'
+                      : ''} px-2 border-dashed"
+            >
+              {tag}
+            </div>
+          {/each}
+        </div>
+        <div class="flex gap-4 sm:gap-1">
+          {#each project.buttons as button}
+            <a
+              href={button.url}
+              class="text-center justify-center gap-1 {project.section == 'misc'
+                ? 'bg-green-300'
+                : project.section == 'cad'
+                  ? 'bg-blue-300'
+                  : project.section == 'robotics'
+                    ? 'bg-red-400'
+                    : project.section == 'programming'
+                      ? 'bg-yellow-300'
+                      : ''} text-lg sm:text-base active:scale-95 transition-all px-2 sm:w-auto w-full sm:py-0 py-1 font-bold hover:bg-white text-black"
+              >{button.name}</a
+            >
+          {/each}
+        </div>
       </div>
-    </a>
-    <a
-      href="/programming"
-      class="bg-gradient-to-tr from-orange-300 to-yellow-300 text-yellow-950 hover:from-yellow-400 hover:to-yellow-700 hover:text-yellow-100 px-3 py-1 transition-all rounded-2xl active:scale-95 shrink-0"
-    >
-      <div class="flex gap-2 items-center">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class=""
-          width="2rem"
-          height="100%"
-          viewBox="0 0 24 24"
-          ><path
-            fill="currentColor"
-            d="M3.464 3.464C2 4.93 2 7.286 2 12s0 7.071 1.464 8.535C4.93 22 7.286 22 12 22s7.071 0 8.535-1.465C22 19.072 22 16.714 22 12s0-7.071-1.465-8.536C19.072 2 16.714 2 12 2S4.929 2 3.464 3.464m2.96 6.056a.75.75 0 0 1 1.056-.096l.277.23c.605.504 1.12.933 1.476 1.328c.379.42.674.901.674 1.518s-.295 1.099-.674 1.518c-.356.395-.871.824-1.476 1.328l-.277.23a.75.75 0 1 1-.96-1.152l.234-.195c.659-.55 1.09-.91 1.366-1.216c.262-.29.287-.427.287-.513s-.025-.222-.287-.513c-.277-.306-.707-.667-1.366-1.216l-.234-.195a.75.75 0 0 1-.096-1.056M17.75 15a.75.75 0 0 1-.75.75h-5a.75.75 0 0 1 0-1.5h5a.75.75 0 0 1 .75.75"
-          /></svg
-        >
-        <div>Programming</div>
-      </div></a
-    >
-    <h2 class="text-lg text-zinc-600 font-medium italic hidden xl:block">
-      Or keep scrolling to view some of my favourites.
-    </h2>
+
+      <div
+        class="w-12 h-0.5 {project.section == 'misc'
+          ? 'bg-green-300'
+          : project.section == 'cad'
+            ? 'bg-blue-300'
+            : project.section == 'robotics'
+              ? 'bg-red-400'
+              : project.section == 'programming'
+                ? 'bg-yellow-300'
+                : ''} my-4 sm:my-2"
+      ></div>
+    </div>
+  {/each}
+{/snippet}
+
+<section class="pb-20">
+  <div class="overflow-x-clip">
+    <Slideshow images={printoFeature} />
   </div>
 </section>
 
-<!-- DIVIDER -->
-<section class="flex justify-center text-zinc-800 text-6xl mt-16">
-  · · ·
-</section>
-
-<!-- FEATURED PROJECTS HEADING -->
-<h2
-  class="mx-5 lg:mx-28 xl:mx-52 2xl:mx-64 mt-10 text-zinc-600 flex gap-2 items-center py-4 border-b-4 border-dashed border-zinc-900"
+<section
+  class="mb-12 px-4 lg:px-28 xl:px-52 2xl:px-72 flex flex-col lg:flex-row gap-12 justify-center"
 >
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    class="w-[2rem] sm:w-[3.8rem]"
-    viewBox="0 0 24 24"
-    ><path
-      fill="currentColor"
-      d="m12 17.27l4.15 2.51c.76.46 1.69-.22 1.49-1.08l-1.1-4.72l3.67-3.18c.67-.58.31-1.68-.57-1.75l-4.83-.41l-1.89-4.46c-.34-.81-1.5-.81-1.84 0L9.19 8.63l-4.83.41c-.88.07-1.24 1.17-.57 1.75l3.67 3.18l-1.1 4.72c-.2.86.73 1.54 1.49 1.08z"
-    /></svg
-  >
-  <div class=" font-semibold text-3xl sm:text-5xl lg:text-6xl">
-    Featured Projects
+  <div class="flex flex-col gap-12">
+    <div
+      class="w-full relative bg-zinc-950 bg-opacity-50 text-white border-2 border-b-zinc-900 border-l-zinc-900 border-green-300 flex justify-between lg:flex-row flex-col"
+    >
+      <div class="flex gap-2 flex-col m-4">
+        <h2
+          class="text-green-300 tracking-tight font-title font-bold text-4xl mb-6"
+        >
+          ABOUT
+        </h2>
+        <div class="flex flex-col">
+          <p class="text-white font-medium tracking-tight max-w-[40rem]">
+            Hello, I'm Peter. I enjoy modelling functional objects in CAD and 3D
+            printing in my spare time. On this website you will find various
+            personal and school projects I have worked on.
+          </p>
+          <div class="w-12 h-0.5 bg-green-300 my-4"></div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="relative bg-zinc-950 bg-opacity-50 text-white border-2 border-b-zinc-900 border-l-zinc-900 border-blue-300 flex justify-between lg:flex-row flex-col"
+    >
+      <div class="flex gap-2 flex-col p-4 w-full">
+        <h2
+          class="text-blue-300 tracking-tight font-title font-bold text-4xl mb-4"
+        >
+          COMPUTER AIDED DESIGN
+        </h2>
+
+        {@render projectSection(cadProjects, [1, 3, 4])}
+
+        <div class="w-full h-0.5 bg-zinc-600 my-3"></div>
+
+        {@render projectSection(cadProjects, [2, 5])}
+
+        <a
+          href="/cad"
+          class="bg-blue-300 px-2 active:scale-95 text-black mt-4 hover:bg-white transition-all font-semibold w-fit"
+          >View all CAD projects</a
+        >
+      </div>
+    </div>
   </div>
-</h2>
+
+  <div class="flex flex-col gap-12">
+    <div
+      class="relative bg-zinc-950 bg-opacity-50 text-white border-2 border-b-zinc-900 border-l-zinc-900 border-red-400 flex justify-between lg:flex-row flex-col"
+    >
+      <div class="flex gap-2 flex-col p-4 w-full">
+        <h2
+          class="text-red-400 tracking-tight font-title font-bold text-4xl mb-6"
+        >
+          ROBOTICS
+        </h2>
+
+        {@render projectSection(roboticsProjects, [1, 2])}
+
+        <a
+          href="/robotics"
+          class="bg-red-400 px-2 text-black active:scale-95 mt-4 hover:bg-white transition-all font-semibold w-fit"
+          >View all robotics projects</a
+        >
+
+      </div>
+    </div>
+
+
+    <div
+      class="relative bg-zinc-950 bg-opacity-50 text-white border-2 border-b-zinc-900 border-l-zinc-900 border-yellow-300 flex justify-between lg:flex-row flex-col"
+    >
+      <div class="flex gap-2 flex-col p-4 w-full">
+        <h2
+          class="text-yellow-300 tracking-tight font-title font-bold text-4xl mb-6"
+        >
+          PROGRAMMING
+        </h2>
+        
+        {@render projectSection(programmingProjects, [1, 2])}
+
+        <div class="w-full h-0.5 bg-zinc-600 my-3"></div>
+        
+        {@render projectSection(programmingProjects, [3])}
+
+        <a
+          href="/programming"
+          class="bg-yellow-300 px-2 active:scale-95 text-black mt-4 hover:bg-white transition-all font-semibold w-fit"
+          >View all programming projects</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- FEATURED: PRINTO -->
-<section
+<!-- <section
   class="bg-gradient-to-tr from-black to-zinc-950 border border-1 border-zinc-900 py-6 my-16"
 >
   <div
     class="mb-6 px-10 lg:px-28 xl:px-52 2xl:px-80 flex flex-col sm:flex-row gap-6 sm:gap-12 items-center"
   >
-    <h3 class="font-bold text-5xl text-black bg-blue-300 px-2 py-0.5">Printo</h3>
+    <h3 class="font-bold text-5xl text-black bg-blue-300 px-2 py-0.5">
+      Printo
+    </h3>
     <p class="font-medium text-xl text-white mb-4 sm:mb-0">
       The 3D printer designed for home users.
     </p>
@@ -177,19 +248,23 @@
       >
     {/each}
   </div>
-</section>
+</section> -->
 
 <!-- FEATURED: TOOTHBRUSH -->
-<section
+<!-- <section
   class="bg-gradient-to-tr from-black to-zinc-950 border border-1 border-zinc-900 py-6 my-16"
 >
   <div
     class="mb-6 px-10 lg:px-28 xl:px-52 2xl:px-80 flex flex-col sm:flex-row gap-6 sm:gap-12 items-center"
   >
-  <div class="flex flex-col lg:flex-row items-center gap-2 lg:gap-6">
-    <h3 class="font-semibold text-5xl text-white">Toothbrush</h3>
-    <h3 class="font-semibold bg-green-300 text-green-950 rounded-md text-xl px-2">Skills Task: Evaluation</h3>
-  </div>
+    <div class="flex flex-col lg:flex-row items-center gap-2 lg:gap-6">
+      <h3 class="font-semibold text-5xl text-white">Toothbrush</h3>
+      <h3
+        class="font-semibold bg-green-300 text-green-950 rounded-md text-xl px-2"
+      >
+        Skills Task: Evaluation
+      </h3>
+    </div>
     <p class="font-medium text-xl text-white mb-4 sm:mb-0">
       Practicing my CAD and rendering skills in preparation for the final
       project.
@@ -203,7 +278,6 @@
       src={getImagePath('cad', 'toothbrush.jpg', '1920', '80')}
       alt="Toothbrush CAD model"
     />
-    <!-- svelte-ignore a11y-media-has-caption -->
     <video
       class="rounded-3xl hidden md:block"
       controls
@@ -212,19 +286,6 @@
       src="/assets/projects/cad/st1.mp4"
     >
     </video>
-    <!-- svelte-ignore a11y_media_has_caption -->
-    <!-- <video
-      class="rounded-3xl"
-      controls
-      controlsList="nodownload"
-      poster="/assets/projects/cad/st2_cover.jpeg"
-      src="/assets/projects/cad/st2.mp4"
-    >
-    </video> -->
-    <!-- <img
-      class="rounded-3xl"
-      src="assets/featured/explode_8bit.png"
-      alt="Toothbrush CAD model"> -->
   </div>
   <div
     class="flex flex-col sm:flex-row mx-auto w-fit text-center items-center justify-center mt-6 gap-4 sm:gap-6"
@@ -249,5 +310,4 @@
     {/each}
   </div>
 </section>
-
-<!-- ADD MORE SOON -->
+ -->

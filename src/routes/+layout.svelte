@@ -40,10 +40,12 @@
   });
 </script>
 
+
 <!-- HEADER & NAV BAR -->
 <header
-  class="p-5 sm:p-10 px-10 xl:px-20 2xl:px-48 sm:py-4 flex justify-center"
+  class="p-5 sm:p-10 px-10 xl:px-20 2xl:px-48 sm:py-4 flex justify-center "
 >
+
   <div
     class="flex sm:gap-16 items-center justify-between w-[90rem] sm:px-10 py-5"
   >

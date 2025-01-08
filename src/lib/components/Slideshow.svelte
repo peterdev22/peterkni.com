@@ -38,7 +38,7 @@
 
 </script>
 
-<div class="flex justify-center gap-5 md:gap-8 -mx-[40rem]">
+<div class="flex justify-center gap-5 md:gap-8 -mx-[50rem]">
   {#each images as image, i (image.id)}
     <div
       class="transition-all delay-200 flex flex-col {i ===
@@ -48,7 +48,7 @@
       
       animate:flip={{ duration: 600 }}
     >
-      <img src={getImagePath(image.filename, "1080", "90")} alt={image.alt} class="rounded-[1.5rem]"/>
+      <img src={getImagePath(image.filename, "1080", "90")} alt={image.alt}/>
     </div>
   {/each}
 </div>

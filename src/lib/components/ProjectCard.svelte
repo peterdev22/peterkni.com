@@ -37,7 +37,7 @@
 </script>
 
 <div
-  class="w-full relative bg-zinc-950 bg-opacity-50 text-white border-t-2 border-r-2 {theme.colour ==
+  class="w-full relative bg-zinc-950 bg-opacity-50 text-white border-2 {theme.colour ==
   'green'
     ? 'border-green-300 '
     : theme.colour == 'blue'
@@ -46,7 +46,7 @@
         ? 'border-red-400 '
         : theme.colour == 'yellow'
           ? 'border-yellow-300 '
-          : ''} flex justify-between 2xl:h-[28rem] lg:flex-row flex-col"
+          : ''} flex justify-between 2xl:h-[28rem] lg:flex-row flex-col border-b-zinc-900 border-l-zinc-900"
 >
   <!-- TEXT SECTION -->
   <div class="flex flex-col mx-8 mt-6 mb-8">

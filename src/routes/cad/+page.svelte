@@ -6,7 +6,7 @@
   // page theme data
   let theme: any = {
     colour: 'blue',
-    title: 'COMPUTER AIDED DESIGN',
+    title: 'Computer Aided Design',
     titleMini: 'CAD',
     description: 'CAD Projects by Peter Knight. This page contains a few of my most recent major CAD projects; view more about them by following the links provided on each card.',
     icon: 'M21.22 6.894a3.7 3.7 0 0 0-1.4-1.37l-6-3.31a3.83 3.83 0 0 0-3.63 0l-6 3.31a3.7 3.7 0 0 0-1.4 1.37a3.74 3.74 0 0 0-.52 1.9v6.41a3.79 3.79 0 0 0 1.92 3.27l6 3.3a3.74 3.74 0 0 0 3.63 0l6-3.31a3.72 3.72 0 0 0 1.91-3.26v-6.36a3.64 3.64 0 0 0-.51-1.95m-1 8.31a2.2 2.2 0 0 1-1.14 1.95l-6 3.31q-.158.089-.33.14v-8.18l7.3-4.39c.092.242.136.5.13.76z',
@@ -32,7 +32,7 @@
 <!-- PAGE METADATA -->
 <svelte:head>
   <meta name="description" content="{theme.description}" />
-  <title>{theme.title} · Peter Knight</title>
+  <title>{theme.titleMini} · Peter Knight</title>
 </svelte:head>
 
 <!-- TITLE SNIPPET -->
@@ -52,11 +52,11 @@
                   : ''} flex gap-4">
     <div class="font-bold tracking-tighter font-title text-5xl sm:text-7xl">
       {#if !sm}
-        {theme.title}
+        {theme.title.toUpperCase()}
       {:else if theme.titleMini !== '' && sm}
-        {theme.titleMini}
+        {theme.titleMini.toUpperCase()}
       {:else}
-        {theme.title}
+        {theme.title.toUpperCase()}
       {/if}
     </div>
   </div>

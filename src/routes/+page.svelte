@@ -77,19 +77,34 @@
         </div>
         <div class="flex gap-4 sm:gap-1">
           {#each project.buttons as button}
+          <div class="text-center justify-center gap-1 {project.section == 'misc'
+          ? 'bg-green-300'
+          : project.section == 'cad'
+            ? 'bg-blue-300'
+            : project.section == 'robotics'
+              ? 'bg-red-400'
+              : project.section == 'programming'
+                ? 'bg-yellow-300'
+                : ''} text-lg sm:text-base flex items-center active:scale-95 transition-all px-2 sm:w-auto w-full sm:py-0 py-1 font-bold hover:bg-white text-black">
             <a
               href={button.url}
-              class="text-center justify-center gap-1 {project.section == 'misc'
-                ? 'bg-green-300'
-                : project.section == 'cad'
-                  ? 'bg-blue-300'
-                  : project.section == 'robotics'
-                    ? 'bg-red-400'
-                    : project.section == 'programming'
-                      ? 'bg-yellow-300'
-                      : ''} text-lg sm:text-base active:scale-95 transition-all px-2 sm:w-auto w-full sm:py-0 py-1 font-bold hover:bg-white text-black"
+              target="_blank"
+              
               >{button.name}</a
             >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1.1rem"
+              height="100%"
+              class=""
+              viewBox="0 0 16 16"
+              ><path
+                fill="currentColor"
+                d="M4.75 3.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h6.5c.69 0 1.25-.56 1.25-1.25v-1.5a.75.75 0 0 1 1.5 0v1.5A2.75 2.75 0 0 1 11.25 14h-6.5A2.75 2.75 0 0 1 2 11.25v-6.5A2.75 2.75 0 0 1 4.75 2h1.5a.75.75 0 0 1 0 1.5zM8 2.75A.75.75 0 0 1 8.75 2h4.5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0V4.561l-3.22 3.22A.75.75 0 1 1 8.22 6.72l3.22-3.22H8.75A.75.75 0 0 1 8 2.75"
+              /></svg
+            >
+          </div>
+            
           {/each}
         </div>
       </div>
@@ -135,7 +150,7 @@
              projects I have worked on.
           </p>
           <div class="w-12 h-0.5 bg-green-300 my-4"></div>
-          <a href="https://github.com/peterdev22" class="items-center font-bold mt-4  hover:bg-white active:scale-95 px-2 text-black transition-all flex gap-1 w-24 lg:w-fit bg-green-300">
+          <a href="https://github.com/peterdev22" target="_blank" class="items-center font-bold mt-4  hover:bg-white active:scale-95 px-2 text-black transition-all flex gap-1 w-24 lg:w-fit bg-green-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="100%"

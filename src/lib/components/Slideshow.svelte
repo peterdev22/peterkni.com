@@ -38,7 +38,7 @@
 
 </script>
 
-<div class="flex justify-center gap-5 md:gap-16 -mx-[60rem]">
+<div class="flex justify-center gap-5 md:gap-16 -mx-[120rem]">
   {#each images as image, i (image.id)}
     <div
       class="transition-all delay-200 flex flex-col {i ===
@@ -48,7 +48,21 @@
       
       animate:flip={{ duration: 600 }}
     >
-      <img src={getImagePath(image.filename, "1080", "90")} alt={image.alt}/>
+      <img src={getImagePath(image.filename, "1080", "90")} alt={image.alt} class="h-96 w-96" />
+
+      <div class="flex justify-center font-bold mt-4">
+        <div class="flex flex-col w-96 bg-zinc-950 bg-opacity-50 border-t-2 text-center border-blue-300 py-2 px-4 text-white {i !== Math.floor(images.length / 2) ? 'opacity-20' : 'opacity-100'} transition-opacity duration-500">
+          <div class="tracking-tighter text-xl">
+        {image.project}
+          </div>
+          <div class="font-medium text-sm">
+        {image.caption}
+          </div>
+        </div>
+      </div>
+
     </div>
+    
   {/each}
 </div>
+

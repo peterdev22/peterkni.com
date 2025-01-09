@@ -129,7 +129,7 @@ export const roboticsProjects = [
     id: 1,
     name: "Frij 2024-2025",
     description:
-      "Our team's robot code for the 2024-2025 'High Stakes' season of VEX V5RC. This season we won the excellence award at the Australian Nationals and will be representing Australia at the VEX Robotics World Championship in May 2025.",
+      "Our robot's Python code (driver & autonomous) for the 2024-2025 'High Stakes' season of VEX V5RC. This season we won the excellence award at the Australian Nationals and will be representing Australia at the VEX Robotics World Championship in May 2025.",
     summary: "Our robot for the 'High Stakes' season of the VEX Robotics Competiton.",
     date: "May 2024 - Present",
     section: "robotics",
@@ -147,18 +147,19 @@ export const roboticsProjects = [
       }
     ],
     tags: [
-      "Competiton"
+      "Competiton",
+      "Python"
     ],
   },
   {
     id: 2,
     name: "Frij 2023",
     description:
-      "Our team's robot code for the VEX Robotics Competition 'Over Under' season. In 2023, we won the Judges award at the Australian National Championship.",
+      "Our robot's Python code (driver & autonomous) for the VEX Robotics Competition 'Over Under' season. In 2023, we won the Judges award at the Australian National Championship.",
     summary: "Our robot for the 'Over Under' season of the VEX Robotics Competiton.",
     date: "May 2023 - Dec 2023",
     section: "robotics",
-    filename: "robot.JPG",
+    filename: "robot.jpeg",
     alt:
       "A black robot with a front sticker that says 'Frij'.",
     buttons: [
@@ -168,7 +169,8 @@ export const roboticsProjects = [
       }
     ],
     tags: [
-      "Competiton"
+      "Competiton",
+      "Python"
     ],
   }
 ];
@@ -198,6 +200,7 @@ export const programmingProjects = [
     ],
     tags: [
       "Svelte",
+      "TypeScript"
     ],
   },
   {

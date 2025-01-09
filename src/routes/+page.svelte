@@ -109,7 +109,7 @@
   {/each}
 {/snippet}
 
-<section class="pb-20">
+<section class="pb-16">
   <div class="overflow-x-clip">
     <Slideshow images={printoFeature} />
   </div>

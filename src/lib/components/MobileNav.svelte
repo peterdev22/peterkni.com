@@ -11,13 +11,13 @@
 ></div>
 
 <nav
-  class="-mt-3 z-20 bg-black tracking-tight border-2 border-amber-300 text-black absolute h-[26rem] flex flex-col gap-2 font-bold text-2xl left-10 right-10 transition-all"
+  class="-mt-3 z-20 bg-black tracking-tight border-2 border-green-300 text-black absolute h-[26rem] flex flex-col gap-2 font-bold text-2xl left-10 right-10 transition-all"
   in:blur={{ duration: 500 }}
   out:blur={{ duration: 500 }}
 >
   <h2
     class="flex
-    bg-amber-300  gap-2 font-bold tracking-tighter transition-all  items-center text-3xl px-2 py-0.5"
+    bg-green-300 gap-2 font-bold tracking-tighter transition-all items-center text-3xl px-2 py-0.5"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,9 @@
       class="bg-white hover:bg-zinc-300 px-3 py-1 transition-all active:scale-95 shrink-0"
       >Dashboard</a
     >
-    <p class="text-zinc-500 text-2xl font-title mt-2 font-bold tracking-tighter">
+    <p
+      class="text-zinc-500 text-2xl font-title mt-2 font-bold tracking-tighter"
+    >
       PROJECTS
     </p>
     <a
@@ -64,5 +66,4 @@
       >Programming</a
     >
   </div>
-  
 </nav>

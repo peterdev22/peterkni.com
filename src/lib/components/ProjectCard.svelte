@@ -38,7 +38,7 @@
 
 <div
   id={project.name.replace(/\s+/g, '').toLowerCase()}
-  class="scroll-mt-40 w-full relative bg-zinc-950 bg-opacity-50 text-white border-2 {theme.colour ==
+  class="scroll-mt-0 lg:scroll-mt-40 w-full relative bg-zinc-950 bg-opacity-50 text-white border-2 {theme.colour ==
   'green'
     ? 'border-green-300 '
     : theme.colour == 'blue'

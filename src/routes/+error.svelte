@@ -15,7 +15,7 @@
   <div class="font-bold text-zinc-700 tracking-tighter font-title text-5xl sm:text-3xl">
     {$page.error?.message.toUpperCase()}
   </div>
-  <div class="items-center text-amber-300 flex gap-4">
+  <div class="items-center text-green-300 flex gap-4">
     <div class="font-bold tracking-tighter font-title text-8xl">
       {$page.status}
     </div>
@@ -23,7 +23,7 @@
   <a
       href="/"
       class="flex
-    bg-amber-300 hover:bg-white w-fit my-20 gap-2 font-bold tracking-tighter transition-all active:scale-95 items-center text-3xl px-2 py-0.5"
+    bg-green-300 hover:bg-white w-fit my-20 gap-2 font-bold tracking-tighter transition-all active:scale-95 items-center text-3xl px-2 py-0.5"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

@@ -42,7 +42,7 @@
     <a
       href="/"
       class="hidden lg:flex
-  bg-amber-300 hover:bg-white group w-fit -mt-28 mb-20 gap-2 font-bold tracking-tighter transition-all active:scale-95 items-center text-3xl px-2 py-0.5"
+    bg-green-300 hover:bg-white group w-fit z-10 -mt-28 mb-20 gap-2 font-bold tracking-tighter transition-all active:scale-95 items-center text-3xl px-2 py-0.5"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

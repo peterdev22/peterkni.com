@@ -59,7 +59,7 @@
 <header
   class="p-5 sm:p-10 px-10 xl:px-20 2xl:px-48 sm:py-4 flex justify-center"
 >
-  <div
+  <nav
     class="flex sm:gap-16 items-center justify-between lg:justify-center w-[90rem] sm:px-10 py-5"
   >
     <a
@@ -73,7 +73,7 @@
     >
       <img
         src="assets/branding/pk_white.svg"
-        alt=""
+        alt="Peter Knight logo with a lower case p and k connected by a line."
         class="group-hover:rotate-6 group-hover:-translate-y-1 transition-all w-[3.5rem]"
       />
     </a>
@@ -123,7 +123,7 @@
         {/if}
       </div>
     </button>
-  </div>
+  </nav>
 </header>
 
 <!-- MOBILE NAV MENU -->

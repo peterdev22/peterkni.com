@@ -1,6 +1,5 @@
 <script lang="ts">
   import { page } from '$app/stores';
-
 </script>
 
 <svelte:head>
@@ -10,17 +9,20 @@
 
 <!-- TITLE SNIPPET -->
 {#snippet titleError()}
-<div class="flex flex-col">
-  
-  <div class="font-bold text-zinc-700 tracking-tighter font-title text-5xl sm:text-3xl">
-    {$page.error?.message.toUpperCase()}
-  </div>
-  <div class="items-center text-green-300 flex gap-4">
-    <div class="font-bold tracking-tighter font-title text-8xl">
-      {$page.status}
-    </div>
-  </div>
-  <a
+  <div class="flex flex-col">
+    <hgroup>
+      <p
+        class="font-bold text-zinc-700 tracking-tighter font-title text-5xl sm:text-3xl"
+      >
+        {$page.error?.message.toUpperCase()}
+      </p>
+      <h1
+        class="font-bold tracking-tighter font-title text-8xl items-center text-green-300 flex gap-4"
+      >
+        {$page.status}
+      </h1>
+    </hgroup>
+    <a
       href="/"
       class="flex
     bg-green-300 hover:bg-white w-fit my-20 gap-2 font-bold tracking-tighter transition-all active:scale-95 items-center text-3xl px-2 py-0.5"
@@ -38,13 +40,12 @@
       >
       <p>Exit to Home</p>
     </a>
-</div>
-
+  </div>
 {/snippet}
 
 <!-- PAGE TITLE -->
-<section
+<main
   class="pt-8 px-4 lg:px-28 xl:px-52 2xl:px-72 flex justify-between items-baseline gap-10 flex-col xl:flex-row pb-[8rem]"
 >
   {@render titleError()}
-</section>
+</main>

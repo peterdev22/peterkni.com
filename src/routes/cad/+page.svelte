@@ -57,24 +57,24 @@
       >
       <p>Exit</p>
     </a>
-
-    <div
-      class="font-bold text-zinc-700 tracking-tighter font-title text-5xl sm:text-3xl"
-    >
-      ALL PROJECTS
-    </div>
-    <div
-      class="items-center {theme.colour == 'green'
-        ? 'text-green-300'
-        : theme.colour == 'blue'
-          ? 'text-blue-300'
-          : theme.colour == 'red'
-            ? 'text-red-400'
-            : theme.colour == 'yellow'
-              ? 'text-yellow-300'
-              : ''} flex gap-4"
-    >
-      <div class="font-bold tracking-tighter font-title text-5xl sm:text-7xl">
+    <hgroup>
+      <p
+        class="font-bold text-zinc-700 tracking-tighter font-title text-5xl sm:text-3xl"
+      >
+        ALL PROJECTS
+      </p>
+      <h1
+        class="items-center font-bold tracking-tighter font-title text-5xl sm:text-7xl {theme.colour ==
+        'green'
+          ? 'text-green-300'
+          : theme.colour == 'blue'
+            ? 'text-blue-300'
+            : theme.colour == 'red'
+              ? 'text-red-400'
+              : theme.colour == 'yellow'
+                ? 'text-yellow-300'
+                : ''} flex gap-4"
+      >
         {#if !sm}
           {theme.title.toUpperCase()}
         {:else if theme.titleMini !== '' && sm}
@@ -82,8 +82,8 @@
         {:else}
           {theme.title.toUpperCase()}
         {/if}
-      </div>
-    </div>
+      </h1>
+    </hgroup>
   </div>
 {/snippet}
 
@@ -95,10 +95,10 @@
 </section>
 
 <!-- PROJECT LIST -->
-<section
+<main
   class="py-6 sm:py-12 px-4 lg:px-28 xl:px-52 2xl:px-72 flex flex-col gap-20"
 >
   {#each cadProjects as project}
     <ProjectCard {project} {theme} />
   {/each}
-</section>
+</main>

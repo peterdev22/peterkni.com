@@ -37,11 +37,11 @@
 
 <!-- TITLE SNIPPET -->
 {#snippet title(theme: any)}
-<div class="flex flex-col">
-  <a
+  <div class="flex flex-col">
+    <a
       href="/"
       class="hidden lg:flex
-    bg-green-300 hover:bg-white w-fit z-10 -mt-28 mb-20 gap-2 font-bold tracking-tighter transition-all active:scale-95 items-center text-3xl px-2 py-0.5"
+    bg-green-300 hover:bg-white group w-fit z-10 -mt-28 mb-20 gap-2 font-bold tracking-tighter transition-all active:scale-95 items-center text-3xl px-2 py-0.5"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -56,30 +56,34 @@
       >
       <p>Exit</p>
     </a>
-  <div class="font-bold text-zinc-700 tracking-tighter font-title text-5xl sm:text-3xl">
-    ALL PROJECTS
+    <hgroup>
+      <p
+        class="font-bold text-zinc-700 tracking-tighter font-title text-5xl sm:text-3xl"
+      >
+        ALL PROJECTS
+      </p>
+      <h1
+        class="items-center font-bold tracking-tighter font-title text-5xl sm:text-7xl {theme.colour ==
+        'green'
+          ? 'text-green-300'
+          : theme.colour == 'blue'
+            ? 'text-blue-300'
+            : theme.colour == 'red'
+              ? 'text-red-400'
+              : theme.colour == 'yellow'
+                ? 'text-yellow-300'
+                : ''} flex gap-4"
+      >
+        {#if !sm}
+          {theme.title.toUpperCase()}
+        {:else if theme.titleMini !== '' && sm}
+          {theme.titleMini.toUpperCase()}
+        {:else}
+          {theme.title.toUpperCase()}
+        {/if}
+      </h1>
+    </hgroup>
   </div>
-  <div class="items-center {theme.colour == 'green'
-            ? 'text-green-300'
-            : theme.colour == 'blue'
-              ? 'text-blue-300'
-              : theme.colour == 'red'
-                ? 'text-red-400'
-                : theme.colour == 'yellow'
-                  ? 'text-yellow-300'
-                  : ''} flex gap-4">
-    <div class="font-bold tracking-tighter font-title text-5xl sm:text-7xl">
-      {#if !sm}
-        {theme.title.toUpperCase()}
-      {:else if theme.titleMini !== '' && sm}
-        {theme.titleMini.toUpperCase()}
-      {:else}
-        {theme.title.toUpperCase()}
-      {/if}
-    </div>
-  </div>
-</div>
-
 {/snippet}
 
 <!-- PAGE TITLE -->
@@ -90,8 +94,8 @@
 </section>
 
 <!-- PROJECT LIST -->
-<section class="py-6 sm:py-12 px-4 lg:px-28 xl:px-52 2xl:px-72 flex flex-col gap-20">
+<main class="py-6 sm:py-12 px-4 lg:px-28 xl:px-52 2xl:px-72 flex flex-col gap-20">
   {#each roboticsProjects as project}
     <ProjectCard {project} {theme} />
   {/each}
-</section>
+</main>

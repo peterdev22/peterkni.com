@@ -36,7 +36,7 @@
   }
 </script>
 
-<div
+<section
   id={project.name.replace(/\s+/g, '').toLowerCase()}
   class="scroll-mt-0 lg:scroll-mt-40 w-full relative bg-zinc-950 bg-opacity-50 text-white border-2 {theme.colour ==
   'green'
@@ -50,18 +50,18 @@
           : ''} flex justify-between 2xl:h-[28rem] lg:flex-row flex-col border-b-zinc-900 border-l-zinc-900"
 >
   <!-- TEXT SECTION -->
-  <div class="flex flex-col mx-8 mt-6 mb-8">
+  <article class="flex flex-col mx-8 mt-6 mb-8">
     <!-- CARD TITLE -->
-    <div class="flex items-center">
-      <div class="text-4xl sm:text-5xl 2xl:text-4xl font-bold tracking-tight">
-        {project.name}
-      </div>
-    </div>
+    <h2
+      class="flex items-center text-4xl sm:text-5xl 2xl:text-4xl font-bold tracking-tight"
+    >
+      {project.name}
+    </h2>
 
     <!-- CARD DESCRIPTION -->
-    <div class=" text-lg font-medium my-3 mb-8 text-white">
+    <p class=" text-lg font-medium my-3 mb-8 text-white">
       {project.description}
-    </div>
+    </p>
 
     <!-- BUTTONS -->
     <div
@@ -117,7 +117,7 @@
       "
       >
         {#each project.tags.slice(0, tagMaxWidth ? 2 : project.tags.length) as tag}
-          <div
+          <p
             class="px-2 py-0.5 border border-dashed {theme.colour == 'green'
               ? 'border-green-300 '
               : theme.colour == 'blue'
@@ -129,25 +129,25 @@
                     : ''}"
           >
             {tag}
-          </div>
+          </p>
         {/each}
       </div>
       {#if project.date}
-        <div
+        <p
           class="px-2 py-0.5 border font-semibold border-dashed border-zinc-700 text-zinc-500"
         >
           {project.date}
-        </div>
+        </p>
       {/if}
     </div>
-  </div>
+  </article>
 
   <!-- IMAGE SECTION -->
-  <div class="p-8 lg:w-1/2 overflow-hidden flex-shrink-0">
+  <figure class="p-8 lg:w-1/2 overflow-hidden flex-shrink-0">
     <img
       src={getImagePath(project.section, project.filename, '1920', '90')}
       alt={project.alt}
       class="h-full w-full object-cover"
     />
-  </div>
-</div>
+  </figure>
+</section>

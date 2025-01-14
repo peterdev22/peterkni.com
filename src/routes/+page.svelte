@@ -36,15 +36,19 @@
   <title>Peter Knight · CAD, Robotics & Programming</title>
 </svelte:head>
 
+<!-- PROJECT SECTION SNIPPET -->
 {#snippet projectSection(type: any, filterIn: Array<number>)}
   {#each type.filter( (project: any) => filterIn.includes(project.id), ) as project}
-    <div class="flex flex-col">
-      <h3 class="text-2xl text-white font-black tracking-tight">
-        {project.name}
-      </h3>
-      <p class="text-white font-medium tracking-tight">
-        {project.summary}
-      </p>
+    <article class="flex flex-col">
+      <hgroup>
+        <h3 class="text-2xl text-white font-black tracking-tight">
+          {project.name}
+        </h3>
+        <p class="text-white font-medium tracking-tight">
+          {project.summary}
+        </p>
+      </hgroup>
+
       <div
         class="flex justify-between sm:items-center sm:flex-row flex-col sm:gap-0 gap-2 sm:mb-0 mb-4"
       >
@@ -60,7 +64,7 @@
                   : ''} font-semibold my-2"
         >
           {#each project.tags as tag}
-            <div
+            <p
               class="border {project.section == 'misc'
                 ? 'border-green-300'
                 : project.section == 'cad'
@@ -72,7 +76,7 @@
                       : ''} px-2 border-dashed"
             >
               {tag}
-            </div>
+            </p>
           {/each}
         </div>
         <div class="flex gap-4 sm:gap-1">
@@ -118,21 +122,23 @@
                 ? 'bg-yellow-300'
                 : ''} my-4 sm:my-2"
       ></div>
-    </div>
+    </article>
   {/each}
 {/snippet}
 
+<!-- FEATURED SLIDESHOW -->
 <section class="pb-16">
   <div class="overflow-x-clip">
     <Slideshow images={printoFeature} />
   </div>
 </section>
 
-<section
+<!-- PROJECT SECTIONS -->
+<main
   class="mb-12 px-4 lg:px-28 xl:px-52 2xl:px-72 flex flex-col lg:flex-row gap-12 justify-center"
 >
   <div class="flex flex-col gap-12 lg:w-[40rem]">
-    <div
+    <section
       class="w-full relative bg-zinc-950 bg-opacity-50 text-white border-2 border-b-zinc-900 border-l-zinc-900 border-green-300 flex justify-between lg:flex-row flex-col"
     >
       <div class="flex gap-2 flex-col m-4">
@@ -168,9 +174,9 @@
           </a>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div
+    <section
       class="relative bg-zinc-950 bg-opacity-50 text-white border-2 border-b-zinc-900 border-l-zinc-900 border-blue-300 flex justify-between lg:flex-row flex-col"
     >
       <div class="flex gap-2 flex-col p-4 w-full">
@@ -182,7 +188,7 @@
 
         {@render projectSection(cadProjects, [1, 3, 4])}
 
-        <div class="w-full h-0.5 bg-zinc-600 my-3"></div>
+        <hr class="border-zinc-600 my-3 border" />
 
         {@render projectSection(cadProjects, [2, 5])}
 
@@ -192,11 +198,11 @@
           >View all CAD projects</a
         >
       </div>
-    </div>
+    </section>
   </div>
 
   <div class="flex flex-col gap-12 lg:w-[40rem]">
-    <div
+    <section
       class="relative bg-zinc-950 bg-opacity-50 text-white border-2 border-b-zinc-900 border-l-zinc-900 border-red-400 flex justify-between lg:flex-row flex-col"
     >
       <div class="flex gap-2 flex-col p-4 w-full">
@@ -214,9 +220,9 @@
           >View all robotics projects</a
         >
       </div>
-    </div>
+    </section>
 
-    <div
+    <section
       class="relative bg-zinc-950 bg-opacity-50 text-white border-2 border-b-zinc-900 border-l-zinc-900 border-yellow-300 flex justify-between lg:flex-row flex-col"
     >
       <div class="flex gap-2 flex-col p-4 w-full">
@@ -228,7 +234,7 @@
 
         {@render projectSection(programmingProjects, [1, 2])}
 
-        <div class="w-full h-0.5 bg-zinc-600 my-3"></div>
+        <hr class="border-zinc-600 my-3 border" />
 
         {@render projectSection(programmingProjects, [3])}
 
@@ -238,109 +244,6 @@
           >View all programming projects</a
         >
       </div>
-    </div>
+    </section>
   </div>
-</section>
-
-<!-- FEATURED: PRINTO -->
-<!-- <section
-  class="bg-gradient-to-tr from-black to-zinc-950 border border-1 border-zinc-900 py-6 my-16"
->
-  <div
-    class="mb-6 px-10 lg:px-28 xl:px-52 2xl:px-80 flex flex-col sm:flex-row gap-6 sm:gap-12 items-center"
-  >
-    <h3 class="font-bold text-5xl text-black bg-blue-300 px-2 py-0.5">
-      Printo
-    </h3>
-    <p class="font-medium text-xl text-white mb-4 sm:mb-0">
-      The 3D printer designed for home users.
-    </p>
-  </div>
-  <div class="overflow-x-clip">
-    <Slideshow images={printoFeature} />
-  </div>
-  <div
-    class="flex flex-col sm:flex-row mx-auto w-fit text-center items-center justify-center mt-6 gap-4 sm:gap-6"
-  >
-    {#each cadProjects[0].buttons as button}
-      <a
-        href={button.url}
-        target="_blank"
-        class="bg-blue-300 hover:bg-blue-400 text-xl font-semibold px-3 py-1 mt-2 sm:mt-0 transition-all rounded-xl active:scale-95"
-        >{button.name}<svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="1.2rem"
-          height="100%"
-          class="inline-block mb-[0.2rem] ml-1"
-          viewBox="0 0 16 16"
-          ><path
-            fill="currentColor"
-            d="M4.75 3.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h6.5c.69 0 1.25-.56 1.25-1.25v-1.5a.75.75 0 0 1 1.5 0v1.5A2.75 2.75 0 0 1 11.25 14h-6.5A2.75 2.75 0 0 1 2 11.25v-6.5A2.75 2.75 0 0 1 4.75 2h1.5a.75.75 0 0 1 0 1.5zM8 2.75A.75.75 0 0 1 8.75 2h4.5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0V4.561l-3.22 3.22A.75.75 0 1 1 8.22 6.72l3.22-3.22H8.75A.75.75 0 0 1 8 2.75"
-          /></svg
-        ></a
-      >
-    {/each}
-  </div>
-</section> -->
-
-<!-- FEATURED: TOOTHBRUSH -->
-<!-- <section
-  class="bg-gradient-to-tr from-black to-zinc-950 border border-1 border-zinc-900 py-6 my-16"
->
-  <div
-    class="mb-6 px-10 lg:px-28 xl:px-52 2xl:px-80 flex flex-col sm:flex-row gap-6 sm:gap-12 items-center"
-  >
-    <div class="flex flex-col lg:flex-row items-center gap-2 lg:gap-6">
-      <h3 class="font-semibold text-5xl text-white">Toothbrush</h3>
-      <h3
-        class="font-semibold bg-green-300 text-green-950 rounded-md text-xl px-2"
-      >
-        Skills Task: Evaluation
-      </h3>
-    </div>
-    <p class="font-medium text-xl text-white mb-4 sm:mb-0">
-      Practicing my CAD and rendering skills in preparation for the final
-      project.
-    </p>
-  </div>
-  <div
-    class="flex gap-10 justify-center h-96 overflow-x-clip p-6 sm:p-0 -my-6 sm:my-0"
-  >
-    <img
-      class="rounded-3xl object-cover h-full"
-      src={getImagePath('cad', 'toothbrush.jpg', '1920', '80')}
-      alt="Toothbrush CAD model"
-    />
-    <video
-      class="rounded-3xl hidden md:block"
-      controls
-      controlsList="nodownload"
-      poster={getImagePath('cad', 'st1_cover.jpeg', '1920', '80')}
-      src="/assets/projects/cad/st1.mp4"
-    >
-    </video>
-  </div>
-  <div
-    class="flex flex-col sm:flex-row mx-auto w-fit text-center items-center justify-center mt-6 gap-4 sm:gap-6"
-  >
-    {#each cadProjects[1].buttons as button}
-      <a
-        href={button.url}
-        target="_blank"
-        class="bg-blue-300 hover:bg-blue-400 text-xl font-semibold px-3 py-1 mt-2 sm:mt-0 transition-all rounded-xl active:scale-95"
-        >{button.name}<svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="1.2rem"
-          height="100%"
-          class="inline-block mb-[0.2rem] ml-1"
-          viewBox="0 0 16 16"
-          ><path
-            fill="currentColor"
-            d="M4.75 3.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h6.5c.69 0 1.25-.56 1.25-1.25v-1.5a.75.75 0 0 1 1.5 0v1.5A2.75 2.75 0 0 1 11.25 14h-6.5A2.75 2.75 0 0 1 2 11.25v-6.5A2.75 2.75 0 0 1 4.75 2h1.5a.75.75 0 0 1 0 1.5zM8 2.75A.75.75 0 0 1 8.75 2h4.5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0V4.561l-3.22 3.22A.75.75 0 1 1 8.22 6.72l3.22-3.22H8.75A.75.75 0 0 1 8 2.75"
-          /></svg
-        ></a
-      >
-    {/each}
-  </div>
-</section>
- -->
+</main>

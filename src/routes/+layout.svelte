@@ -73,7 +73,7 @@
     >
       <img
         src="assets/branding/pk_white.svg"
-        alt="Peter Knight logo with a lower case p and k connected by a line."
+        alt="White symbol with a lower case p and k, with a line connected and perpendicular to the top of the k reaching above the p. Represnts the initials of Peter Knight."
         class="group-hover:rotate-6 group-hover:-translate-y-1 transition-all w-[3.5rem]"
       />
     </a>
@@ -86,19 +86,13 @@
     >
       <div class="w-10 h-10 flex justify-center items-center">
         {#if !navMenuEnabled}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="100%"
-            height="100%"
-            class="absolute w-8 -translate-y-1"
-            viewBox="0 0 16 16"
+          <img
+            src="assets/symbols/exit_man_running_white.svg"
+            alt="White symbol of a man running, representing an exit sign."
+            class="w-8 absolute -translate-y-1"
             in:scale
             out:scale
-            ><path
-              fill="currentColor"
-              d="M14 6h-1.7c-.2 0-.4-.1-.6-.2l-1.3-1.3c-.2-.3-.6-.5-1.1-.5H9c1.1 0 2-.9 2-2s-.9-2-2-2s-2 .9-2 2c0 .7.4 1.4 1 1.7l-.2.3h-2c-1.1 0-2.3.5-3 1.5l-.6.8c-.4.4-.2 1 .2 1.3c.4.2.9.1 1.2-.3l.5-.7Q4.55 6 5.3 6h.8l-.7 1.6c-.3.6-.4 1.2-.4 1.9v2c0 .3-.2.5-.5.5H2c-.6 0-1 .4-1 1s.4 1 1 1h3.5c.8 0 1.5-.7 1.5-1.5V10l3.8 4.5c.6.9 1.7 1.5 2.8 1.5h.9L9.1 9.3c-.3-.4-.2-.8 0-1.3l.6-1.5l.7.8c.4.4 1 .7 1.6.7h2c.6 0 1-.4 1-1s-.4-1-1-1"
-            /></svg
-          >
+          />
           <p
             class="font-black tracking-tighter text-xs translate-y-5"
             in:scale
@@ -108,18 +102,12 @@
           </p>
         {/if}
         {#if navMenuEnabled}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="100%"
-            height="100%"
-            viewBox="0 0 24 24"
-            in:scale
+          <img
+            src="assets/symbols/cross_white.svg"
+            alt="White symbol of a cross as an indicator to close the menu."
             class="absolute w-12"
-            ><path
-              fill="currentColor"
-              d="M18.36 19.78L12 13.41l-6.36 6.37l-1.42-1.42L10.59 12L4.22 5.64l1.42-1.42L12 10.59l6.36-6.36l1.41 1.41L13.41 12l6.36 6.36z"
-            /></svg
-          >
+            in:scale
+          />
         {/if}
       </div>
     </button>
@@ -142,11 +130,11 @@
     <img
       src="assets/branding/pk_grey_nodetail.svg"
       class="w-8 m-2"
-      alt="Peter Knight logo"
+      alt="Dark grey symbol with a lower case p and k, with a line connected and perpendicular to the top of the k reaching above the p. Represnts the initials of Peter Knight."
     />
     <a
       href="/"
-      class="hover:text-zinc-400 transition-all text-zinc-700 font-bold"
+      class="hover:text-zinc-400 transition-all text-zinc-700 font-bold active:scale-95"
       >Peter Knight</a
     >
     <p class="text-zinc-700 text-xs font-bold -mt-1">2022-2025</p>

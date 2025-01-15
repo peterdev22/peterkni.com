@@ -20,9 +20,9 @@
     bg-green-300 gap-2 font-bold tracking-tighter transition-all items-center text-3xl px-2 py-0.5"
   >
     <img
-      src="assets/symbols/exit_man_running_black.svg"
+      src="/assets/symbols/exit_man_running_black.svg"
       alt="Black symbol of a man running, representing an exit sign."
-      class="w-8"
+      class="w-8 text-black font-normal truncate italic text-xs"
     />
     <h2>Exit Menu</h2>
   </div>

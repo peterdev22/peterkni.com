@@ -84,9 +84,9 @@
           <div class="flex items-center justify-center gap-2 line-clamp-1">
             {button.name}
             <img
-              src="assets/symbols/external_link_black.svg"
+              src="/assets/symbols/external_link_black.svg"
               alt="Black symbol of a rounded hollow box with an arrow inside pointing to the top right, representing an external link."
-              class="w-5"
+              class="w-5 text-black font-normal truncate italic text-xs"
             />
           </div>
         </a>
@@ -139,7 +139,21 @@
     <img
       src={getImagePath(project.section, project.filename, '1920', '90')}
       alt={project.alt}
-      class="h-full w-full object-cover"
+      class="h-full w-full object-cover text-zinc-700 text-lg italic ring-zinc-900 ring-inset ring-[2px] flex items-center text-center justify-center min-h-60 lg:min-h-full"
     />
+    <figcaption
+      class="text-sm italic text-black px-2 py-0.5 tracking-tight font-semibold my-2 absolute -translate-y-8 {theme.colour ==
+      'green'
+        ? 'bg-green-300 '
+        : theme.colour == 'blue'
+          ? 'bg-blue-300 '
+          : theme.colour == 'red'
+            ? 'bg-red-400 '
+            : theme.colour == 'yellow'
+              ? 'bg-yellow-300 '
+              : ''}"
+    >
+      {project.caption}
+    </figcaption>
   </figure>
 </section>

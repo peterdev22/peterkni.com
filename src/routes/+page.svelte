@@ -31,9 +31,9 @@
 <svelte:head>
   <meta
     name="description"
-    content="Peter Knight's portfolio of computer aided design (CAD), VEX robotics, 3D renders and programming projects. View source code, videos, CAD models and renders created by Peter in various different projects."
+    content="Peter Knight. I enjoy CAD modeling and 3D printing, and I currently compete in the VEX Robotics Competition. Explore my portfolio of various CAD, robotics, and programming projects I have worked on."
   />
-  <title>Peter Knight · CAD, Robotics & Programming</title>
+  <title>Peter Knight</title>
 </svelte:head>
 
 <!-- PROJECT SECTION SNIPPET -->
@@ -96,9 +96,9 @@
             >
               {button.name}
               <img
-                src="assets/symbols/external_link_black.svg"
+                src="/assets/symbols/external_link_black.svg"
                 alt="Black symbol of a rounded hollow box with an arrow inside pointing to the top right, representing an external link."
-                class="w-4"
+                class="w-4 text-black font-normal truncate italic text-xs"
               />
             </a>
           {/each}
@@ -143,8 +143,8 @@
         </h2>
         <div class="flex flex-col">
           <p class="text-white font-medium tracking-tight max-w-[40rem]">
-            Hello, I'm Peter. I enjoy designing functional objects with CAD and
-            3D printing in my spare time. On this website you will find various
+            Hello, I'm Peter Knight. I enjoy designing functional objects with CAD and
+            3D printing in my spare time. I have competed in the VEX Robotics Competition with my team 75477M Frij over the last three years. On this website, you will find documentation of various
             projects I have worked on.
           </p>
           <div class="w-12 h-0.5 bg-green-300 my-4"></div>
@@ -154,9 +154,9 @@
             class="select-none items-center font-bold mt-4 hover:bg-white active:scale-95 px-2 text-black transition-all flex gap-1 w-24 lg:w-fit bg-green-300"
           >
             <img
-              src="assets/symbols/github_black.svg"
+              src="/assets/symbols/github_black.svg"
               alt="Black GitHub logo."
-              class="h-5"
+              class="h-5 text-black font-normal truncate italic text-xs"
             />
             GitHub
           </a>
@@ -171,7 +171,7 @@
         <h2
           class="text-blue-300 tracking-tight font-title font-bold text-4xl mb-4"
         >
-          COMPUTER AIDED DESIGN
+          COMPUTER-AIDED DESIGN
         </h2>
 
         {@render projectSection(cadProjects, [1, 3, 4])}

@@ -6,10 +6,10 @@
   // page theme data
   let theme: any = {
     colour: 'blue',
-    title: 'Computer Aided Design',
+    title: 'Computer-aided Design',
     titleMini: 'CAD',
     description:
-      'CAD Projects by Peter Knight. This page contains a few of my most recent major CAD projects; view more about them by following the links provided on each card.',
+      "All of my computer-aided design (CAD) projects. View my 3D models, renders, and videos for various industrial design projects. I primarily use Autodesk Fusion for CAD work and Blender for 3D rendering.",
     icon: 'M21.22 6.894a3.7 3.7 0 0 0-1.4-1.37l-6-3.31a3.83 3.83 0 0 0-3.63 0l-6 3.31a3.7 3.7 0 0 0-1.4 1.37a3.74 3.74 0 0 0-.52 1.9v6.41a3.79 3.79 0 0 0 1.92 3.27l6 3.3a3.74 3.74 0 0 0 3.63 0l6-3.31a3.72 3.72 0 0 0 1.91-3.26v-6.36a3.64 3.64 0 0 0-.51-1.95m-1 8.31a2.2 2.2 0 0 1-1.14 1.95l-6 3.31q-.158.089-.33.14v-8.18l7.3-4.39c.092.242.136.5.13.76z',
   };
 
@@ -33,7 +33,7 @@
 <!-- PAGE METADATA -->
 <svelte:head>
   <meta name="description" content={theme.description} />
-  <title>{theme.titleMini} · Peter Knight</title>
+  <title>{theme.titleMini} - Peter Knight</title>
 </svelte:head>
 
 <!-- TITLE SNIPPET -->
@@ -45,9 +45,9 @@
     bg-green-300 hover:bg-white group w-fit z-10 -mt-28 mb-20 gap-2 font-bold tracking-tighter transition-all active:scale-95 items-center text-3xl px-2 py-0.5"
     >
       <img
-        src="assets/symbols/exit_man_running_black.svg"
+        src="/assets/symbols/exit_man_running_black.svg"
         alt="Black symbol of a man running, representing an exit sign."
-        class="w-8"
+        class="w-8 text-black font-normal truncate italic text-xs"
       />
       Exit
     </a>

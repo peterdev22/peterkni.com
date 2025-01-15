@@ -72,9 +72,9 @@
       class="font-bold flex group flex-col items-center tracking-tight active:scale-95 text-zinc-800 transition-all"
     >
       <img
-        src="assets/branding/pk_white.svg"
+        src="/assets/branding/pk_white.svg"
         alt="White symbol with a lower case p and k, with a line connected and perpendicular to the top of the k reaching above the p. Represnts the initials of Peter Knight."
-        class="group-hover:rotate-6 group-hover:-translate-y-1 transition-all w-[3.5rem]"
+        class="group-hover:rotate-6 group-hover:-translate-y-1 transition-all w-[3.5rem] text-white font-normal truncate italic text-xs"
       />
     </a>
 
@@ -87,9 +87,9 @@
       <div class="w-10 h-10 flex justify-center items-center">
         {#if !navMenuEnabled}
           <img
-            src="assets/symbols/exit_man_running_white.svg"
+            src="/assets/symbols/exit_man_running_white.svg"
             alt="White symbol of a man running, representing an exit sign."
-            class="w-8 absolute -translate-y-1"
+            class="w-8 absolute -translate-y-1 text-white font-normal truncate italic text-xs"
             in:scale
             out:scale
           />
@@ -103,9 +103,9 @@
         {/if}
         {#if navMenuEnabled}
           <img
-            src="assets/symbols/cross_white.svg"
+            src="/assets/symbols/cross_white.svg"
             alt="White symbol of a cross as an indicator to close the menu."
-            class="absolute w-12"
+            class="absolute w-12 text-white font-normal truncate italic text-xs"
             in:scale
           />
         {/if}
@@ -128,8 +128,8 @@
 >
   <div class="flex flex-col items-center">
     <img
-      src="assets/branding/pk_grey_nodetail.svg"
-      class="w-8 m-2"
+      src="/assets/branding/pk_grey_nodetail.svg"
+      class="w-8 m-2 text-zinc-700 font-normal truncate italic text-xs"
       alt="Dark grey symbol with a lower case p and k, with a line connected and perpendicular to the top of the k reaching above the p. Represnts the initials of Peter Knight."
     />
     <a

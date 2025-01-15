@@ -8,7 +8,7 @@
     colour: 'red',
     title: 'Robotics',
     titleMini: '',
-    description: 'Peter Knight\'s VEX Robotics projects. I am apart of the VEX Robotics team at my school, team 75477M Frij, and have been for the past 3 years. I have been involved in the design, engineering, and programming of the robots.',
+    description: 'Information about my team, 75477M Frij, which has competed in the VEX Robotics Competition from 2022 to 2025. I have been involved in the design, building, programming, and documentation of the robot.',
     icon: 'M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2M7.5 13A2.5 2.5 0 0 0 5 15.5A2.5 2.5 0 0 0 7.5 18a2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 7.5 13m9 0a2.5 2.5 0 0 0-2.5 2.5a2.5 2.5 0 0 0 2.5 2.5a2.5 2.5 0 0 0 2.5-2.5a2.5 2.5 0 0 0-2.5-2.5',
   };
 
@@ -32,7 +32,7 @@
 <!-- PAGE METADATA -->
 <svelte:head>
   <meta name="description" content="{theme.description}" />
-  <title>{theme.title} · Peter Knight</title>
+  <title>{theme.title} - Peter Knight</title>
 </svelte:head>
 
 <!-- TITLE SNIPPET -->
@@ -44,9 +44,9 @@
     bg-green-300 hover:bg-white group w-fit z-10 -mt-28 mb-20 gap-2 font-bold tracking-tighter transition-all active:scale-95 items-center text-3xl px-2 py-0.5"
     >
       <img
-        src="assets/symbols/exit_man_running_black.svg"
+        src="/assets/symbols/exit_man_running_black.svg"
         alt="Black symbol of a man running, representing an exit sign."
-        class="w-8"
+        class="w-8 text-black font-normal truncate italic text-xs"
       />
       Exit
     </a>

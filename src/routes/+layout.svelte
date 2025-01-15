@@ -57,7 +57,7 @@
 
 <!-- HEADER & NAV BAR -->
 <header
-  class="p-5 sm:p-10 px-10 xl:px-20 2xl:px-48 sm:py-4 flex justify-center"
+  class="select-none p-5 sm:p-10 px-10 xl:px-20 2xl:px-48 sm:py-4 flex justify-center"
 >
   <nav
     class="flex sm:gap-16 items-center justify-between lg:justify-center w-[90rem] sm:px-10 py-5"
@@ -124,7 +124,7 @@
 
 <!-- FOOTER -->
 <footer
-  class="mt-40 mb-10 px-10 lg:px-28 xl:px-52 2xl:px-72 flex justify-center"
+  class="selection:text-black selection:bg-zinc-700 mt-40 mb-10 px-10 lg:px-28 xl:px-52 2xl:px-72 flex justify-center"
 >
   <div class="flex flex-col items-center">
     <img

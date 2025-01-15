@@ -38,15 +38,15 @@
 
 <section
   id={project.name.replace(/\s+/g, '').toLowerCase()}
-  class="scroll-mt-0 lg:scroll-mt-40 w-full relative bg-zinc-950 bg-opacity-50 text-white border-2 {theme.colour ==
+  class="selection:text-black scroll-mt-0 lg:scroll-mt-40 w-full relative bg-zinc-950 bg-opacity-50 text-white border-2 {theme.colour ==
   'green'
-    ? 'border-green-300 '
+    ? 'border-green-300 selection:bg-green-300'
     : theme.colour == 'blue'
-      ? 'border-blue-300 '
+      ? 'border-blue-300 selection:bg-blue-300 '
       : theme.colour == 'red'
-        ? 'border-red-400 '
+        ? 'border-red-400 selection:bg-red-400 '
         : theme.colour == 'yellow'
-          ? 'border-yellow-300 '
+          ? 'border-yellow-300 selection:bg-yellow-300 '
           : ''} flex justify-between 2xl:h-[28rem] lg:flex-row flex-col border-b-zinc-900 border-l-zinc-900"
 >
   <!-- TEXT SECTION -->
@@ -65,7 +65,7 @@
 
     <!-- BUTTONS -->
     <div
-      class="flex flex-col gap-6 lg:gap-4 text-xl md:text-lg xl:text-md my-4 text-center font-bold sm:w-fit text-black 2xl:flex-row"
+      class="select-none flex flex-col gap-6 lg:gap-4 text-xl md:text-lg xl:text-md my-4 text-center font-bold sm:w-fit text-black 2xl:flex-row"
     >
       {#each project.buttons as button}
         <a

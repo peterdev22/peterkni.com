@@ -84,7 +84,7 @@
             <a
               href={button.url}
               target="_blank"
-              class="text-center justify-center gap-1 {project.section == 'misc'
+              class="select-none text-center justify-center gap-1 {project.section == 'misc'
                 ? 'bg-green-300'
                 : project.section == 'cad'
                   ? 'bg-blue-300'
@@ -133,11 +133,11 @@
 >
   <div class="flex flex-col gap-12 lg:w-[40rem]">
     <section
-      class="w-full relative bg-zinc-950 bg-opacity-50 text-white border-2 border-b-zinc-900 border-l-zinc-900 border-green-300 flex justify-between lg:flex-row flex-col"
+      class="selection:text-black selection:bg-green-300 w-full relative bg-zinc-950 bg-opacity-50 text-white border-2 border-b-zinc-900 border-l-zinc-900 border-green-300 flex justify-between lg:flex-row flex-col"
     >
       <div class="flex gap-2 flex-col m-4">
         <h2
-          class="text-green-300 tracking-tight font-title font-bold text-4xl mb-6"
+          class="text-green-300 tracking-tight font-title font-bold text-4xl mb-6 "
         >
           ABOUT
         </h2>
@@ -151,7 +151,7 @@
           <a
             href="https://github.com/peterdev22"
             target="_blank"
-            class="items-center font-bold mt-4 hover:bg-white active:scale-95 px-2 text-black transition-all flex gap-1 w-24 lg:w-fit bg-green-300"
+            class="select-none items-center font-bold mt-4 hover:bg-white active:scale-95 px-2 text-black transition-all flex gap-1 w-24 lg:w-fit bg-green-300"
           >
             <img
               src="assets/symbols/github_black.svg"
@@ -165,7 +165,7 @@
     </section>
 
     <section
-      class="relative bg-zinc-950 bg-opacity-50 text-white border-2 border-b-zinc-900 border-l-zinc-900 border-blue-300 flex justify-between lg:flex-row flex-col"
+      class="selection:text-black selection:bg-blue-300 relative bg-zinc-950 bg-opacity-50 text-white border-2 border-b-zinc-900 border-l-zinc-900 border-blue-300 flex justify-between lg:flex-row flex-col"
     >
       <div class="flex gap-2 flex-col p-4 w-full">
         <h2
@@ -182,7 +182,7 @@
 
         <a
           href="/cad"
-          class="bg-blue-300 px-2 active:scale-95 text-black mt-4 hover:bg-white transition-all font-semibold w-fit"
+          class="select-none bg-blue-300 px-2 active:scale-95 text-black mt-4 hover:bg-white transition-all font-semibold w-fit"
           >View all CAD projects</a
         >
       </div>
@@ -191,7 +191,7 @@
 
   <div class="flex flex-col gap-12 lg:w-[40rem]">
     <section
-      class="relative bg-zinc-950 bg-opacity-50 text-white border-2 border-b-zinc-900 border-l-zinc-900 border-red-400 flex justify-between lg:flex-row flex-col"
+      class="selection:text-black selection:bg-red-400 relative bg-zinc-950 bg-opacity-50 text-white border-2 border-b-zinc-900 border-l-zinc-900 border-red-400 flex justify-between lg:flex-row flex-col"
     >
       <div class="flex gap-2 flex-col p-4 w-full">
         <h2
@@ -204,14 +204,14 @@
 
         <a
           href="/robotics"
-          class="bg-red-400 px-2 text-black active:scale-95 mt-4 hover:bg-white transition-all font-semibold w-fit"
+          class="select-none bg-red-400 px-2 text-black active:scale-95 mt-4 hover:bg-white transition-all font-semibold w-fit"
           >View all robotics projects</a
         >
       </div>
     </section>
 
     <section
-      class="relative bg-zinc-950 bg-opacity-50 text-white border-2 border-b-zinc-900 border-l-zinc-900 border-yellow-300 flex justify-between lg:flex-row flex-col"
+      class="selection:text-black selection:bg-yellow-300 relative bg-zinc-950 bg-opacity-50 text-white border-2 border-b-zinc-900 border-l-zinc-900 border-yellow-300 flex justify-between lg:flex-row flex-col"
     >
       <div class="flex gap-2 flex-col p-4 w-full">
         <h2
@@ -228,7 +228,7 @@
 
         <a
           href="/programming"
-          class="bg-yellow-300 px-2 active:scale-95 text-black mt-4 hover:bg-white transition-all font-semibold w-fit"
+          class="select-none bg-yellow-300 px-2 active:scale-95 text-black mt-4 hover:bg-white transition-all font-semibold w-fit"
           >View all programming projects</a
         >
       </div>

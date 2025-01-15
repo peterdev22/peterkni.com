@@ -11,7 +11,7 @@
 ></div>
 
 <nav
-  class="-mt-3 z-20 bg-black tracking-tight border-2 border-green-300 text-black absolute h-[26rem] flex flex-col gap-2 font-bold text-2xl left-10 right-10 transition-all"
+  class="select-none -mt-3 z-20 bg-black tracking-tight border-2 border-green-300 text-black absolute h-[26rem] flex flex-col gap-2 font-bold text-2xl left-10 right-10 transition-all"
   in:blur={{ duration: 500 }}
   out:blur={{ duration: 500 }}
 >

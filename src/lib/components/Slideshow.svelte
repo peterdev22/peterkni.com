@@ -38,7 +38,7 @@
 
 </script>
 
-<div class="flex justify-center gap-5 md:gap-16 -mx-[120rem]">
+<div class="flex justify-center gap-5 md:gap-16 -mx-[120rem] selection:text-black selection:bg-blue-300">
   {#each images as image, i (image.id)}
     <figure
       class="transition-all delay-200 flex flex-col {i ===
@@ -50,8 +50,8 @@
     >
       <img src={getImagePath(image.filename, "1080", "90")} alt={image.alt} class="h-96 w-96" />
 
-      <figcaption class="flex justify-center font-bold mt-4">
-        <a href="/cad#{image.project.split(' - ')[0].toLowerCase()}" class="active:scale-[98%] hover:text-blue-300 transition-all flex flex-col w-96 bg-zinc-950 bg-opacity-50 border-t-2 border-blue-300  text-center  py-2 pb-2.5 px-4 text-white {i !== Math.floor(images.length / 2) ? 'opacity-20' : 'opacity-100'} transition-opacity duration-500">
+      <figcaption class="flex justify-center font-bold mt-4 ">
+        <a href="/cad#{image.project.split(' - ')[0].toLowerCase()}" class="active:scale-[98%] hover:text-blue-300  transition-all flex flex-col w-96 bg-zinc-950 bg-opacity-50 border-t-2 border-blue-300  text-center  py-2 pb-2.5 px-4 text-white {i !== Math.floor(images.length / 2) ? 'opacity-20' : 'opacity-100'} transition-opacity duration-500">
           <h4 class="tracking-tighter text-xl transition-all">
         {image.project}
           </h4>

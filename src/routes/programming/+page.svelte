@@ -40,33 +40,33 @@
   <div class="flex flex-col">
     <a
       href="/"
-      class="hidden lg:flex
+      class="select-none hidden lg:flex
     bg-green-300 hover:bg-white group w-fit z-10 -mt-28 mb-20 gap-2 font-bold tracking-tighter transition-all active:scale-95 items-center text-3xl px-2 py-0.5"
     >
-    <img
-    src="assets/symbols/exit_man_running_black.svg"
-    alt="Black symbol of a man running, representing an exit sign."
-    class="w-8"
-    >
+      <img
+        src="assets/symbols/exit_man_running_black.svg"
+        alt="Black symbol of a man running, representing an exit sign."
+        class="w-8"
+      />
       Exit
     </a>
     <hgroup>
       <p
-        class="font-bold text-zinc-700 tracking-tighter font-title text-5xl sm:text-3xl"
+        class="font-bold text-zinc-700 tracking-tighter font-title text-5xl sm:text-3xl selection:text-black selection:bg-zinc-700"
       >
         ALL PROJECTS
       </p>
       <h1
         class="items-center font-bold tracking-tighter font-title text-5xl sm:text-7xl {theme.colour ==
         'green'
-          ? 'text-green-300'
+          ? 'text-green-300 selection:bg-green-300'
           : theme.colour == 'blue'
-            ? 'text-blue-300'
+            ? 'text-blue-300 selection:bg-blue-300'
             : theme.colour == 'red'
-              ? 'text-red-400'
+              ? 'text-red-400 selection:bg-red-400'
               : theme.colour == 'yellow'
-                ? 'text-yellow-300'
-                : ''} flex gap-4"
+                ? 'text-yellow-300 selection:bg-yellow-300'
+                : ''} flex gap-4 selection:text-black"
       >
         {#if !sm}
           {theme.title.toUpperCase()}

@@ -12,19 +12,19 @@
   <div class="flex flex-col">
     <hgroup>
       <p
-        class="font-bold text-zinc-700 tracking-tighter font-title text-5xl sm:text-3xl"
+        class="selection:text-black selection:bg-zinc-700 font-bold text-zinc-700 tracking-tighter font-title text-5xl sm:text-3xl"
       >
         {$page.error?.message.toUpperCase()}
       </p>
       <h1
-        class="font-bold tracking-tighter font-title text-8xl items-center text-green-300 flex gap-4"
+        class="selection:text-black selection:bg-green-300 font-bold tracking-tighter font-title text-8xl items-center text-green-300 flex gap-4"
       >
         {$page.status}
       </h1>
     </hgroup>
     <a
       href="/"
-      class="flex
+      class="flex select-none
     bg-green-300 hover:bg-white w-fit my-20 gap-2 font-bold tracking-tighter transition-all active:scale-95 items-center text-3xl px-2 py-0.5"
     >
       <img

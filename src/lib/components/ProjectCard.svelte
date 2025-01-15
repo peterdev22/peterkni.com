@@ -29,7 +29,7 @@
     const productionBuild = PUBLIC_CF_IMAGES;
 
     if (productionBuild == 'true') {
-      return `/cdn-cgi/image/format=auto,width=${width},quality=${quality}/assets/projects/${section}/${filename}`;
+      return `/cdn-cgi/image/format=auto,onerror=redirect,width=${width},quality=${quality}/assets/projects/${section}/${filename}`;
     } else {
       return `/assets/projects/${section}/${filename}`;
     }

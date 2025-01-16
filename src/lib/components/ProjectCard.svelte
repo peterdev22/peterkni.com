@@ -135,14 +135,14 @@
   </article>
 
   <!-- IMAGE SECTION -->
-  <figure class="p-8 lg:w-1/2 overflow-hidden flex-shrink-0">
+  <figure class="m-8 lg:w-1/2 overflow-hidden flex-shrink-0">
     <img
       src={getImagePath(project.section, project.filename, '1920', '90')}
       alt={project.alt}
       class="h-full w-full object-cover text-zinc-700 text-lg italic ring-zinc-900 ring-inset ring-[2px] flex items-center text-center justify-center min-h-60 lg:min-h-full"
     />
     <figcaption
-      class="text-sm italic text-black px-2 py-0.5 tracking-tight font-semibold my-2 absolute -translate-y-8 {theme.colour ==
+      class="w-fit text-xs sm:text-sm italic text-black px-2 py-0.5 tracking-tight font-semibold mt-2 lg:absolute lg:-translate-y-8 {theme.colour ==
       'green'
         ? 'bg-green-300 '
         : theme.colour == 'blue'

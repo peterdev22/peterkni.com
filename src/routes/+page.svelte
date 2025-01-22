@@ -29,22 +29,29 @@
 
 <!-- PAGE METADATA -->
 <svelte:head>
+  <!-- Standard metadata -->
   <meta
     name="description"
     content="Peter Knight. I enjoy CAD modeling and 3D printing, and I currently compete in the VEX Robotics Competition. Explore my portfolio of various CAD, robotics, and programming projects I have worked on."
   />
   <title>Peter Knight</title>
 
+  <!-- Open Graph (Website preview image) -->
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:description"
+    content="Hey I'm Peter. I enjoy CAD and 3D printing, and I currently compete in the VEX Robotics Competition. Explore my portfolio of various projects I have worked on."
+  />
   <meta property="og:title" content="Peter Knight" />
   <meta property="og:url" content="https://peterkni.com/" />
   <meta
-  property="og:image"
-  content="https://peterkni.com/assets/branding/pk_og.png"
-/>
-<meta
-  property="og:image:alt"
-  content="Black rectangle with a green top and right border, with the text 'Peter Knight' and 'Portfolio' on the bottom right and a stylised pair of white initials 'pk' on the left."
-/>
+    property="og:image"
+    content="https://peterkni.com/assets/branding/pk_og.png"
+  />
+  <meta
+    property="og:image:alt"
+    content="Black rectangle with a green top and right border, with the text 'Peter Knight' and 'Portfolio' on the bottom right and a stylised pair of white initials 'pk' on the left."
+  />
 </svelte:head>
 
 <!-- PROJECT SECTION SNIPPET -->
@@ -95,7 +102,8 @@
             <a
               href={button.url}
               target="_blank"
-              class="select-none text-center justify-center gap-1 {project.section == 'misc'
+              class="select-none text-center justify-center gap-1 {project.section ==
+              'misc'
                 ? 'bg-green-300'
                 : project.section == 'cad'
                   ? 'bg-blue-300'
@@ -148,14 +156,16 @@
     >
       <div class="flex gap-2 flex-col m-4">
         <h2
-          class="text-green-300 tracking-tight font-title font-bold text-4xl mb-6 "
+          class="text-green-300 tracking-tight font-title font-bold text-4xl mb-6"
         >
           ABOUT
         </h2>
         <div class="flex flex-col">
           <p class="text-white font-medium tracking-tight max-w-[40rem]">
-            Hello, I'm Peter Knight. I enjoy designing functional objects with CAD and
-            3D printing in my spare time. I have competed in the VEX Robotics Competition with my team 75477M Frij over the last three years. On this website, you will find documentation of various
+            Hello, I'm Peter Knight. I enjoy designing functional objects with
+            CAD and 3D printing in my spare time. I have competed in the VEX
+            Robotics Competition with my team 75477M Frij over the last three
+            years. On this website, you will find documentation of various
             projects I have worked on.
           </p>
           <div class="w-12 h-0.5 bg-green-300 my-4"></div>

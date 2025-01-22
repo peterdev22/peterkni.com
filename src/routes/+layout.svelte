@@ -55,14 +55,6 @@
   });
 </script>
 
-<svelte:head>
-  <meta property="og:type" content="website" />
-  <meta
-    property="og:description"
-    content="Hey I'm Peter. I enjoy CAD and 3D printing, and I currently compete in the VEX Robotics Competition. Explore my portfolio of various projects I have worked on."
-  />
-</svelte:head>
-
 <!-- HEADER & NAV BAR -->
 <header
   class="select-none p-5 sm:p-10 px-10 xl:px-20 2xl:px-48 sm:py-4 flex justify-center"

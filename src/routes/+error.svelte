@@ -3,6 +3,7 @@
 </script>
 
 <svelte:head>
+  <!-- Standard metadata -->
   <meta name="description" content={$page.error?.message} />
   <title>{$page.status} - Peter Knight</title>
 </svelte:head>

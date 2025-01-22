@@ -32,9 +32,16 @@
 
 <!-- PAGE METADATA -->
 <svelte:head>
+  <!-- Standard metadata -->
   <meta name="description" content={theme.description} />
   <title>{theme.titleMini} - Peter Knight</title>
 
+  <!-- Open Graph (Website preview image) -->
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:description"
+    content="Hey I'm Peter. I enjoy CAD and 3D printing, and I currently compete in the VEX Robotics Competition. Explore my portfolio of various projects I have worked on."
+  />
   <meta property="og:title" content="{theme.title} - Peter Knight" />
   <meta
     property="og:url"

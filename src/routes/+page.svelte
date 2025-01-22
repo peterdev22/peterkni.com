@@ -34,6 +34,9 @@
     content="Peter Knight. I enjoy CAD modeling and 3D printing, and I currently compete in the VEX Robotics Competition. Explore my portfolio of various CAD, robotics, and programming projects I have worked on."
   />
   <title>Peter Knight</title>
+
+  <meta property="og:title" content="Peter Knight" />
+  <meta property="og:url" content="https://peterkni.com/" />
 </svelte:head>
 
 <!-- PROJECT SECTION SNIPPET -->

@@ -33,6 +33,9 @@
 <svelte:head>
   <meta name="description" content="{theme.description}" />
   <title>{theme.title} - Peter Knight</title>
+
+  <meta property="og:title" content="{theme.title} - Peter Knight" />
+  <meta property="og:url" content="https://peterkni.com/{theme.title.toLowerCase()}" />
 </svelte:head>
 
 <!-- TITLE SNIPPET -->

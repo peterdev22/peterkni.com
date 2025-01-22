@@ -37,6 +37,14 @@
 
   <meta property="og:title" content="Peter Knight" />
   <meta property="og:url" content="https://peterkni.com/" />
+  <meta
+  property="og:image"
+  content="https://peterkni.com/assets/branding/pk_og.png"
+/>
+<meta
+  property="og:image:alt"
+  content="Black rectangle with a green top and right border, with the text 'Peter Knight' and 'Portfolio' on the bottom right and a stylised pair of white initials 'pk' on the left."
+/>
 </svelte:head>
 
 <!-- PROJECT SECTION SNIPPET -->

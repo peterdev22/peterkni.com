@@ -61,14 +61,6 @@
     property="og:description"
     content="Hey I'm Peter. I enjoy CAD and 3D printing, and I currently compete in the VEX Robotics Competition. Explore my portfolio of various projects I have worked on."
   />
-  <meta
-    property="og:image"
-    content="https://peterkni.com/assets/branding/pk_ogbanner.png"
-  />
-  <meta
-    property="og:image:alt"
-    content="Black rectangle with a blue top and right border, with the text 'Peter Knight' and 'Portfolio' on the bottom right and a stylised pair of white initials 'pk' on the left."
-  />
 </svelte:head>
 
 <!-- HEADER & NAV BAR -->

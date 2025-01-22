@@ -8,7 +8,8 @@
     colour: 'red',
     title: 'Robotics',
     titleMini: '',
-    description: 'Information about my team, 75477M Frij, which has competed in the VEX Robotics Competition from 2022 to 2025. I have been involved in the design, building, programming, and documentation of the robot.',
+    description:
+      'Information about my team, 75477M Frij, which has competed in the VEX Robotics Competition from 2022 to 2025. I have been involved in the design, building, programming, and documentation of the robot.',
     icon: 'M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2M7.5 13A2.5 2.5 0 0 0 5 15.5A2.5 2.5 0 0 0 7.5 18a2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 7.5 13m9 0a2.5 2.5 0 0 0-2.5 2.5a2.5 2.5 0 0 0 2.5 2.5a2.5 2.5 0 0 0 2.5-2.5a2.5 2.5 0 0 0-2.5-2.5',
   };
 
@@ -31,11 +32,22 @@
 
 <!-- PAGE METADATA -->
 <svelte:head>
-  <meta name="description" content="{theme.description}" />
+  <meta name="description" content={theme.description} />
   <title>{theme.title} - Peter Knight</title>
 
   <meta property="og:title" content="{theme.title} - Peter Knight" />
-  <meta property="og:url" content="https://peterkni.com/{theme.title.toLowerCase()}" />
+  <meta
+    property="og:url"
+    content="https://peterkni.com/{theme.title.toLowerCase()}"
+  />
+  <meta
+    property="og:image"
+    content="https://peterkni.com/assets/branding/pk_og_robotics.png"
+  />
+  <meta
+    property="og:image:alt"
+    content="Black rectangle with a red top and right border, with the text 'Robotics', 'Peter Knight' and 'Portfolio' on the bottom right and a stylised pair of white initials 'pk' on the left."
+  />
 </svelte:head>
 
 <!-- TITLE SNIPPET -->
@@ -91,7 +103,9 @@
 </section>
 
 <!-- PROJECT LIST -->
-<main class="py-6 sm:py-12 px-4 lg:px-28 xl:px-52 2xl:px-72 flex flex-col gap-20">
+<main
+  class="py-6 sm:py-12 px-4 lg:px-28 xl:px-52 2xl:px-72 flex flex-col gap-20"
+>
   {#each roboticsProjects as project}
     <ProjectCard {project} {theme} />
   {/each}

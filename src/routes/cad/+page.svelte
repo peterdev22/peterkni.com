@@ -9,7 +9,7 @@
     title: 'Computer-aided Design',
     titleMini: 'CAD',
     description:
-      "All of my computer-aided design (CAD) projects. View my 3D models, renders, and videos for various industrial design projects. I primarily use Autodesk Fusion for CAD work and Blender for 3D rendering.",
+      'All of my computer-aided design (CAD) projects. View my 3D models, renders, and videos for various industrial design projects. I primarily use Autodesk Fusion for CAD work and Blender for 3D rendering.',
     icon: 'M21.22 6.894a3.7 3.7 0 0 0-1.4-1.37l-6-3.31a3.83 3.83 0 0 0-3.63 0l-6 3.31a3.7 3.7 0 0 0-1.4 1.37a3.74 3.74 0 0 0-.52 1.9v6.41a3.79 3.79 0 0 0 1.92 3.27l6 3.3a3.74 3.74 0 0 0 3.63 0l6-3.31a3.72 3.72 0 0 0 1.91-3.26v-6.36a3.64 3.64 0 0 0-.51-1.95m-1 8.31a2.2 2.2 0 0 1-1.14 1.95l-6 3.31q-.158.089-.33.14v-8.18l7.3-4.39c.092.242.136.5.13.76z',
   };
 
@@ -36,7 +36,18 @@
   <title>{theme.titleMini} - Peter Knight</title>
 
   <meta property="og:title" content="{theme.title} - Peter Knight" />
-  <meta property="og:url" content="https://peterkni.com/{theme.titleMini.toLowerCase()}" />
+  <meta
+    property="og:url"
+    content="https://peterkni.com/{theme.titleMini.toLowerCase()}"
+  />
+  <meta
+    property="og:image"
+    content="https://peterkni.com/assets/branding/pk_og_cad.png"
+  />
+  <meta
+    property="og:image:alt"
+    content="Black rectangle with a blue top and right border, with the text 'Computer-aided Design', 'Peter Knight' and 'Portfolio' on the bottom right and a stylised pair of white initials 'pk' on the left."
+  />
 </svelte:head>
 
 <!-- TITLE SNIPPET -->

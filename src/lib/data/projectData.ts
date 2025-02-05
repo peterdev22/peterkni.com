@@ -92,13 +92,9 @@ export const cadProjects = [
       "3D rendering of a Slatedock mini, an organisation hub that can assist with tasks.",
     buttons: [
       {
-        name: "Branding",
-        url: "https://slatedock.peterkni.com/branding",
-      },
-      {
-        name: "Prototypes",
-        url: "https://slatedock.peterkni.com/prototypes",
-      },
+        name: "Product Page",
+        url: "https://slatedock.peterkni.com",
+      }
     ],
     tags: [
       "Concept",

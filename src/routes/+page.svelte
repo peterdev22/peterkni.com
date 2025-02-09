@@ -162,25 +162,39 @@
         </h2>
         <div class="flex flex-col">
           <p class="text-white font-medium tracking-tight max-w-[40rem]">
-            Hello, I'm Peter Knight. I enjoy designing functional objects with
+            Hey, I'm Peter. I enjoy designing functional objects with
             CAD and 3D printing in my spare time. I have competed in the VEX
             Robotics Competition with my team 75477M Frij over the last three
             years. On this website, you will find documentation of various
             projects I have worked on.
           </p>
           <div class="w-12 h-0.5 bg-green-300 my-4"></div>
-          <a
-            href="https://github.com/peterdev22"
-            target="_blank"
-            class="select-none items-center font-bold mt-4 hover:bg-white active:scale-95 px-2 text-black transition-all flex gap-1 w-24 lg:w-fit bg-green-300"
-          >
-            <img
-              src="/assets/symbols/github_black.svg"
-              alt="Black GitHub logo."
-              class="h-5 text-black font-normal truncate italic text-xs"
-            />
-            GitHub
-          </a>
+          <div class="flex gap-4">
+            <a
+              href="https://github.com/peterdev22"
+              target="_blank"
+              class="select-none items-center font-bold mt-4 hover:bg-white active:scale-95 px-2 text-black transition-all  flex gap-1 w-24 lg:w-fit bg-green-300"
+            >
+              <img
+                src="/assets/symbols/github_black.svg"
+                alt="Black GitHub logo."
+                class="h-5 text-black font-normal italic text-xs"
+              />
+              GitHub
+            </a>
+            <a
+              href="https://www.printables.com/@Peter_2926191"
+              target="_blank"
+              class="select-none items-center font-bold mt-4 hover:bg-white active:scale-95 px-2 text-black transition-all  flex gap-1 w-30 lg:w-fit bg-green-300"
+            >
+              <img
+                src="/assets/symbols/printables_black.svg"
+                alt="Black Printables logo."
+                class="h-5 text-black font-normal italic text-xs"
+              />
+              Printables
+            </a>
+          </div>
         </div>
       </div>
     </section>

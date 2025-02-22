@@ -9,8 +9,12 @@ Thanks for visiting!
 
 ### Fonts
 The fonts contained on my website are avalible to download from Google Fonts. All fonts are locally imported.
-- [DM Sans](https://fonts.google.com/specimen/DM+Sans)
-- [Outfit](https://fonts.google.com/specimen/Outfit)
+- Body: [DM Sans](https://fonts.google.com/specimen/DM+Sans)
+- Title: [Outfit](https://fonts.google.com/specimen/Outfit)
 
 ### Suggestions & Issues
 If you have a suggestion or have a problem with the website's UX - send me a [GitHub Issue](https://github.com/peterdev22/peterkni.com/issues/new) - i'll try to help.
+
+<br>
+
+<img width="1886" alt="image" src="https://github.com/user-attachments/assets/c640709f-8c1d-4a53-89e9-4786be76596e" />

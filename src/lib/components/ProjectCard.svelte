@@ -135,7 +135,7 @@
   </article>
 
   <!-- IMAGE SECTION -->
-  <figure class="m-8 lg:w-1/2 overflow-hidden flex-shrink-0">
+  <figure class="m-8 lg:w-1/2 overflow-hidden shrink-0">
     <img
       src={getImagePath(project.section, project.filename, '1920', '90')}
       alt={project.alt}

@@ -142,11 +142,11 @@
 </footer>
 
 <!-- GLOBAL STYLES -->
-<style lang="postcss">
+<style>
   /* general */
   :global(body) {
-    @apply bg-[#040405];
-    @apply font-sans;
+    background-color: var(--bg-base);
+    font-family: var(--font-sans);
   }
 
   /* view transitions */

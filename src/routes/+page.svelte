@@ -35,6 +35,16 @@
     content="Peter Knight. I enjoy CAD modeling and 3D printing, and I currently compete in the VEX Robotics Competition. Explore my portfolio of various CAD, robotics, and programming projects I have worked on."
   />
   <title>Peter Knight</title>
+  
+  <!-- Google Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context" : "https://schema.org",
+      "@type" : "WebSite",
+      "name" : "Peter Knight",
+      "url" : "https://peterkni.com/"
+    }
+  </script>
 
   <!-- Open Graph (Website preview image) -->
   <meta property="og:type" content="website" />

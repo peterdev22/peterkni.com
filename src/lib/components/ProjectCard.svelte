@@ -139,7 +139,7 @@
     <img
       src={getImagePath(project.section, project.filename, '1920', '90')}
       alt={project.alt}
-      class="h-full w-full object-cover text-zinc-700 text-lg italic ring-zinc-900 ring-inset ring-[2px] flex items-center text-center justify-center min-h-60 lg:min-h-full"
+      class="h-full w-full object-cover text-zinc-700 text-lg italic ring-zinc-900 ring-inset ring-2 flex items-center text-center justify-center min-h-60 lg:min-h-full"
     />
     <figcaption
       class="w-fit text-xs sm:text-sm italic text-black px-2 py-0.5 tracking-tight font-semibold mt-2 lg:absolute lg:-translate-y-8 {theme.colour ==

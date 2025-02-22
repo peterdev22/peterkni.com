@@ -145,8 +145,8 @@
 <style>
   /* general */
   :global(body) {
-    background-color: #040405;
-    font-family: (--font-sans);
+    background-color: var(--bg-base);
+    font-family: var(--font-sans);
   }
 
   /* view transitions */

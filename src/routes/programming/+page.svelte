@@ -117,3 +117,54 @@
     <ProjectCard {project} {theme} />
   {/each}
 </main>
+
+<!-- SWITCHER -->
+<section
+  class="mt-14 sm:mt-8 px-4 lg:px-28 xl:px-52 2xl:px-72 flex gap-4 text-lg flex-col sm:flex-row sm:justify-between tracking-tight"
+>
+  <a
+    href="/robotics"
+    class="select-none items-center justify-between text-center font-bold hover:bg-white active:scale-95 py-2 lg:py-1 px-4 flex gap-2 text-black transition-all w-full sm:w-fit bg-green-300"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="100%"
+      height="100%"
+      class="w-5 hidden sm:block"
+      viewBox="0 0 24 24"
+      ><path
+        fill="currentColor"
+        d="m15.965 1.6l.035.034l-8.832 8.855H24v3.556H7.166L16 22.9l-.035.034h-5.319L0 12.268L10.647 1.601z"
+      /></svg
+    >
+    Robotics
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="100%"
+      height="100%"
+      class="w-5 block sm:hidden"
+      viewBox="0 0 24 24"
+      ><path
+        fill="currentColor"
+        d="m15.965 1.6l.035.034l-8.832 8.855H24v3.556H7.166L16 22.9l-.035.034h-5.319L0 12.268L10.647 1.601z"
+      /></svg
+    >
+  </a>
+  <a
+    href="/cad"
+    class="select-none items-center justify-between text-center font-bold hover:bg-white active:scale-95 py-2 lg:py-1 px-4 flex gap-2 text-black transition-all w-full sm:w-fit bg-green-300"
+  >
+    Computer-aided Design
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="100%"
+      height="100%"
+      class="w-5"
+      viewBox="0 0 24 24"
+      ><path
+        fill="currentColor"
+        d="M8.034 22.933L8 22.899l10.608-10.634L8 1.632l.034-.034h5.319L24 12.264L13.353 22.931z"
+      /><path fill="currentColor" d="M0 10.488h18.666v3.555H0z" /></svg
+    >
+  </a>
+</section>

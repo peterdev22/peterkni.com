@@ -35,14 +35,14 @@
     content="Peter Knight. I enjoy CAD modeling and 3D printing, and I currently compete in the VEX Robotics Competition. Explore my portfolio of various CAD, robotics, and programming projects I have worked on."
   />
   <title>Peter Knight</title>
-  
+
   <!-- Google Structured Data -->
   <script type="application/ld+json">
     {
-      "@context" : "https://schema.org",
-      "@type" : "WebSite",
-      "name" : "Peter Knight",
-      "url" : "https://peterkni.com/"
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Peter Knight",
+      "url": "https://peterkni.com/"
     }
   </script>
 
@@ -172,18 +172,22 @@
         </h2>
         <div class="flex flex-col">
           <p class="text-white font-medium tracking-tight max-w-[40rem]">
-            Hey, I'm Peter. I enjoy designing functional objects with
-            CAD and 3D printing in my spare time. I have competed in the VEX
-            Robotics Competition with my team 75477M Frij over the last three
-            years. On this website, you will find documentation of various
-            projects I have worked on.
+            Hey, I'm Peter. I enjoy designing functional objects with CAD and 3D
+            printing in my spare time. I have competed in the VEX Robotics
+            Competition with my team 75477M Frij over the last three years. On
+            this website, you will find documentation of various projects I have
+            worked on.
           </p>
+          <!-- <p class="text-white font-medium tracking-tight max-w-[40rem] mt-4">
+            Check out my GitHub and Printables for more code and 3D prints, or
+            if you want to get in touch - feel free to flick an email through.
+          </p> -->
           <div class="w-12 h-0.5 bg-green-300 my-4"></div>
           <div class="flex gap-4">
             <a
               href="https://github.com/peterdev22"
               target="_blank"
-              class="select-none items-center font-bold mt-4 hover:bg-white active:scale-95 px-2 text-black transition-all  flex gap-1 w-24 lg:w-fit bg-green-300"
+              class="select-none items-center font-bold mt-4 hover:bg-white active:scale-95 px-2 text-black transition-all flex gap-1 w-24 lg:w-fit bg-green-300"
             >
               <img
                 src="/assets/symbols/github_black.svg"
@@ -195,7 +199,7 @@
             <a
               href="https://www.printables.com/@Peter_2926191"
               target="_blank"
-              class="select-none items-center font-bold mt-4 hover:bg-white active:scale-95 px-2 text-black transition-all  flex gap-1 w-30 lg:w-fit bg-green-300"
+              class="select-none items-center font-bold mt-4 hover:bg-white active:scale-95 px-2 text-black transition-all flex gap-1 w-30 lg:w-fit bg-green-300"
             >
               <img
                 src="/assets/symbols/printables_black.svg"
@@ -204,6 +208,25 @@
               />
               Printables
             </a>
+
+            <!-- <a
+              href=""
+              target="_blank"
+              class="select-none items-center font-bold mt-4 hover:bg-white active:scale-95 px-2 text-black transition-all flex gap-1 w-24 lg:w-fit bg-green-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100%"
+                height="100%"
+                class="h-4.5 mr-0.5 text-black font-normal italic text-xs"
+                viewBox="0 0 1792 1792"
+                ><path
+                  fill="currentColor"
+                  d="M1764 11q33 24 27 64l-256 1536q-5 29-32 45q-14 8-31 8q-11 0-24-5l-453-185l-242 295q-18 23-49 23q-13 0-22-4q-19-7-30.5-23.5T640 1728v-349l864-1059l-1069 925l-395-162q-37-14-40-55q-2-40 32-59L1696 9q15-9 32-9q20 0 36 11"
+                /></svg
+              >
+              Email
+            </a> -->
           </div>
         </div>
       </div>

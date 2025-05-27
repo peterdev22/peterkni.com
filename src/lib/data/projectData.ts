@@ -130,9 +130,9 @@ export const roboticsProjects = [
     id: 1,
     name: "Frij 2024-2025",
     description:
-      "Our robot's 'Frij' Python code (driver & autonomous) for the 2024-2025 'High Stakes' season of the VEX Robotics Competition. This season we won the excellence award at the Australian Nationals and will be representing Australia at the VEX Robotics World Championship in May 2025.",
+      "Our robot's 'Frij' Python code (driver & autonomous) for the 2024-2025 'High Stakes' season of the VEX Robotics Competition. This season we won the excellence award at the Australian Nationals and represented Australia at the VEX Robotics World Championship during May 2025.",
     summary: "Our robot for the 'High Stakes' season of the VEX Robotics Competiton.",
-    date: "May 2024 - Present",
+    date: "May 2024 - May 2025",
     section: "robotics",
     filename: "robot2.jpeg",
     caption: "Frij as of Jan 2025 - preparing for worlds",

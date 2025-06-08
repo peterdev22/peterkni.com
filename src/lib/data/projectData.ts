@@ -41,11 +41,11 @@ export const cadProjects = [
     buttons: [
       {
         name: "Episode I",
-        url: "/assets/projects/cad/st1.mp4",
+        url: "https://storage.peterkni.com/projects/toothbrush/st1.mp4",
       },
       {
         name: "Episode II",
-        url: "/assets/projects/cad/st2.mp4",
+        url: "https://storage.peterkni.com/projects/toothbrush/st2.mp4",
       },
     ],
     tags: [

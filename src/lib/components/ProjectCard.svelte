@@ -53,13 +53,13 @@
   <article class="flex flex-col mx-8 mt-6 mb-8">
     <!-- CARD TITLE -->
     <h2
-      class="flex items-center text-4xl sm:text-5xl 2xl:text-4xl font-bold tracking-tight"
+      class="flex items-center text-4xl sm:text-5xl 2xl:text-4xl font-black tracking-tight"
     >
       {project.name}
     </h2>
 
     <!-- CARD DESCRIPTION -->
-    <p class=" text-lg font-medium my-3 mb-8 text-white">
+    <p class=" text-lg my-3 mb-8 font-medium tracking-tight text-white">
       {project.description}
     </p>
 

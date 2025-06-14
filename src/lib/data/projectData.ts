@@ -1,6 +1,29 @@
 export const cadProjects = [
   {
     id: 1,
+    name: "Anglebarrier",
+    description:
+      "The Anglebarrier is an alternative to sandbags as a flood barrier, offering greater stability during rapid floodwaters compared to the Boxwall. A single Anglebarrier can be folded down to 50 mm and stored on a standard European pallet measuring 1200 × 800 mm.",
+    summary: "The compact, rapidly deployable flood barrier.",
+    date: "June 2025",
+    section: "cad",
+    filename: "anglebarrier.png",
+    caption: "Anglebarrier - Prototype Model",
+    alt:
+      "3D rendering of an orange flood barrier with a right-angle-shaped structure.",
+    buttons: [
+      {
+        name: "More info...",
+        url: "/cad#anglebarrier",
+      }
+    ],
+    tags: [
+      "Concept",
+      "Design Process",
+    ],
+  },
+  {
+    id: 2,
     name: "Printo",
     description:
       "Creating a new 3D printer design in CAD designed for home users. Designed to be easy to use and maintain, CAD modelled in Fusion and rendered in Blender. The final task included a folio with documentation of the entire design process.",
@@ -27,7 +50,7 @@ export const cadProjects = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     name: "Toothbrush",
     description:
       "Creating a toothbrush in CAD while simulating it's motion using Fusion's motion link tools. Also rendered in Blender with realistic materials created with nodes. The purpose of this project was to build up skill in these areas.",
@@ -53,7 +76,7 @@ export const cadProjects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     name: "Airohh",
     description:
       "Airohh is a drone that puts modularity first. The drone has detachable propellers via magnets and a camera chamber that can hold a small GoPro. Users can swap out propeller types (FPV style, speed style, etc.) according to their usage - reducing the need to own multiple drones.",
@@ -79,7 +102,7 @@ export const cadProjects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     name: "Slatedock",
     description:
       "Slatedock is an organisation hub that can assist you with tasks at your desk or anywhere else. Different 'Slate Modules' can be swapped in and out of the dock to customise and upgrade the dock as needed. Some modules include a wireless charger, a pen holder, and a cable management system.",
@@ -102,7 +125,7 @@ export const cadProjects = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     name: "4 Top CAD Tips",
     description:
       "'4 Top CAD Tips to Save Tons of Time' is an informal, fun article about how some tools in CAD programs can save you time when CAD modelling. Written for an english assignment but can be found here for your enjoyment.",

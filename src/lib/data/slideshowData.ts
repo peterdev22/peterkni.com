@@ -55,22 +55,36 @@ export const printoFeature = [
     caption: 'The 3D printer designed for home users.',
     alt: 'Bird\'s eye view of the Printo 3D printer.',
   },
+  {
+    id: 8,
+    filename: 'anglebarrier.png',
+    project: 'Anglebarrier - Water Contact Side',
+    caption: 'The compact, rapidly deployable flood barrier.',
+    alt: 'The Anglebarrier looking from the flood water blocking side.',
+  },
   { 
-    id: 8, 
+    id: 9, 
     filename: 'brush_base.png', 
     project: 'Toothbrush - Leaning',
     caption: 'First attempts at rendering with Blender.',
     alt: 'The brush piece of an electric toothbrush leaning against the base.' 
   },
   { 
-    id: 9, 
+    id: 10, 
     filename: 'screen_8bit.jpeg', 
     project: 'Printo - Control Centre',
     caption: 'The 3D printer designed for home users.',
     alt: 'The Printo 3D printer\'s control centre screen leaning against the body of the 3D printer.' 
   },
+  {
+    id: 11,
+    filename: 'anglebarrier_side.png',
+    project: 'Anglebarrier - Side View',
+    caption: 'The compact, rapidly deployable flood barrier.',
+    alt: 'Side view of Anglebarrier, a barrier for flood water.',
+  },
   { 
-    id: 10, 
+    id: 12, 
     filename: 'main.jpeg', 
     project: 'Printo - The Printer',
     caption: 'The 3D printer designed for home users.',

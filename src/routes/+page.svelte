@@ -1,14 +1,14 @@
 <script lang="ts">
-  import { PUBLIC_CF_IMAGES } from '$env/static/public';
-  import { printoFeature } from '$lib/data/slideshowData';
+  import { PUBLIC_CF_IMAGES } from "$env/static/public";
+  import { printoFeature } from "$lib/data/slideshowData";
   import {
     cadProjects,
     roboticsProjects,
     programmingProjects,
-  } from '$lib/data/projectData';
+  } from "$lib/data/projectData";
 
   // slideshow component
-  import Slideshow from '$lib/components/Slideshow.svelte';
+  import Slideshow from "$lib/components/Slideshow.svelte";
 
   // handle local vs cloudflare pages image paths
   function getImagePath(
@@ -19,7 +19,7 @@
   ) {
     const productionBuild = PUBLIC_CF_IMAGES;
 
-    if (productionBuild == 'true') {
+    if (productionBuild == "true") {
       return `/cdn-cgi/image/format=auto,onerror=redirect,width=${width},quality=${quality}/assets/projects/${section}/${filename}`;
     } else {
       return `/assets/projects/${section}/${filename}`;
@@ -109,27 +109,46 @@
         </div>
         <div class="flex gap-4 sm:gap-1">
           {#each project.buttons as button}
-            <a
-              href={button.url}
-              target="_blank"
-              class="select-none text-center justify-center gap-1 {project.section ==
-              'misc'
-                ? 'bg-green-300'
-                : project.section == 'cad'
-                  ? 'bg-blue-300'
-                  : project.section == 'robotics'
-                    ? 'bg-red-400'
-                    : project.section == 'programming'
-                      ? 'bg-yellow-300'
-                      : ''} text-lg sm:text-base flex items-center active:scale-95 transition-all w-full px-2 sm:w-auto sm:py-0 py-1 font-bold hover:bg-white text-black"
-            >
-              {button.name}
-              <img
-                src="/assets/symbols/external_link_black.svg"
-                alt="Black symbol of a rounded hollow box with an arrow inside pointing to the top right, representing an external link."
-                class="w-4 text-black font-normal truncate italic text-xs"
-              />
-            </a>
+            {#if button.url.startsWith("/")}
+              <!-- dont show external link icon, and target _blank if it is local -->
+              <a
+                href={button.url}
+                class="select-none text-center justify-center gap-1 {project.section ==
+                'misc'
+                  ? 'bg-green-300'
+                  : project.section == 'cad'
+                    ? 'bg-blue-300'
+                    : project.section == 'robotics'
+                      ? 'bg-red-400'
+                      : project.section == 'programming'
+                        ? 'bg-yellow-300'
+                        : ''} text-lg sm:text-base flex items-center active:scale-95 transition-all w-full px-2 sm:w-auto sm:py-0 py-1 font-bold hover:bg-white text-black"
+              >
+                {button.name}
+              </a>
+            {:else}
+              <a
+                href={button.url}
+                target="_blank"
+                class="select-none text-center justify-center gap-1 {project.section ==
+                'misc'
+                  ? 'bg-green-300'
+                  : project.section == 'cad'
+                    ? 'bg-blue-300'
+                    : project.section == 'robotics'
+                      ? 'bg-red-400'
+                      : project.section == 'programming'
+                        ? 'bg-yellow-300'
+                        : ''} text-lg sm:text-base flex items-center active:scale-95 transition-all w-full px-2 sm:w-auto sm:py-0 py-1 font-bold hover:bg-white text-black"
+              >
+                {button.name}
+                <img
+                  src="/assets/symbols/external_link_black.svg"
+                  alt="Black symbol of a rounded hollow box with an arrow inside pointing to the top right, representing an external link."
+                  class="w-4 text-black font-normal truncate italic text-xs"
+                />
+              </a>
+            {/if}
           {/each}
         </div>
       </div>
@@ -158,7 +177,7 @@
 
 <!-- PROJECT SECTIONS -->
 <main
-  class="mb-12 px-4 lg:px-28 xl:px-52 2xl:px-72 flex flex-col lg:flex-row gap-12 justify-center"
+  class="mb-12 px-4 lg:px-12 xl:px-40 2xl:px-60 flex flex-col lg:flex-row gap-12 justify-center"
 >
   <div class="flex flex-col gap-12 lg:w-[40rem]">
     <section
@@ -181,6 +200,7 @@
           <!-- <p class="text-white font-medium tracking-tight max-w-[40rem] mt-4">
             Check out my GitHub and Printables for more code and 3D prints, or
             if you want to get in touch - feel free to flick an email through.
+            Note the email address linked is an alias; it will still reach me!
           </p> -->
           <div class="w-12 h-0.5 bg-green-300 my-4"></div>
           <div class="flex gap-4">
@@ -207,13 +227,13 @@
                 class="h-5 text-black font-normal italic text-xs"
               />
               Printables
-            </a>
-
-            <!-- <a
-              href=""
+            </a> 
+            <!-- email alias -->
+            <!-- <a 
+              href="" 
               target="_blank"
               class="select-none items-center font-bold mt-4 hover:bg-white active:scale-95 px-2 text-black transition-all flex gap-1 w-24 lg:w-fit bg-green-300"
-            >
+            > 
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="100%"
@@ -242,11 +262,11 @@
           COMPUTER-AIDED DESIGN
         </h2>
 
-        {@render projectSection(cadProjects, [1, 3, 4])}
+        {@render projectSection(cadProjects, [1, 2, 4, 5])}
 
         <hr class="border-zinc-600 my-3 border" />
 
-        {@render projectSection(cadProjects, [2, 5])}
+        {@render projectSection(cadProjects, [3, 6])}
 
         <a
           href="/cad"

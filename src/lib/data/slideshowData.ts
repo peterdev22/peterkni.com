@@ -57,10 +57,10 @@ export const printoFeature = [
   },
   {
     id: 8,
-    filename: 'anglebarrier.png',
-    project: 'Anglebarrier - Water Contact Side',
+    filename: 'anglebarrier_side.png',
+    project: 'Anglebarrier - Side View',
     caption: 'The compact, rapidly deployable flood barrier.',
-    alt: 'The Anglebarrier looking from the flood water blocking side.',
+    alt: 'Side view of Anglebarrier, a barrier for flood water.',
   },
   { 
     id: 9, 
@@ -78,10 +78,10 @@ export const printoFeature = [
   },
   {
     id: 11,
-    filename: 'anglebarrier_side.png',
-    project: 'Anglebarrier - Side View',
+    filename: 'anglebarrier.png',
+    project: 'Anglebarrier - Front View',
     caption: 'The compact, rapidly deployable flood barrier.',
-    alt: 'Side view of Anglebarrier, a barrier for flood water.',
+    alt: 'The Anglebarrier looking from the flood water blocking side.',
   },
   { 
     id: 12, 

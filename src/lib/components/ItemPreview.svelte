@@ -52,7 +52,7 @@
 
     {#if previewData.type == 'video'}
       <!-- svelte-ignore a11y_media_has_caption -->
-      <video controls width="100%" class="" poster={previewData.thumbnail}>
+      <video controls crossorigin="anonymous" width="100%" class="" poster={previewData.thumbnail}>
         <source
           src={previewData.url}
           type="video/{previewData.url.split('.').pop()}"

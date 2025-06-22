@@ -1,15 +1,15 @@
 <script lang="ts">
-  import { PUBLIC_CF_IMAGES } from "$env/static/public";
-  import { printoFeature } from "$lib/data/slideshowData";
+  import { PUBLIC_CF_IMAGES } from '$env/static/public';
+  import { printoFeature } from '$lib/data/slideshowData';
   import {
     cadProjects,
     roboticsProjects,
     programmingProjects,
-  } from "$lib/data/projectData";
+  } from '$lib/data/projectData';
 
   // components
-  import Slideshow from "$lib/components/Slideshow.svelte";
-  import ItemPreview from "$lib/components/ItemPreview.svelte";
+  import Slideshow from '$lib/components/Slideshow.svelte';
+  import ItemPreview from '$lib/components/ItemPreview.svelte';
 
   // handle local vs cloudflare pages image paths
   function getImagePath(
@@ -20,7 +20,7 @@
   ) {
     const productionBuild = PUBLIC_CF_IMAGES;
 
-    if (productionBuild == "true") {
+    if (productionBuild == 'true') {
       return `/cdn-cgi/image/format=auto,onerror=redirect,width=${width},quality=${quality}/assets/projects/${section}/${filename}`;
     } else {
       return `/assets/projects/${section}/${filename}`;
@@ -34,11 +34,11 @@
   // prevent scrolling while preview is open
   $effect(() => {
     if (isPreviewOpen) {
-      document.body.classList.add("overflow-y-hidden");
-      document.body.classList.add("touch-none");
+      document.body.classList.add('overflow-y-hidden');
+      document.body.classList.add('touch-none');
     } else {
-      document.body.classList.remove("overflow-y-hidden");
-      document.body.classList.remove("touch-none");
+      document.body.classList.remove('overflow-y-hidden');
+      document.body.classList.remove('touch-none');
     }
   });
 </script>
@@ -125,7 +125,7 @@
         </div>
         <div class="flex gap-4 sm:gap-1">
           {#each project.buttons as button}
-            {#if button.url.startsWith("/")}
+            {#if button.url.startsWith('/')}
               <!-- dont show external link icon, and target _blank if it is local -->
               <a
                 href={button.url}
@@ -142,13 +142,11 @@
               >
                 {button.name}
               </a>
-            {:else if button.url.startsWith("preview:")}
+            {:else if button.url.startsWith('preview:')}
               <button
                 onclick={() => {
                   isPreviewOpen = !isPreviewOpen;
-                  previewData = project.previews[
-                    button.url.split(":")[1]
-                  ];
+                  previewData = project.previews[button.url.split(':')[1]];
                 }}
                 class="select-none cursor-pointer text-center justify-center gap-1 {project.section ==
                 'misc'
@@ -239,11 +237,6 @@
             this website, you will find documentation of various projects I have
             worked on.
           </p>
-          <!-- <p class="text-white font-medium tracking-tight max-w-[40rem] mt-4">
-            Check out my GitHub and Printables for more code and 3D prints, or
-            if you want to get in touch - feel free to flick an email through.
-            Note the email address linked is an alias; it will still reach me!
-          </p> -->
           <div class="w-12 h-0.5 bg-green-300 my-4"></div>
           <div class="flex gap-4">
             <a
@@ -259,7 +252,7 @@
               GitHub
             </a>
             <a
-              href="https://www.printables.com/@Peter_2926191"
+              href="https://www.printables.com/@peterk"
               target="_blank"
               class="select-none items-center font-bold mt-4 hover:bg-white active:scale-95 px-2 text-black transition-all flex gap-1 w-30 lg:w-fit bg-green-300"
             >
@@ -270,25 +263,6 @@
               />
               Printables
             </a>
-            <!-- email alias -->
-            <!-- <a 
-              href="" 
-              target="_blank"
-              class="select-none items-center font-bold mt-4 hover:bg-white active:scale-95 px-2 text-black transition-all flex gap-1 w-24 lg:w-fit bg-green-300"
-            > 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="100%"
-                height="100%"
-                class="h-4.5 mr-0.5 text-black font-normal italic text-xs"
-                viewBox="0 0 1792 1792"
-                ><path
-                  fill="currentColor"
-                  d="M1764 11q33 24 27 64l-256 1536q-5 29-32 45q-14 8-31 8q-11 0-24-5l-453-185l-242 295q-18 23-49 23q-13 0-22-4q-19-7-30.5-23.5T640 1728v-349l864-1059l-1069 925l-395-162q-37-14-40-55q-2-40 32-59L1696 9q15-9 32-9q20 0 36 11"
-                /></svg
-              >
-              Email
-            </a> -->
           </div>
         </div>
       </div>

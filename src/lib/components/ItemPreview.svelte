@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { blur } from "svelte/transition";
+  import { blur } from 'svelte/transition';
 
   let { isPreviewOpen = $bindable(), previewData = $bindable() } = $props();
 </script>
@@ -50,7 +50,7 @@
       </hgroup>
     </div>
 
-    {#if previewData.type == "video"}
+    {#if previewData.type == 'video'}
       <!-- svelte-ignore a11y_media_has_caption -->
       <video controls width="100%" class="" poster={previewData.thumbnail}>
         <source

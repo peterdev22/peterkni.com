@@ -30,18 +30,18 @@
     };
   });
 
-    // item preview
+  // item preview
   let isPreviewOpen: boolean = $state(false);
   let previewData = $state({});
 
   // prevent scrolling while preview is open
   $effect(() => {
     if (isPreviewOpen) {
-      document.body.classList.add("overflow-y-hidden");
-      document.body.classList.add("touch-none");
+      document.body.classList.add('overflow-y-hidden');
+      document.body.classList.add('touch-none');
     } else {
-      document.body.classList.remove("overflow-y-hidden");
-      document.body.classList.remove("touch-none");
+      document.body.classList.remove('overflow-y-hidden');
+      document.body.classList.remove('touch-none');
     }
   });
 </script>
@@ -151,13 +151,13 @@
       src="/assets/symbols/arrow_left_black.svg"
       alt="Black arrow pointing to the left."
       class="w-5 hidden sm:block"
-    >
+    />
     Programming
     <img
       src="/assets/symbols/arrow_left_black.svg"
       alt="Black arrow pointing to the left."
       class="w-5 block sm:hidden"
-    >
+    />
   </a>
   <a
     href="/robotics"
@@ -168,6 +168,6 @@
       src="/assets/symbols/arrow_right_black.svg"
       alt="Black arrow pointing to the right."
       class="w-5"
-    >
+    />
   </a>
 </section>

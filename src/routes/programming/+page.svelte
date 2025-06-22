@@ -130,13 +130,13 @@
       src="/assets/symbols/arrow_left_black.svg"
       alt="Black arrow pointing to the left."
       class="w-5 hidden sm:block"
-    >
+    />
     Robotics
     <img
       src="/assets/symbols/arrow_left_black.svg"
       alt="Black arrow pointing to the left."
       class="w-5 block sm:hidden"
-    >
+    />
   </a>
   <a
     href="/cad"
@@ -147,6 +147,6 @@
       src="/assets/symbols/arrow_right_black.svg"
       alt="Black arrow pointing to the right."
       class="w-5"
-    >
+    />
   </a>
 </section>

@@ -1,8 +1,13 @@
 <script lang="ts">
-  import { PUBLIC_CF_IMAGES } from "$env/static/public";
-  import { onMount } from "svelte";
+  import { PUBLIC_CF_IMAGES } from '$env/static/public';
+  import { onMount } from 'svelte';
 
-  let { project, theme, isPreviewOpen = $bindable(), previewData = $bindable() } = $props();
+  let {
+    project,
+    theme,
+    isPreviewOpen = $bindable(),
+    previewData = $bindable(),
+  } = $props();
   let tagMaxWidth = $state(false);
 
   // check screen width for tag display
@@ -12,10 +17,10 @@
     };
 
     checkScreenWidth();
-    window.addEventListener("resize", checkScreenWidth);
+    window.addEventListener('resize', checkScreenWidth);
 
     return () => {
-      window.removeEventListener("resize", checkScreenWidth);
+      window.removeEventListener('resize', checkScreenWidth);
     };
   });
 
@@ -28,7 +33,7 @@
   ) {
     const productionBuild = PUBLIC_CF_IMAGES;
 
-    if (productionBuild == "true") {
+    if (productionBuild == 'true') {
       return `/cdn-cgi/image/format=auto,onerror=redirect,width=${width},quality=${quality}/assets/projects/${section}/${filename}`;
     } else {
       return `/assets/projects/${section}/${filename}`;
@@ -37,7 +42,7 @@
 </script>
 
 <section
-  id={project.name.replace(/\s+/g, "").toLowerCase()}
+  id={project.name.replace(/\s+/g, '').toLowerCase()}
   class="selection:text-black scroll-mt-0 lg:scroll-mt-40 w-full relative bg-zinc-950 bg-opacity-50 text-white border-2 {theme.colour ==
   'green'
     ? 'border-green-300 selection:bg-green-300'
@@ -68,13 +73,11 @@
       class="select-none flex flex-col gap-6 lg:gap-4 text-xl md:text-lg xl:text-md my-4 text-center font-bold sm:w-fit text-black 2xl:flex-row"
     >
       {#each project.buttons as button}
-        {#if button.url.startsWith("preview:")}
+        {#if button.url.startsWith('preview:')}
           <button
             onclick={() => {
-                  isPreviewOpen = !isPreviewOpen;
-                  previewData = project.previews[
-                    button.url.split(":")[1]
-                  ];
+              isPreviewOpen = !isPreviewOpen;
+              previewData = project.previews[button.url.split(':')[1]];
             }}
             class="py-2 lg:py-1 px-4 cursor-pointer {theme.colour == 'green'
               ? 'bg-green-300 hover:bg-white'
@@ -90,7 +93,7 @@
               {button.name}
             </div>
           </button>
-        {:else if button.url.startsWith("/") != true}
+        {:else if button.url.startsWith('/') != true}
           <a
             href={button.url}
             target="_blank"
@@ -161,7 +164,7 @@
   <!-- IMAGE SECTION -->
   <figure class="m-8 lg:w-1/2 overflow-hidden shrink-0">
     <img
-      src={getImagePath(project.section, project.filename, "1920", "90")}
+      src={getImagePath(project.section, project.filename, '1920', '90')}
       alt={project.alt}
       class="h-full w-full object-cover text-zinc-700 text-lg italic ring-zinc-900 ring-inset ring-2 flex items-center text-center justify-center min-h-60 lg:min-h-full"
     />

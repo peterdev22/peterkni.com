@@ -64,16 +64,34 @@ export const cadProjects = [
     buttons: [
       {
         name: "Episode I",
-        url: "https://storage.peterkni.com/projects/toothbrush/st1.mp4",
+        url: "preview:0",
       },
       {
         name: "Episode II",
-        url: "https://storage.peterkni.com/projects/toothbrush/st2.mp4",
+        url: "preview:1",
       },
     ],
     tags: [
       "Video",
     ],
+    previews: [
+      {
+        type: "video",
+        project: "Toothbrush",
+        title: "Skills Task 1 - Motion & Complex Tools",
+        description: "Documenting the challenges and solutions of problems encountered while creating a mechanically accurate toothbrush in Autodesk Fusion.",
+        thumbnail: "/assets/projects/cad/st1_cover.jpeg",
+        url: "https://storage.peterkni.com/projects/toothbrush/st1.mp4",
+      },
+      {
+        type: "video",
+        project: "Toothbrush",
+        title: "Skills Task 2 - Advanced Rendering",
+        description: "Using the toothbrush model created in Skills Task 1, renders were created using Blender. Challenges encountered along the way were documented in this video.",
+        thumbnail: "/assets/projects/cad/st2_cover.jpeg",
+        url: "https://storage.peterkni.com/projects/toothbrush/st2.mp4",
+      }
+    ]
   },
   {
     id: 4,

@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import { cadProjects } from '$lib/data/projectData';
   import ProjectCard from '$lib/components/ProjectCard.svelte';
+  import ItemPreview from '$lib/components/ItemPreview.svelte';
 
   // page theme data
   let theme: any = {
@@ -14,7 +15,7 @@
   };
 
   // screen width check
-  let sm = false;
+  let sm = $state(false);
 
   onMount(() => {
     const checkScreenWidth = () => {
@@ -27,6 +28,21 @@
     return () => {
       window.removeEventListener('resize', checkScreenWidth);
     };
+  });
+
+    // item preview
+  let isPreviewOpen: boolean = $state(false);
+  let previewData = $state({});
+
+  // prevent scrolling while preview is open
+  $effect(() => {
+    if (isPreviewOpen) {
+      document.body.classList.add("overflow-y-hidden");
+      document.body.classList.add("touch-none");
+    } else {
+      document.body.classList.remove("overflow-y-hidden");
+      document.body.classList.remove("touch-none");
+    }
   });
 </script>
 
@@ -102,6 +118,11 @@
   </div>
 {/snippet}
 
+<!-- ITEM PREVIEW (VIDEO/CAD MODEL)-->
+{#if isPreviewOpen}
+  <ItemPreview bind:isPreviewOpen bind:previewData />
+{/if}
+
 <!-- PAGE TITLE -->
 <section
   class="pt-8 px-4 lg:px-28 xl:px-52 2xl:px-72 flex justify-between items-baseline gap-10 flex-col xl:flex-row"
@@ -114,7 +135,7 @@
   class="py-6 sm:py-12 px-4 lg:px-28 xl:px-52 2xl:px-72 flex flex-col gap-20"
 >
   {#each cadProjects as project}
-    <ProjectCard {project} {theme} />
+    <ProjectCard {project} {theme} bind:isPreviewOpen bind:previewData />
   {/each}
 </main>
 

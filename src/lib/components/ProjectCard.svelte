@@ -2,7 +2,7 @@
   import { PUBLIC_CF_IMAGES } from "$env/static/public";
   import { onMount } from "svelte";
 
-  let { project, theme } = $props();
+  let { project, theme, isPreviewOpen = $bindable(), previewData = $bindable() } = $props();
   let tagMaxWidth = $state(false);
 
   // check screen width for tag display
@@ -68,7 +68,29 @@
       class="select-none flex flex-col gap-6 lg:gap-4 text-xl md:text-lg xl:text-md my-4 text-center font-bold sm:w-fit text-black 2xl:flex-row"
     >
       {#each project.buttons as button}
-        {#if button.url.startsWith("/") != true}
+        {#if button.url.startsWith("preview:")}
+          <button
+            onclick={() => {
+                  isPreviewOpen = !isPreviewOpen;
+                  previewData = project.previews[
+                    button.url.split(":")[1]
+                  ];
+            }}
+            class="py-2 lg:py-1 px-4 cursor-pointer {theme.colour == 'green'
+              ? 'bg-green-300 hover:bg-white'
+              : theme.colour == 'blue'
+                ? 'bg-blue-300 hover:bg-white'
+                : theme.colour == 'red'
+                  ? 'bg-red-400 hover:bg-white'
+                  : theme.colour == 'yellow'
+                    ? 'bg-yellow-300 hover:bg-white'
+                    : ''}  transition-all active:scale-95"
+          >
+            <div class="flex items-center justify-center gap-2 line-clamp-1">
+              {button.name}
+            </div>
+          </button>
+        {:else if button.url.startsWith("/") != true}
           <a
             href={button.url}
             target="_blank"

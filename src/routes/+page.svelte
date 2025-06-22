@@ -7,8 +7,9 @@
     programmingProjects,
   } from "$lib/data/projectData";
 
-  // slideshow component
+  // components
   import Slideshow from "$lib/components/Slideshow.svelte";
+  import ItemPreview from "$lib/components/ItemPreview.svelte";
 
   // handle local vs cloudflare pages image paths
   function getImagePath(
@@ -25,6 +26,21 @@
       return `/assets/projects/${section}/${filename}`;
     }
   }
+
+  // item preview
+  let isPreviewOpen: boolean = $state(false);
+  let previewData = $state({});
+
+  // prevent scrolling while preview is open
+  $effect(() => {
+    if (isPreviewOpen) {
+      document.body.classList.add("overflow-y-hidden");
+      document.body.classList.add("touch-none");
+    } else {
+      document.body.classList.remove("overflow-y-hidden");
+      document.body.classList.remove("touch-none");
+    }
+  });
 </script>
 
 <!-- PAGE METADATA -->
@@ -126,6 +142,27 @@
               >
                 {button.name}
               </a>
+            {:else if button.url.startsWith("preview:")}
+              <button
+                onclick={() => {
+                  isPreviewOpen = !isPreviewOpen;
+                  previewData = project.previews[
+                    button.url.split(":")[1]
+                  ];
+                }}
+                class="select-none cursor-pointer text-center justify-center gap-1 {project.section ==
+                'misc'
+                  ? 'bg-green-300'
+                  : project.section == 'cad'
+                    ? 'bg-blue-300'
+                    : project.section == 'robotics'
+                      ? 'bg-red-400'
+                      : project.section == 'programming'
+                        ? 'bg-yellow-300'
+                        : ''} text-lg sm:text-base flex items-center active:scale-95 transition-all w-full px-2 sm:w-auto sm:py-0 py-1 font-bold hover:bg-white text-black"
+              >
+                {button.name}
+              </button>
             {:else}
               <a
                 href={button.url}
@@ -167,6 +204,11 @@
     </article>
   {/each}
 {/snippet}
+
+<!-- ITEM PREVIEW (VIDEO/CAD MODEL)-->
+{#if isPreviewOpen}
+  <ItemPreview bind:isPreviewOpen bind:previewData />
+{/if}
 
 <!-- FEATURED SLIDESHOW -->
 <section class="pb-16">
@@ -227,7 +269,7 @@
                 class="h-5 text-black font-normal italic text-xs"
               />
               Printables
-            </a> 
+            </a>
             <!-- email alias -->
             <!-- <a 
               href="" 

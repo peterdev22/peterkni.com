@@ -6,7 +6,7 @@
 
 <!-- BG : DARKEN -->
 <div
-  class=" bg-black h-full w-full z-10 transition-all fixed top-0 left-0 opacity-90"
+  class=" bg-black h-full w-full z-10 transition-all fixed top-0 left-0 opacity-95"
   in:blur={{ duration: 500 }}
   out:blur={{ duration: 500 }}
 ></div>
@@ -35,24 +35,24 @@
         />
         Exit
       </button>
-      
+
       <hgroup class="flex flex-col items-end">
-        <h1
-          class="text-lg text-zinc-700 font-bold font-title tracking-tighter -mb-1"
+        <p
+          class="text-lg text-zinc-700 font-bold font-title tracking-tighter -mb-1 selection:text-black selection:bg-zinc-700"
         >
           {previewData.type.toUpperCase()}
-        </h1>
-        <h1
-          class="text-2xl text-blue-300 font-bold font-title tracking-tighter"
+        </p>
+        <h5
+          class="text-2xl text-blue-300 font-bold font-title tracking-tighter selection:text-black selection:bg-blue-300"
         >
           {previewData.project.toUpperCase()}
-        </h1>
+        </h5>
       </hgroup>
     </div>
 
     {#if previewData.type == "video"}
       <!-- svelte-ignore a11y_media_has_caption -->
-      <video controls width="100%" class="" poster="{previewData.thumbnail}">
+      <video controls width="100%" class="" poster={previewData.thumbnail}>
         <source
           src={previewData.url}
           type="video/{previewData.url.split('.').pop()}"
@@ -60,10 +60,12 @@
       </video>
     {/if}
 
-    <hgroup class="flex flex-col gap-2">
-      <h1 class="text-xl sm:text-3xl text-zinc-500 font-black tracking-tight">
+    <hgroup
+      class="flex flex-col gap-2 selection:text-black selection:bg-zinc-500"
+    >
+      <h4 class="text-xl sm:text-3xl text-zinc-500 font-black tracking-tight">
         {previewData.title}
-      </h1>
+      </h4>
       <p class="text-zinc-500 sm:text-lg font-medium tracking-tight">
         {previewData.description}
       </p>

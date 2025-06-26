@@ -1,6 +1,9 @@
 <script lang="ts">
   import { blur } from 'svelte/transition';
 
+  import { Canvas } from '@threlte/core';
+  import Scene from './Scene.svelte';
+
   let { isPreviewOpen = $bindable(), previewData = $bindable() } = $props();
 </script>
 
@@ -52,12 +55,33 @@
 
     {#if previewData.type == 'video'}
       <!-- svelte-ignore a11y_media_has_caption -->
-      <video controls crossorigin="anonymous" width="100%" class="" poster={previewData.thumbnail}>
+      <video
+        controls
+        crossorigin="anonymous"
+        width="100%"
+        poster={previewData.thumbnail}
+      >
         <source
           src={previewData.url}
           type="video/{previewData.url.split('.').pop()}"
         />
       </video>
+    {:else if previewData.type == '3d model'}
+      <!-- <div class="bg-zinc-950 outline-2 outline-zinc-900 flex items-center justify-center h-[30rem] sm:h-[40rem]">
+        <div class="text-zinc-600 w-8 h-8 font-black tracking-wide">
+          LOADING...
+        </div>
+        <div class="h-[30rem] sm:h-[40rem] absolute">
+        <Canvas>
+          <Scene url={previewData.url} />
+        </Canvas>
+        </div>
+      </div> -->
+      <div class="bg-zinc-950 outline-2 outline-zinc-900 flex items-center justify-center h-[25rem] sm:h-[40rem]">
+        <Canvas>
+          <Scene url={previewData.url} />
+        </Canvas>
+      </div>
     {/if}
 
     <hgroup

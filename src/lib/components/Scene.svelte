@@ -1,0 +1,37 @@
+<script>
+  import { T } from '@threlte/core';
+  import {
+    Gizmo,
+    Environment,
+    OrbitControls,
+    GLTF,
+    useDraco,
+    ContactShadows
+  } from '@threlte/extras';
+
+  const dracoLoader = useDraco();
+
+  let { url } = $props();
+</script>
+
+
+<Environment url="/assets/3d/golden_gate_hills_1k.hdr" />
+
+<T.PerspectiveCamera makeDefault position={[1, 1, 1]} fov={30}>
+  <OrbitControls
+    autoRotate
+    autoRotateSpeed={0.5}
+    enableDamping
+    target={[0, 0.35, 0]}
+  >
+    <Gizmo />
+  </OrbitControls>
+</T.PerspectiveCamera>
+
+<T.DirectionalLight intensity={2} position.x={5} position.y={-5} color={'#F9FFF7'}/>
+
+<T.GridHelper args={[10, 10]} position.y={-0.001} />
+
+<ContactShadows scale={1} blur={2} far={10} opacity={0.7} />
+
+<GLTF {url} />

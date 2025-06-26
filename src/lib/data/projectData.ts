@@ -15,12 +15,26 @@ export const cadProjects = [
       {
         name: "More info...",
         url: "/cad#anglebarrier",
-      }
+      },
+      {
+        name: "3D model",
+        url: "preview:0",
+      },
     ],
     tags: [
       "Concept",
       "Design Process",
     ],
+    previews: [
+      {
+        type: "3d model",
+        project: "Anglebarrier",
+        title: "Anglebarrier - 3D Model",
+        description: "The Anglebarrier is an alternative to sandbags as a flood barrier, offering greater stability during rapid floodwaters compared to the Boxwall.",
+        thumbnail: "",
+        url: "",
+      },
+    ]
   },
   {
     id: 2,
@@ -41,13 +55,23 @@ export const cadProjects = [
       },
       {
         name: "3D model",
-        url: "https://collaborate.shapr3d.com/v/lo4VRJcwMHnFwjyv5TsYy",
+        url: "preview:0",
       },
     ],
     tags: [
       "Concept",
       "Design Process",
     ],
+    previews: [
+      {
+        type: "3d model",
+        project: "Printo",
+        title: "Printo - 3D Model",
+        description: "Creating a new 3D printer design in CAD designed for home users. Designed to be easy to use and maintain, CAD modelled in Fusion and rendered in Blender.",
+        thumbnail: "",
+        url: "/assets/3d/printo.gltf",
+      },
+    ]
   },
   {
     id: 3,
@@ -111,13 +135,23 @@ export const cadProjects = [
       },
       {
         name: "3D model",
-        url: "https://collaborate.shapr3d.com/v/uu8gjKiymWejbBenDEDN6",
+        url: "preview:0",
       },
     ],
     tags: [
       "Concept",
       "Design Process",
     ],
+    previews: [
+      {
+        type: "3d model",
+        project: "Airohh",
+        title: "Airohh - 3D Model",
+        description: "Airohh is a drone that puts modularity first. The drone has detachable propellers via magnets and a camera chamber that can hold a small GoPro. Users can swap out propeller types (FPV style, speed style, etc.) according to their usage - reducing the need to own multiple drones.",
+        thumbnail: "",
+        url: "",
+      },
+    ]
   },
   {
     id: 5,

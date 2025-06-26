@@ -1,6 +1,6 @@
 {
 	"name": "peterkni.com",
-	"version": "2.6.3",
+	"version": "2.7.0",
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
@@ -8,6 +8,11 @@
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+	},
+	"dependencies": {
+		"@threlte/core": "^8.0.5",
+		"@threlte/extras": "^9.4.0",
+		"three": "^0.177.0"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-cloudflare": "^5.0.3",

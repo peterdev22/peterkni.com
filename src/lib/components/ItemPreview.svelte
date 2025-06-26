@@ -18,7 +18,7 @@
   out:blur={{ duration: 500 }}
 >
   <div
-    class="flex flex-col mx-4 sm:mx-8 md:mx-20 lg:mx-40 xl:mx-60 2xl:mx-80 gap-10"
+    class="flex flex-col mx-4 sm:mx-8 md:mx-20 lg:mx-40 xl:mx-60 2xl:mx-80 gap-10 w-[80rem]"
   >
     <div class="flex justify-between items-center">
       <button

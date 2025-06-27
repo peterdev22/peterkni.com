@@ -32,6 +32,7 @@
 
   // item preview
   let isPreviewOpen: boolean = $state(false);
+  let previewFor: string = $state('');
   let previewData = $state({});
 
   // prevent scrolling while preview is open
@@ -120,7 +121,7 @@
 
 <!-- ITEM PREVIEW (VIDEO/CAD MODEL)-->
 {#if isPreviewOpen}
-  <ItemPreview bind:isPreviewOpen bind:previewData />
+  <ItemPreview bind:isPreviewOpen bind:preview={previewData} bind:projectName={previewFor} />
 {/if}
 
 <!-- PAGE TITLE -->
@@ -135,7 +136,7 @@
   class="py-6 sm:py-12 px-4 lg:px-28 xl:px-52 2xl:px-72 flex flex-col gap-20"
 >
   {#each cadProjects as project}
-    <ProjectCard {project} {theme} bind:isPreviewOpen bind:previewData />
+    <ProjectCard {project} {theme} bind:isPreviewOpen bind:previewData bind:previewFor />
   {/each}
 </main>
 

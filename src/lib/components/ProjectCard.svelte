@@ -7,6 +7,7 @@
     theme,
     isPreviewOpen = $bindable(),
     previewData = $bindable(),
+    previewFor = $bindable(),
   } = $props();
   let tagMaxWidth = $state(false);
 
@@ -78,6 +79,7 @@
             onclick={() => {
               isPreviewOpen = !isPreviewOpen;
               previewData = project.previews[button.url.split(':')[1]];
+              previewFor = project.name;
             }}
             class="py-2 lg:py-1 px-4 cursor-pointer {theme.colour == 'green'
               ? 'bg-green-300 hover:bg-white'

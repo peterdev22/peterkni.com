@@ -15,11 +15,7 @@ export const cadProjects = [
       {
         name: "More info...",
         url: "/cad#anglebarrier",
-      },
-      {
-        name: "3D model",
-        url: "preview:0",
-      },
+      }
     ],
     tags: [
       "Concept",
@@ -27,12 +23,10 @@ export const cadProjects = [
     ],
     previews: [
       {
-        type: "3d model",
-        project: "Anglebarrier",
+        type: "scene",
         title: "Anglebarrier - 3D Model",
-        description: "The Anglebarrier is an alternative to sandbags as a flood barrier, offering greater stability during rapid floodwaters compared to the Boxwall.",
-        thumbnail: "",
-        url: "",
+        caption: "The Anglebarrier is an alternative to sandbags as a flood barrier, offering greater stability during rapid floodwaters compared to the Boxwall.",
+        source: "",
       },
     ]
   },
@@ -64,12 +58,10 @@ export const cadProjects = [
     ],
     previews: [
       {
-        type: "3d model",
-        project: "Printo",
-        title: "Printo - 3D Model",
-        description: "Creating a new 3D printer design in CAD designed for home users. Designed to be easy to use and maintain, CAD modelled in Fusion and rendered in Blender.",
-        thumbnail: "",
-        url: "/assets/3d/printo.gltf",
+        type: "scene",
+        title: "Printo - Final Model",
+        caption: "The goal was to create a new 3D printer design in CAD made for home users. Designed to be easy to use and maintain, CAD modelled in Fusion and rendered in Blender.",
+        source: "https://storage.peterkni.com/projects/printo/printo.gltf",
       },
     ]
   },
@@ -101,19 +93,17 @@ export const cadProjects = [
     previews: [
       {
         type: "video",
-        project: "Toothbrush",
         title: "Skills Task 1 - Motion & Complex Tools",
-        description: "Documenting the challenges and solutions of problems encountered while creating a mechanically accurate toothbrush in Autodesk Fusion.",
+        caption: "Documenting the challenges and solutions of problems encountered while creating a mechanically accurate toothbrush in Autodesk Fusion.",
+        source: "https://storage.peterkni.com/projects/toothbrush/st1.mp4",
         thumbnail: "/assets/projects/cad/st1_cover.jpeg",
-        url: "https://storage.peterkni.com/projects/toothbrush/st1.mp4",
       },
       {
         type: "video",
-        project: "Toothbrush",
         title: "Skills Task 2 - Advanced Rendering",
-        description: "Using the toothbrush model created in Skills Task 1, renders were created using Blender. Challenges encountered along the way were documented in this video.",
+        caption: "Using the toothbrush model created in Skills Task 1, renders were created using Blender. Challenges encountered along the way were documented in this video.",
+        source: "https://storage.peterkni.com/projects/toothbrush/st2.mp4",
         thumbnail: "/assets/projects/cad/st2_cover.jpeg",
-        url: "https://storage.peterkni.com/projects/toothbrush/st2.mp4",
       }
     ]
   },
@@ -132,25 +122,11 @@ export const cadProjects = [
       {
         name: "Info page",
         url: "https://airohh.peterkni.com",
-      },
-      {
-        name: "3D model",
-        url: "preview:0",
-      },
+      }
     ],
     tags: [
       "Concept",
       "Design Process",
-    ],
-    previews: [
-      {
-        type: "3d model",
-        project: "Airohh",
-        title: "Airohh - 3D Model",
-        description: "Airohh is a drone that puts modularity first. The drone has detachable propellers via magnets and a camera chamber that can hold a small GoPro. Users can swap out propeller types (FPV style, speed style, etc.) according to their usage - reducing the need to own multiple drones.",
-        thumbnail: "",
-        url: "",
-      },
     ]
   },
   {

@@ -11,9 +11,8 @@
 
   const dracoLoader = useDraco();
 
-  let { url } = $props();
+  let { source } = $props();
 </script>
-
 
 <Environment url="/assets/3d/golden_gate_hills_1k.hdr" />
 
@@ -21,7 +20,10 @@
   <OrbitControls
     autoRotate
     autoRotateSpeed={0.5}
+    minDistance={0.5}
+    maxDistance={8}
     enableDamping
+    enablePan={false}
     target={[0, 0.35, 0]}
   >
     <Gizmo />
@@ -34,4 +36,4 @@
 
 <ContactShadows scale={1} blur={2} far={10} opacity={0.7} />
 
-<GLTF {url} />
+<GLTF url={source} {dracoLoader} />

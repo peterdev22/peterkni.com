@@ -2,9 +2,9 @@
   import { blur } from 'svelte/transition';
 
   import { Canvas } from '@threlte/core';
-  import Scene from './Scene.svelte';
+  import ModelScene from './ModelScene.svelte';
 
-  let { isPreviewOpen = $bindable(), previewData = $bindable() } = $props();
+  let { isPreviewOpen = $bindable(), preview = $bindable(), projectName = $bindable() } = $props();
 </script>
 
 <!-- BG : DARKEN -->
@@ -43,43 +43,33 @@
         <p
           class="text-lg text-zinc-700 font-bold font-title tracking-tighter -mb-1 selection:text-black selection:bg-zinc-700"
         >
-          {previewData.type.toUpperCase()}
+          {preview.type.toUpperCase() === 'VIDEO' ? 'VIDEO' : '3D MODEL'}
         </p>
         <h5
           class="text-2xl text-blue-300 font-bold font-title tracking-tighter selection:text-black selection:bg-blue-300"
         >
-          {previewData.project.toUpperCase()}
+          {projectName.toUpperCase()}
         </h5>
       </hgroup>
     </div>
 
-    {#if previewData.type == 'video'}
+    {#if preview.type == 'video'}
       <!-- svelte-ignore a11y_media_has_caption -->
       <video
         controls
         crossorigin="anonymous"
         width="100%"
-        poster={previewData.thumbnail}
+        poster={preview.thumbnail}
       >
         <source
-          src={previewData.url}
-          type="video/{previewData.url.split('.').pop()}"
+          src={preview.source}
+          type="video/{preview.source.split('.').pop()}"
         />
       </video>
-    {:else if previewData.type == '3d model'}
-      <!-- <div class="bg-zinc-950 outline-2 outline-zinc-900 flex items-center justify-center h-[30rem] sm:h-[40rem]">
-        <div class="text-zinc-600 w-8 h-8 font-black tracking-wide">
-          LOADING...
-        </div>
-        <div class="h-[30rem] sm:h-[40rem] absolute">
-        <Canvas>
-          <Scene url={previewData.url} />
-        </Canvas>
-        </div>
-      </div> -->
+    {:else if preview.type == 'scene'}
       <div class="bg-zinc-950 outline-2 outline-zinc-900 flex items-center justify-center h-[25rem] sm:h-[40rem]">
         <Canvas>
-          <Scene url={previewData.url} />
+          <ModelScene source={preview.source} />
         </Canvas>
       </div>
     {/if}
@@ -88,10 +78,10 @@
       class="flex flex-col gap-2 selection:text-black selection:bg-zinc-500"
     >
       <h4 class="text-xl sm:text-3xl text-zinc-500 font-black tracking-tight">
-        {previewData.title}
+        {preview.title}
       </h4>
       <p class="text-zinc-500 sm:text-lg font-medium tracking-tight">
-        {previewData.description}
+        {preview.caption}
       </p>
     </hgroup>
   </div>

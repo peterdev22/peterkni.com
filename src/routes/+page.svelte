@@ -29,6 +29,7 @@
 
   // item preview
   let isPreviewOpen: boolean = $state(false);
+  let previewFor: string = $state('');
   let previewData = $state({});
 
   // prevent scrolling while preview is open
@@ -147,6 +148,7 @@
                 onclick={() => {
                   isPreviewOpen = !isPreviewOpen;
                   previewData = project.previews[button.url.split(':')[1]];
+                  previewFor = project.name;
                 }}
                 class="select-none cursor-pointer text-center justify-center gap-1 {project.section ==
                 'misc'
@@ -205,7 +207,7 @@
 
 <!-- ITEM PREVIEW (VIDEO/CAD MODEL)-->
 {#if isPreviewOpen}
-  <ItemPreview bind:isPreviewOpen bind:previewData />
+  <ItemPreview bind:isPreviewOpen bind:preview={previewData} bind:projectName={previewFor}/>
 {/if}
 
 <!-- FEATURED SLIDESHOW -->

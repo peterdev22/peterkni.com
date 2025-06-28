@@ -1,4 +1,5 @@
 <script>
+  import { PUBLIC_CF_IMAGES } from '$env/static/public';
   import { T } from '@threlte/core';
   import {
     Gizmo,

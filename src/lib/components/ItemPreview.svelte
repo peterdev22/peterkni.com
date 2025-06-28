@@ -1,10 +1,30 @@
 <script lang="ts">
   import { blur } from 'svelte/transition';
+  import { Tween } from 'svelte/motion';
+  import { fromStore } from 'svelte/store';
 
   import { Canvas } from '@threlte/core';
+  import { useProgress } from '@threlte/extras';
+
   import ModelScene from './ModelScene.svelte';
 
-  let { isPreviewOpen = $bindable(), preview = $bindable(), projectName = $bindable() } = $props();
+  // loading 3d model scene
+  const { progress } = useProgress();
+  const p = fromStore(progress);
+
+  const tweenedProgress = Tween.of(() => p.current, {
+    duration: 200,
+  });
+
+  const progressPercent = $derived(100 * tweenedProgress.current);
+  const progressDone = $derived(tweenedProgress.current >= 1);
+
+  // props
+  let {
+    isPreviewOpen = $bindable(),
+    preview = $bindable(),
+    projectName = $bindable(),
+  } = $props();
 </script>
 
 <!-- BG : DARKEN -->
@@ -67,7 +87,17 @@
         />
       </video>
     {:else if preview.type == 'scene'}
-      <div class="bg-zinc-950 outline-2 outline-zinc-900 flex items-center justify-center h-[25rem] sm:h-[40rem]">
+      <div
+        class="bg-zinc-950 outline-2 outline-zinc-900 flex items-center justify-center h-[25rem] sm:h-[40rem]"
+      >
+        {#if progressDone != true}
+          <div
+            class="absolute text-black text-2xl bg-blue-300 font-bold px-2 py-0.5 -translate-y-3"
+          >
+            {Math.round(progressPercent)}%
+          </div>
+        {/if}
+
         <Canvas>
           <ModelScene source={preview.source} />
         </Canvas>

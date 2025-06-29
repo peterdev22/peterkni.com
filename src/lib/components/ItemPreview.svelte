@@ -41,7 +41,7 @@
   out:blur={{ duration: 500 }}
 >
   <div
-    class="flex flex-col mx-4 sm:mx-8 md:mx-20 lg:mx-40 xl:mx-60 2xl:mx-80 gap-10 w-[80rem]"
+    class="flex flex-col mx-4 gap-10 w-[90%] sm:w-[80%] 2xl:w-[70%] max-w-[80rem]"
   >
     <div class="flex justify-between items-center">
       <button
@@ -88,7 +88,7 @@
       </video>
     {:else if preview.type == 'scene'}
       <div
-        class="bg-zinc-950 outline-2 outline-zinc-900 flex items-center justify-center h-[25rem] sm:h-[40rem]"
+        class="bg-zinc-950 outline-2 outline-zinc-900 flex items-center justify-center h-[20rem] sm:h-[30rem] 2xl:h-[40rem] max-h-[60rem]}"
       >
         {#if progressDone != true}
           <div

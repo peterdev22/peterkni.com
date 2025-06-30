@@ -15,7 +15,7 @@
   let { source } = $props();
 </script>
 
-<Environment url="/assets/3d/golden_gate_hills_1k.hdr" />
+<Environment url="/assets/3d/citrus_orchard_road_puresky_1k.hdr" />
 
 <T.PerspectiveCamera makeDefault position={[1, 1, 1]} fov={30}>
   <OrbitControls

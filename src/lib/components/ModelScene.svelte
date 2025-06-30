@@ -15,7 +15,7 @@
   let { source } = $props();
 </script>
 
-<Environment url="/assets/3d/citrus_orchard_road_puresky_1k.hdr" />
+<Environment url="/assets/3d/brown_photostudio_02_1k.hdr" />
 
 <T.PerspectiveCamera makeDefault position={[1, 1, 1]} fov={30}>
   <OrbitControls
@@ -31,10 +31,10 @@
   </OrbitControls>
 </T.PerspectiveCamera>
 
-<T.DirectionalLight intensity={2} position.x={5} position.y={-5} color={'#F9FFF7'}/>
+<!-- <T.DirectionalLight intensity={10} position.x={1} position.y={1} color={'#FFF4E5'}/> -->
 
 <T.GridHelper args={[10, 10]} position.y={-0.001} />
 
 <ContactShadows scale={1} blur={2} far={10} opacity={0.7} />
 
-<GLTF url={source} {dracoLoader} />
+<GLTF url={"/TEST/printo.gltf"} {dracoLoader} />

@@ -88,7 +88,7 @@
       </video>
     {:else if preview.type == 'scene'}
       <div
-        class="bg-zinc-950 outline-2 outline-zinc-900 flex items-center justify-center h-[20rem] sm:h-[30rem] 2xl:h-[40rem] max-h-[60rem]}"
+        class="bg-zinc-950 outline-2 outline-zinc-900 flex items-center justify-center h-[50vh] sm:h-[60vh] 2xl:h-[60vh]"
       >
         {#if progressDone != true}
           <div

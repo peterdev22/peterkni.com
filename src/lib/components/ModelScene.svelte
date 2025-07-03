@@ -6,16 +6,17 @@
     OrbitControls,
     GLTF,
     useDraco,
+    ContactShadows
   } from '@threlte/extras';
 
-  const dracoLoader = useDraco();
+  // const dracoLoader = useDraco();
 
   let { source, cameraPos, targetPos } = $props();
 </script>
 
 <Environment url="/assets/3d/brown_photostudio_02_1k.hdr" />
 
-<T.PerspectiveCamera makeDefault position={cameraPos} fov={30}>
+<T.PerspectiveCamera makeDefault position={[1, 1, 1]} fov={30}>
   <OrbitControls
     autoRotate
     autoRotateSpeed={0.25}
@@ -23,7 +24,7 @@
     maxDistance={8}
     enableDamping
     enablePan={false}
-    target={targetPos}
+    target={[0, 0.35, 0]}
   >
     <Gizmo />
   </OrbitControls>
@@ -35,6 +36,6 @@
 
 <T.GridHelper args={[10, 10]} position.y={-0.001}/>
 
-<!-- <ContactShadows scale={1} blur={2} far={10} opacity={0.7} /> -->
+<ContactShadows scale={1} blur={2} far={10} opacity={0.7} />
 
-<GLTF url={source} {dracoLoader} />
+<GLTF url={source} />

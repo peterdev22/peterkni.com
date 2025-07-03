@@ -17,7 +17,7 @@
 <Environment url="/assets/3d/brown_photostudio_02_1k.hdr" />
 
 <T.PerspectiveCamera makeDefault position={[1, 1, 1]} fov={30}>
-  <!-- <OrbitControls
+  <OrbitControls
     autoRotate
     autoRotateSpeed={0.5}
     minDistance={0.5}
@@ -26,8 +26,8 @@
     enablePan={false}
     target={[0, 0.35, 0]}
   >
-    <Gizmo />
-  </OrbitControls> -->
+    <!-- <Gizmo /> -->
+  </OrbitControls>
 </T.PerspectiveCamera>
 
 <!-- <T.GridHelper args={[10, 10]} position.y={-0.001}/> -->

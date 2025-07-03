@@ -5,10 +5,11 @@
     Environment,
     OrbitControls,
     GLTF,
-    ContactShadows
+    ContactShadows,
+    useDraco
   } from '@threlte/extras';
 
-  // const dracoLoader = useDraco();
+  const dracoLoader = useDraco();
 
   let { source } = $props();
 </script>
@@ -33,4 +34,4 @@
 
 <ContactShadows scale={1} blur={2} far={10} opacity={0.7} />
 
-<GLTF url={source} />
+<GLTF url={source} {dracoLoader} />

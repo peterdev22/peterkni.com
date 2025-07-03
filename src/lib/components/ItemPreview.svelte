@@ -6,7 +6,7 @@
   import { Canvas } from '@threlte/core';
   import { useProgress } from '@threlte/extras';
 
-  import ModelScene from './ModelScene.svelte';
+  import ModelScene from '$lib/components/ModelScene.svelte';
 
   // loading 3d model scene
   const { progress } = useProgress();
@@ -22,8 +22,8 @@
   // props
   let {
     isPreviewOpen = $bindable(),
-    preview = $bindable(),
-    projectName = $bindable(),
+    preview,
+    projectName,
   } = $props();
 </script>
 

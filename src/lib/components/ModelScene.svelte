@@ -34,4 +34,4 @@
 
 <!-- <ContactShadows scale={1} blur={2} far={10} opacity={0.7} /> -->
 
-<!-- <GLTF url={source} {dracoLoader} /> -->
+<GLTF url={source} {dracoLoader} />

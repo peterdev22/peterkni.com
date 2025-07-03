@@ -15,6 +15,10 @@ export const cadProjects = [
       {
         name: "More info...",
         url: "/cad#anglebarrier",
+      },
+      {
+        name: "3D model",
+        url: "preview:0",
       }
     ],
     tags: [

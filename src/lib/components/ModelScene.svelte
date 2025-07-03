@@ -10,12 +10,12 @@
 
   // const dracoLoader = useDraco();
 
-  let { source } = $props();
+  let { source, cameraPos, targetPos } = $props();
 </script>
 
 <Environment url="/assets/3d/brown_photostudio_02_1k.hdr" />
 
-<T.PerspectiveCamera makeDefault position={[1, 1, 1]} fov={30}>
+<T.PerspectiveCamera makeDefault position={cameraPos} fov={30}>
   <OrbitControls
     autoRotate
     autoRotateSpeed={0.25}
@@ -23,7 +23,7 @@
     maxDistance={8}
     enableDamping
     enablePan={false}
-    target={[0, 0.35, 0]}
+    target={targetPos}
   >
     <Gizmo />
   </OrbitControls>

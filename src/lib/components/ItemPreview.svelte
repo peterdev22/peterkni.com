@@ -101,14 +101,12 @@
         <Canvas>
           <ModelScene
             source={preview.source}
-            cameraPos={preview.cameraPos}
-            targetPos={preview.targetPos}
           />
         </Canvas>
       </div>
     {/if}
 
-    <div class="flex flex-col gap-2 selection:text-black selection:bg-zinc-500">
+    <!-- <div class="flex flex-col gap-2 selection:text-black selection:bg-zinc-500">
       <div class="flex justify-between items-center">
         <h4 class="text-xl sm:text-3xl text-zinc-500 font-black tracking-tight">
           {preview.title}
@@ -126,6 +124,6 @@
       <p class="text-zinc-500 sm:text-lg font-medium tracking-tight">
         {preview.caption}
       </p>
-    </div>
+    </div> -->
   </div>
 </div>

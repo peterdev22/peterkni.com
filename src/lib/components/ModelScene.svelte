@@ -5,10 +5,10 @@
     Environment,
     OrbitControls,
     GLTF,
-    ContactShadows
+    useDraco,
   } from '@threlte/extras';
 
-  // const dracoLoader = useDraco();
+  const dracoLoader = useDraco();
 
   let { source, cameraPos, targetPos } = $props();
 </script>
@@ -35,6 +35,6 @@
 
 <T.GridHelper args={[10, 10]} position.y={-0.001}/>
 
-<ContactShadows scale={1} blur={2} far={10} opacity={0.7} />
+<!-- <ContactShadows scale={1} blur={2} far={10} opacity={0.7} /> -->
 
-<GLTF url={source} />
+<GLTF url={source} {dracoLoader} />

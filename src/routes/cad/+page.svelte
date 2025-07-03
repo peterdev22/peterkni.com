@@ -121,7 +121,7 @@
 
 <!-- ITEM PREVIEW (VIDEO/CAD MODEL)-->
 {#if isPreviewOpen}
-  <ItemPreview bind:isPreviewOpen bind:preview={previewData} bind:projectName={previewFor} />
+  <ItemPreview bind:isPreviewOpen preview={previewData} projectName={previewFor} />
 {/if}
 
 <!-- PAGE TITLE -->

@@ -1,11 +1,9 @@
 <script>
   import { T } from '@threlte/core';
   import {
-    Gizmo,
     Environment,
     OrbitControls,
-    GLTF,
-    ContactShadows
+    GLTF
   } from '@threlte/extras';
 
   // const dracoLoader = useDraco();
@@ -25,12 +23,12 @@
     enablePan={false}
     target={targetPos}
   >
-    <Gizmo />
+    <!-- <Gizmo /> --> <!-- gizmo potentially not working with cf pages -->
   </OrbitControls>
 </T.PerspectiveCamera>
 
 <T.GridHelper args={[10, 10]} position.y={-0.001}/>
 
-<ContactShadows scale={1} blur={2} far={10} opacity={0.7} />
+<!-- <ContactShadows scale={1} blur={2} far={10} opacity={0.7} /> -->
 
 <GLTF url={source} />

@@ -22,8 +22,8 @@
   // props
   let {
     isPreviewOpen = $bindable(),
-    preview = $bindable(),
-    projectName = $bindable(),
+    preview,
+    projectName
   } = $props();
 </script>
 

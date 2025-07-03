@@ -99,20 +99,33 @@
         {/if}
 
         <Canvas>
-          <ModelScene source={preview.source} />
+          <ModelScene
+            source={preview.source}
+            cameraPos={preview.cameraPos}
+            targetPos={preview.targetPos}
+          />
         </Canvas>
       </div>
     {/if}
 
-    <hgroup
-      class="flex flex-col gap-2 selection:text-black selection:bg-zinc-500"
-    >
-      <h4 class="text-xl sm:text-3xl text-zinc-500 font-black tracking-tight">
-        {preview.title}
-      </h4>
+    <div class="flex flex-col gap-2 selection:text-black selection:bg-zinc-500">
+      <div class="flex justify-between items-center">
+        <h4 class="text-xl sm:text-3xl text-zinc-500 font-black tracking-tight">
+          {preview.title}
+        </h4>
+        <div class="flex flex-col shrink-0">
+          {#each preview.dimensions as dimension, i}
+            <p
+              class="text-sm {i >= 1 ? "sm:text-sm text-zinc-700" : "sm:text-lg text-zinc-500"} font-medium tracking-tight text-right -my-0.5"
+            >
+              {dimension}
+            </p>
+          {/each}
+        </div>
+      </div>
       <p class="text-zinc-500 sm:text-lg font-medium tracking-tight">
         {preview.caption}
       </p>
-    </hgroup>
+    </div>
   </div>
 </div>

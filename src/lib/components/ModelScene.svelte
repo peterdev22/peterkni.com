@@ -14,9 +14,9 @@
   let { source } = $props();
 </script>
 
-<!-- <Environment url="/assets/3d/brown_photostudio_02_1k.hdr" />
+<Environment url="/assets/3d/brown_photostudio_02_1k.hdr" />
 
-<T.PerspectiveCamera makeDefault position={[1, 1, 1]} fov={30}>
+<!-- <T.PerspectiveCamera makeDefault position={[1, 1, 1]} fov={30}>
   <OrbitControls
     autoRotate
     autoRotateSpeed={0.5}

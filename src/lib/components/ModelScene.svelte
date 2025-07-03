@@ -26,7 +26,7 @@
     enablePan={false}
     target={targetPos}
   >
-    <!-- <Gizmo /> -->
+    <Gizmo />
   </OrbitControls>
 </T.PerspectiveCamera>
 

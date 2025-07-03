@@ -1,7 +1,7 @@
 <script lang="ts">
   import { blur } from 'svelte/transition';
 
-  let { menuOpen = $bindable() } = $props();
+  let { isMenuOpen = $bindable() } = $props();
 </script>
 
 <div
@@ -31,7 +31,7 @@
       HOME
     </h3>
     <a
-      onclick={() => (menuOpen = false)}
+      onclick={() => (isMenuOpen = false)}
       href="/"
       class="bg-white hover:bg-zinc-300 px-3 py-1 transition-all active:scale-95 shrink-0"
       >Dashboard</a
@@ -42,19 +42,19 @@
       PROJECTS
     </h3>
     <a
-      onclick={() => (menuOpen = false)}
+      onclick={() => (isMenuOpen = false)}
       href="/cad"
       class="bg-white hover:bg-blue-300 px-3 py-1 transition-all active:scale-95 shrink-0"
       >CAD</a
     >
     <a
-      onclick={() => (menuOpen = false)}
+      onclick={() => (isMenuOpen = false)}
       href="/robotics"
       class="bg-white hover:bg-red-400 px-3 py-1 transition-all active:scale-95 shrink-0"
       >Robotics</a
     >
     <a
-      onclick={() => (menuOpen = false)}
+      onclick={() => (isMenuOpen = false)}
       href="/programming"
       class="bg-white hover:bg-yellow-300 px-3 py-1 transition-all active:scale-95 shrink-0"
       >Programming</a

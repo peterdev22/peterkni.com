@@ -116,7 +116,7 @@
 
 <!-- MOBILE NAV MENU -->
 {#if navMenuEnabled}
-  <MobileNav bind:menuOpen={navMenuEnabled} />
+  <MobileNav isMenuOpen={navMenuEnabled} />
 {/if}
 
 <!-- PAGE SNIPPET -->

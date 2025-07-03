@@ -100,7 +100,7 @@
 
         <Canvas>
           <ModelScene
-            source={preview.source}
+            source={preview.source} cameraPos={preview.cameraPos} targetPos={preview.targetPos}
           />
         </Canvas>
       </div>

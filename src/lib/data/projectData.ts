@@ -31,6 +31,8 @@ export const cadProjects = [
         title: "Anglebarrier - Flood Barrier",
         caption: "The Anglebarrier is an alternative to sandbags for flood protection, offering greater stability during rapid floodwaters compared to the Boxwall. When not in use, it can be densely stored, folding down to just 50 mm thick per 800 mm of barrier.",
         source: "https://storage.peterkni.com/projects/anglebarrier/anglebarrier.gltf",
+        targetPos: [0, 0.35, 0],
+        cameraPos: [1, 1, 1]
       },
     ]
   },
@@ -66,6 +68,8 @@ export const cadProjects = [
         title: "Printo - 3D Printer",
         caption: "Printo is a 3D printer designed for home users. Access the airtight filament storage via the control stack and monitor prints remotely with the detachable control center screen. Its modular design allows different 'stacks' to be swapped in and out for easy upgrades.",
         source: "https://storage.peterkni.com/projects/printo/printo.gltf",
+        targetPos: [0, 0.35, 0],
+        cameraPos: [1, 1, 1]
       },
     ]
   },

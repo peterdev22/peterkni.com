@@ -10,10 +10,10 @@
 
   // const dracoLoader = useDraco();
 
-  let { source, cameraPos, targetPos } = $props();
+  let { source } = $props();
 </script>
 
-<!-- <Environment url="/assets/3d/brown_photostudio_02_1k.hdr" /> -->
+<Environment url="/assets/3d/brown_photostudio_02_1k.hdr" />
 
 <T.PerspectiveCamera makeDefault position={[1, 1, 1]} fov={30}>
   <OrbitControls
@@ -28,10 +28,6 @@
     <Gizmo />
   </OrbitControls>
 </T.PerspectiveCamera>
-
-<!-- <T.DirectionalLight intensity={10} position.x={1} position.y={1} position.z={1} color={'#FFF4E5'}/>
-
-<T.AmbientLight intensity={0.5} color={'#FFF4E5'} /> -->
 
 <T.GridHelper args={[10, 10]} position.y={-0.001}/>
 

@@ -98,11 +98,11 @@
           </div>
         {/if}
 
-        <Canvas>
+        <!-- <Canvas>
           <ModelScene
             source={preview.source}
           />
-        </Canvas>
+        </Canvas> -->
       </div>
     {/if}
 

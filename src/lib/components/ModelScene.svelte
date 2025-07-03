@@ -30,7 +30,7 @@
   </OrbitControls>
 </T.PerspectiveCamera>
 
-<!-- <T.GridHelper args={[10, 10]} position.y={-0.001}/> -->
+<T.GridHelper args={[10, 10]} position.y={-0.001}/>
 
 <!-- <ContactShadows scale={1} blur={2} far={10} opacity={0.7} /> -->
 

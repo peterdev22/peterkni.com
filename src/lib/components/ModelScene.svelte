@@ -14,7 +14,7 @@
   let { source } = $props();
 </script>
 
-<Environment url="/assets/3d/brown_photostudio_02_1k.hdr" />
+<!-- <Environment url="/assets/3d/brown_photostudio_02_1k.hdr" />
 
 <T.PerspectiveCamera makeDefault position={[1, 1, 1]} fov={30}>
   <OrbitControls
@@ -32,6 +32,6 @@
 
 <T.GridHelper args={[10, 10]} position.y={-0.001}/>
 
-<ContactShadows scale={1} blur={2} far={10} opacity={0.7} />
+<ContactShadows scale={1} blur={2} far={10} opacity={0.7} /> -->
 
 <!-- <GLTF url={source} {dracoLoader} /> -->

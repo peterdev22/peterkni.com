@@ -116,7 +116,7 @@
         <div class="flex flex-col shrink-0">
           {#each preview.dimensions as dimension, i}
             <p
-              class="text-sm {i >= 1 ? "sm:text-sm text-zinc-700" : "sm:text-lg text-zinc-500"} font-medium tracking-tight text-right -my-0.5"
+              class="text-sm {i >= 1 ? "sm:text-sm" : "sm:text-lg font-semibold"} text-zinc-500 tracking-tight text-right -my-0.5"
             >
               {dimension}
             </p>

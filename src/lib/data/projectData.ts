@@ -13,10 +13,6 @@ export const cadProjects = [
       "3D rendering of an orange flood barrier with a right-angle-shaped structure.",
     buttons: [
       {
-        name: "More info...",
-        url: "/cad#anglebarrier",
-      },
-      {
         name: "3D model",
         url: "preview:0",
       }
@@ -29,7 +25,7 @@ export const cadProjects = [
       {
         type: "scene",
         title: "Anglebarrier - Flood Barrier",
-        dimensions: ["800 × 1200 × ≈870", "while folded: 800 × 1200 × 50"],
+        dimensions: ["[ 800 × 1200 × ~870 ]", "while folded: [ 800 × 1200 × 50 ]"],
         caption: "The Anglebarrier is an alternative to sandbags for flood protection, offering greater stability during rapid floodwaters compared to the Boxwall. When not in use, it can be densely stored, folding down to just 50 mm thick per 800 mm of barrier.",
         source: "https://storage.peterkni.com/projects/anglebarrier/anglebarrier.gltf",
         targetPos: [0.00, 0.30, 0.00],
@@ -51,7 +47,7 @@ export const cadProjects = [
       "3D rendering of an cylindrical 3D printer on a wooden floor with a dark metallic background.",
     buttons: [
       {
-        name: "Product page",
+        name: "Concept page",
         url: "https://printo.peterkni.com",
       },
       {
@@ -67,7 +63,7 @@ export const cadProjects = [
       {
         type: "scene",
         title: "Printo - 3D Printer",
-        dimensions: ["⌀400 × ≈700"],
+        dimensions: ["[ ⌀ 400 × 700 ]"],
         caption: "Printo is a 3D printer designed for home users. Access the airtight filament storage via the control stack and monitor prints remotely with the detachable control center screen. Its modular design allows different 'stacks' to be swapped in and out for easy upgrades.",
         source: "https://storage.peterkni.com/projects/printo/printo.gltf",
         targetPos: [0.00, 0.35, 0.00],
@@ -130,7 +126,7 @@ export const cadProjects = [
     alt: "3D rendering of a drone that has detachable propellers via magnets.",
     buttons: [
       {
-        name: "Info page",
+        name: "Concept page",
         url: "https://airohh.peterkni.com",
       }
     ],
@@ -153,7 +149,7 @@ export const cadProjects = [
       "3D rendering of a Slatedock mini, an organisation hub that can assist with tasks.",
     buttons: [
       {
-        name: "Product Page",
+        name: "Concept page",
         url: "https://slatedock.peterkni.com",
       }
     ],
@@ -201,7 +197,7 @@ export const roboticsProjects = [
       "A robot that is holding two blue rings.",
     buttons: [
       {
-        name: "Team info",
+        name: "Team stats",
         url: "https://www.robotevents.com/teams/V5RC/75477M",
       },
       {
@@ -257,11 +253,7 @@ export const programmingProjects = [
       {
         name: "Repository",
         url: "https://github.com/peterdev22/peterkni.com",
-      },
-      {
-        name: "Homepage",
-        url: "/",
-      },
+      }
     ],
     tags: [
       "Svelte",

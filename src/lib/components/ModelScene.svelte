@@ -1,14 +1,18 @@
 <script>
   import { T } from '@threlte/core';
   import {
+    useDraco,
     Environment,
     OrbitControls,
     GLTF
   } from '@threlte/extras';
 
-  // const dracoLoader = useDraco();
-
+  // passed down props
   let { source, cameraPos, targetPos } = $props();
+
+  // prepare useDraco for compressed models
+  const dracoLoader = useDraco();
+
 </script>
 
 <Environment url="/assets/3d/brown_photostudio_02_1k.hdr" />
@@ -23,12 +27,10 @@
     enablePan={false}
     target={targetPos}
   >
-    <!-- <Gizmo /> --> <!-- gizmo potentially not working with cf pages -->
+    <!-- gizmo currently not working with cf pages, tested: 03-07-2025 -->
+    <!-- <Gizmo /> -->
   </OrbitControls>
 </T.PerspectiveCamera>
 
-<T.GridHelper args={[10, 10]} position.y={-0.001}/>
-
-<!-- <ContactShadows scale={1} blur={2} far={10} opacity={0.7} /> -->
-
-<GLTF url={source} />
+<T.GridHelper args={[10, 10, '#3F3F46', '#3F3F46']} position.y={-0.001}/>
+<GLTF url={source} {dracoLoader} />

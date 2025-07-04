@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { blur } from 'svelte/transition';
+  import { scale, fade } from 'svelte/transition';
   import { Tween } from 'svelte/motion';
   import { fromStore } from 'svelte/store';
 
@@ -29,16 +29,16 @@
 
 <!-- BG : DARKEN -->
 <div
-  class=" bg-black h-full w-full z-10 transition-all fixed top-0 left-0 opacity-95"
-  in:blur={{ duration: 500 }}
-  out:blur={{ duration: 500 }}
+  class=" bg-black h-full w-full z-20 transition-all fixed top-0 left-0 opacity-95"
+  in:fade={{ duration: 200 }}
+  out:fade={{ duration: 200 }}
 ></div>
 
 <!-- UI -->
 <div
-  class="fixed top-0 left-0 w-full h-full z-20 flex items-center justify-center"
-  in:blur={{ duration: 500 }}
-  out:blur={{ duration: 500 }}
+  class="fixed top-0 left-0 w-full h-full z-30 flex items-center justify-center"
+  in:scale={{ duration: 200, start: 0.9 }}
+  out:scale={{ duration: 200, start: 0.9 }}
 >
   <div
     class="flex flex-col mx-4 gap-10 w-[90%] sm:w-[80%] 2xl:w-[70%] max-w-[80rem]"
@@ -113,7 +113,7 @@
         <h4 class="text-xl sm:text-3xl text-zinc-500 font-black tracking-tight">
           {preview.title}
         </h4>
-        <div class="flex flex-col shrink-0">
+        <div class="sm:flex flex-col shrink-0 hidden">
           {#each preview.dimensions as dimension, i}
             <p
               class="text-sm {i >= 1 ? "sm:text-sm" : "sm:text-lg font-semibold"} text-zinc-500 tracking-tight text-right -my-0.5"

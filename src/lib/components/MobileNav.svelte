@@ -1,19 +1,19 @@
 <script lang="ts">
-  import { blur } from 'svelte/transition';
+  import { fade, scale } from 'svelte/transition';
 
   let { isMenuOpen = $bindable() } = $props();
 </script>
 
 <div
   class="absolute bg-black h-full w-full z-10 transition-all opacity-90"
-  in:blur={{ duration: 500 }}
-  out:blur={{ duration: 500 }}
+  in:fade={{ duration: 200 }}
+  out:fade={{ duration: 200 }}
 ></div>
 
 <nav
   class="select-none -mt-3 z-20 bg-black tracking-tight border-2 border-green-300 text-black absolute h-[26rem] flex flex-col gap-2 font-bold text-2xl left-10 right-10 transition-all"
-  in:blur={{ duration: 500 }}
-  out:blur={{ duration: 500 }}
+  in:scale={{ duration: 200, start: 0.9 }}
+  out:scale={{ duration: 200, start: 0.9 }}
 >
   <div
     class="flex

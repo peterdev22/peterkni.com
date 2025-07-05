@@ -25,7 +25,6 @@ export const cadProjects = [
       {
         type: "scene",
         title: "Anglebarrier - Flood Barrier",
-        dimensions: ["[ 800 × 1200 × ~870 ]", "while folded: [ 800 × 1200 × 50 ]"],
         caption: "The Anglebarrier is an alternative to sandbags for flood protection, offering greater stability during rapid floodwaters compared to the Boxwall. When not in use, it can be densely stored, folding down to just 50 mm thick per 800 mm of barrier.",
         source: "https://storage.peterkni.com/projects/anglebarrier/anglebarrier.gltf",
         targetPos: [0.00, 0.30, 0.00],

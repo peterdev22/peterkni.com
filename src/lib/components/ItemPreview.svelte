@@ -20,11 +20,7 @@
   const progressDone = $derived(tweenedProgress.current >= 1);
 
   // props
-  let {
-    isPreviewOpen = $bindable(),
-    preview,
-    projectName
-  } = $props();
+  let { isPreviewOpen = $bindable(), preview, projectName } = $props();
 </script>
 
 <!-- BG : DARKEN -->
@@ -108,24 +104,15 @@
       </div>
     {/if}
 
-    <div class="flex flex-col gap-2 selection:text-black selection:bg-zinc-500">
-      <div class="flex justify-between items-center">
-        <h4 class="text-xl sm:text-3xl text-zinc-500 font-black tracking-tight">
-          {preview.title}
-        </h4>
-        <div class="sm:flex flex-col shrink-0 hidden">
-          {#each preview.dimensions as dimension, i}
-            <p
-              class="text-sm {i >= 1 ? "sm:text-sm" : "sm:text-lg font-semibold"} text-zinc-500 tracking-tight text-right -my-0.5"
-            >
-              {dimension}
-            </p>
-          {/each}
-        </div>
-      </div>
+    <hgroup
+      class="flex flex-col gap-2 selection:text-black selection:bg-zinc-500"
+    >
+      <h4 class="text-xl sm:text-3xl text-zinc-500 font-black tracking-tight">
+        {preview.title}
+      </h4>
       <p class="text-zinc-500 sm:text-lg font-medium tracking-tight">
         {preview.caption}
       </p>
-    </div>
+    </hgroup>
   </div>
 </div>

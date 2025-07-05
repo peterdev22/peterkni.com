@@ -1,7 +1,7 @@
 <script>
   import { T } from '@threlte/core';
   import {
-    useDraco,
+    // useDraco,
     Environment,
     OrbitControls,
     GLTF
@@ -10,8 +10,8 @@
   // passed down props
   let { source, cameraPos, targetPos } = $props();
 
-  // prepare useDraco for compressed models
-  const dracoLoader = useDraco();
+  // Enable the usage of draco compressed models (google script is used)
+  // const dracoLoader = useDraco();
 
 </script>
 
@@ -33,4 +33,4 @@
 </T.PerspectiveCamera>
 
 <T.GridHelper args={[10, 10, '#3F3F46', '#3F3F46']} position.y={-0.001}/>
-<GLTF url={source} {dracoLoader} />
+<GLTF url={source} />

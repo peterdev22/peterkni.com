@@ -49,26 +49,11 @@ export const cadProjects = [
       {
         name: "Concept page",
         url: "https://printo.peterkni.com",
-      },
-      {
-        name: "3D model",
-        url: "preview:0",
-      },
+      }
     ],
     tags: [
       "Concept",
       "Design Process",
-    ],
-    previews: [
-      {
-        type: "scene",
-        title: "Printo - 3D Printer",
-        dimensions: ["[ ⌀ 400 × 700 ]"],
-        caption: "Printo is a 3D printer designed for home users. Access the airtight filament storage via the control stack and monitor prints remotely with the detachable control center screen. Its modular design allows different 'stacks' to be swapped in and out for easy upgrades.",
-        source: "https://storage.peterkni.com/projects/printo/printo.gltf",
-        targetPos: [0.00, 0.35, 0.00],
-        cameraPos: [1.00, 1.00, 1.00]
-      },
     ]
   },
   {

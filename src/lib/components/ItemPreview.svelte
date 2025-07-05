@@ -92,7 +92,7 @@
       >
         {#if progressDone != true}
           <div
-            class="absolute text-black text-2xl bg-blue-300 font-bold px-2 py-0.5 -translate-y-3"
+            class="absolute text-black text-2xl bg-blue-300 font-bold px-2 py-0.5 -translate-y-3 z-40"
           >
             {Math.round(progressPercent)}%
           </div>
